@@ -9,11 +9,22 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-namespace think;
-
-// ThinkPHP 引导文件
-// 1. 加载基础文件
-require __DIR__ . '/base.php';
-
-// 2. 执行应用
-App::run()->send();
+// +----------------------------------------------------------------------
+// | Cookie设置
+// +----------------------------------------------------------------------
+return [
+    // cookie 名称前缀
+    'prefix'    => '',
+    // cookie 保存时间
+    'expire'    => 0,
+    // cookie 保存路径
+    'path'      => '/',
+    // cookie 有效域名
+    'domain'    => '',
+    //  cookie 启用安全传输
+    'secure'    => false,
+    // httponly设置
+    'httponly'  => '',
+    // 是否使用 setcookie
+    'setcookie' => true,
+];

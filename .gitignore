@@ -1,9 +1,9 @@
-.settings
-.buildpath
-.project
-.idea
-composer.lock
+/.settings
+/.buildpath
+/.project
+/.idea
+/.vscode
 *.log
-runtime
-/.svn
-/.user.ini
+thinkphp
+.env
+.DS_Store
