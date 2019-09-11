@@ -1,6 +1,6 @@
 <?php
 namespace app\index\controller;
-
+use think\facade\Env;
 class Index
 {
     public function index()
@@ -12,4 +12,18 @@ class Index
     {
         return 'hello,' . $name;
     }
+
+
+    public function test(){
+    	dump('think_path='.Env::get('think_path'));
+		dump('root_path='.Env::get('root_path'));
+		dump('app_path='.Env::get('app_path'));
+		dump('config_path='.Env::get('config_path'));
+		dump('route_path='.Env::get('route_path'));
+		dump('runtime_path='.Env::get('runtime_path'));
+		dump('extend_path='.Env::get('extend_path'));
+		dump('vendor_path='.Env::get('vendor_path'));
+
+		dump(Env::get('app_path').DIRECTORY_SEPARATOR.'common'.DIRECTORY_SEPARATOR.'common.php');
+	}
 }

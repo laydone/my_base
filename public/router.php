@@ -13,5 +13,7 @@
 if (is_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["SCRIPT_NAME"])) {
     return false;
 } else {
+    dump( __DIR__ . "/index.php");
+    exit;
     require __DIR__ . "/index.php";
 }

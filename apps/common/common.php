@@ -2,22 +2,14 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006-2018 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
+// | Author: 流年 <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// [ 应用入口文件 ]
-namespace think;
+// 应用公共文件
+use think\facade\Env;
 
-// 定义应用目录
-define('APP_PATH', __DIR__ . '/../apps/');
-// 加载基础文件
-require __DIR__ . '/../thinkphp/base.php';
-
-// 支持事先使用静态方法设置Request对象和Config对象
-
-// 执行应用并响应
-Container::get('app')->path(APP_PATH)->run()->send();
+include_once Env::get('app_path').DIRECTORY_SEPARATOR.'common'.DIRECTORY_SEPARATOR.'common.php';
