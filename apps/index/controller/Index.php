@@ -30,6 +30,7 @@ class Index extends Common {
 		dump('11');
 		dump(config('middleware.default_namespace'));
 		dump(ihuyi_sms('13232323232', 'shushushushsu'));
+		dump(get_protocol());
 	}
 
 
