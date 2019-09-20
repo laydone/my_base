@@ -8,13 +8,15 @@
 // +----------------------------------------------------------------------
 // | Author: 流年 <liu21st@gmail.com>
 // +----------------------------------------------------------------------
-// 应用公共文件
+// 应用全局公共文件
 use think\facade\Env;
 
-/* 加载公共配置 */
-$common_function_file = Env::get('app_path') . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR . 'common.php';
-if (file_exists($common_function_file)) {
-	include_once $common_function_file;
+/* 加载应用公共模块function文件 */
+if (!defined('COMMON_FUNCTION_FILE')) { /* 定义公共应用文件 */
+	define('COMMON_FUNCTION_FILE', Env::get('app_path') . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR . 'common.php');
+}
+if (file_exists(COMMON_FUNCTION_FILE)) {
+	include_once COMMON_FUNCTION_FILE;
 } else {
-	echo '文件：'.$common_function_file.' 不存在';
+	echo '文件：' . COMMON_FUNCTION_FILE . ' 不存在';
 }
