@@ -41,19 +41,21 @@ function ihuyi_sms($mobile, $content) {
         'mobile'   => $mobile,
         'content'  => $content,
     ];
+    $status = $values = null;
     $full_url = config('sms.ihuyi.url') . '?' . http_build_query($params);
-    $string = curl_get($full_url);
-    $xml = xml_parser_create();
-    xml_parse_into_struct($xml, $string, $values);
-    xml_parser_free($xml);
-    $status = $values[1]['value'];
+    try {
+        $string = curl_get($full_url);
+        $xml = xml_parser_create();
+        xml_parse_into_struct($xml, $string, $values);
+        xml_parser_free($xml);
+        $status = $values[1]['value'];
+    } catch (\Exception $e) {
+    }
     if ($status != 2) {
         return $values[3]['value'];
-    } else {
-        return $status;
     }
 
-    return $full_url;
+    return $status;
 }
 
 /**
@@ -69,7 +71,7 @@ function ihuyi_sms($mobile, $content) {
  * @date   2019/9/20 0020
  */
 function curl_get($url, $data = [], $ssl = false) {
-    $url = (strpos($url) !== false) ? ($url . '&') : ($url . '?');
+    $url = (strpos($url, '?') !== false) ? ($url . '&') : ($url . '?');
     $ext_params = '';
     if (!empty($data)) {
         $ext_params = is_string($data) ? $data : http_build_query($data);

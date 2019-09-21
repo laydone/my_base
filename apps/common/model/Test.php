@@ -5,14 +5,20 @@
  * +----------------------------------------------------------------------
  * | Author: lidong <947714443@qq.com>
  * +----------------------------------------------------------------------
- * | Date 2019/9/20 0020
+ * | Date 2019/9/21 0021
  * +----------------------------------------------------------------------
- * | File Describe:手机短信相关配置
+ * | File Describe:
  */
-return [
-    'ihuyi' => [ /* 互亿无线短信*/
-                 'account' => '', /* 账号 */
-                 'pwd'     => md5(''), /* 密码 */
-                 'url'     => 'http://106.ihuyi.cn/webservice/sms.php',/* 短信接口URL */
-    ],
-];
+namespace app\common\model;
+
+/**
+ * Describe:
+ * Class TestModel
+ *
+ * @package app\common\model
+ * @author  lidong<947714443@qq.com>
+ * @date    2019/9/21 0021
+ */
+class Test extends Mybase {
+
+}
