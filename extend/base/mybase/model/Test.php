@@ -5,19 +5,19 @@
  * +----------------------------------------------------------------------
  * | Author: lidong <947714443@qq.com>
  * +----------------------------------------------------------------------
- * | Date 2019/9/21 0021
+ * | Date 2019/9/22 0022
  * +----------------------------------------------------------------------
  * | File Describe:
  */
-namespace app\common\model;
+namespace base\mybase\model;
 
 /**
  * Describe:
- * Class TestModel
+ * Class Test
  *
- * @package app\common\model
+ * @package base\mybase\model
  * @author  lidong<947714443@qq.com>
- * @date    2019/9/21 0021
+ * @date    2019/9/22 0022
  */
 class Test extends Mybase {
 

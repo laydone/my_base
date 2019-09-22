@@ -12,11 +12,8 @@
 use think\facade\Env;
 
 /* 加载应用公共模块function文件 */
-if (!defined('COMMON_FUNCTION_FILE')) { /* 定义公共应用文件 */
-	define('COMMON_FUNCTION_FILE', Env::get('app_path') . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR . 'common.php');
-}
-if (file_exists(COMMON_FUNCTION_FILE)) {
-	include_once COMMON_FUNCTION_FILE;
-} else {
-	echo '文件：' . COMMON_FUNCTION_FILE . ' 不存在';
-}
+if (!defined('COMMON_FUNCTION_FILE')) define('COMMON_FUNCTION_FILE', Env::get('app_path') . DIRECTORY_SEPARATOR . 'common' . DIRECTORY_SEPARATOR . 'common.php');/* 定义公共应用文件位置 */
+if (file_exists(COMMON_FUNCTION_FILE)) include_once COMMON_FUNCTION_FILE;
+/* 加载扩展库function文件*/
+if (!defined('EXTEND_FUNCTION_FILE')) define('EXTEND_FUNCTION_FILE', Env::get('extend_path') . DIRECTORY_SEPARATOR . 'base' . DIRECTORY_SEPARATOR . 'mybase' . DIRECTORY_SEPARATOR . 'common.php');/* 定义扩展库应用文件位置 */
+if (file_exists(EXTEND_FUNCTION_FILE)) include_once EXTEND_FUNCTION_FILE;
