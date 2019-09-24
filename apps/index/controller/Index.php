@@ -43,4 +43,8 @@ class Index extends Mybase {
     }
 
 
+    public function fetch_test(){
+        return $this->fetch();
+    }
+
 }
