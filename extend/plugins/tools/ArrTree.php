@@ -97,7 +97,7 @@ class ArrTree {
 
 
     /**
-     * Describe:判断是否为非空数组[数组为空或者非数组都会返回false,非空数组返回true]
+     * Describe:判断是否为非空数组[数组为空或者非数组都会返回true,非空数组返回false]
      *
      * @param array $arr 需要判断的变量
      *
@@ -106,9 +106,9 @@ class ArrTree {
      * @date   2019/10/16 0016
      */
     static public function arr_empty($arr) {
-        if (is_array($arr) && !empty($arr)) return true;
+        if (is_array($arr) && !empty($arr)) return false;
 
-        return false;
+        return true;
     }
 
 

@@ -31,6 +31,53 @@ class Mybase extends Controller {
      */
     protected $logic;
 
+    /**
+     * Describe:每页显示条数
+     *
+     * @var int
+     */
+    protected $limit = 15;
+
+    /**
+     * 是否允许修改
+     */
+    protected $is_allow_edit = true;
+
+    /**
+     * 是否允许添加
+     *
+     * @var string
+     */
+    protected $is_allow_add = true;
+
+    /**
+     * 是否允许删除(标记删除)
+     *
+     * @var string
+     */
+    protected $is_allow_del = true;
+
+    /**
+     * 是否允许启用
+     *
+     * @var string
+     */
+    protected $is_allow_enable = true;
+
+    /**
+     * 是否允许禁用
+     *
+     * @var string
+     */
+    protected $is_allow_disable = true;
+
+    /**
+     * 是否允许删除(真实删除)
+     *
+     * @var string
+     */
+    protected $is_allow_delete = false;
+
 
     /**
      * Describe:初始化方法
@@ -44,8 +91,51 @@ class Mybase extends Controller {
     }
 
 
+    /**
+     * Describe:首页/列表页默认展示
+     *
+     * @return mixed
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/16 0016
+     */
     public function index() {
         return $this->fetch();
+    }
+
+
+    /**
+     * Describe:添加页默认展示
+     *
+     * @return mixed
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/16 0016
+     */
+    public function add() {
+        return $this->fetch();
+    }
+
+
+    /**
+     * Describe:编辑页默认展示
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/16 0016
+     */
+    public function edit() {
+        return $this->fetch();
+    }
+
+
+    /**
+     * Describe:禁用
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/16 0016
+     */
+    public function disable() {
+        if (!$this->request->isPost()) { /*TODO:错误提示*/
+        }
+        /*TODO:数据更新操作*/
     }
 
 

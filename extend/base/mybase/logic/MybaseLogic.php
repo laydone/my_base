@@ -13,6 +13,7 @@ namespace base\mybase\logic;
 
 use base\mybase\model\Mybase as MyModel;
 use base\mybase\validate\Mybase as MyValidate;
+use plugins\tools\ArrTree;
 
 /**
  * Describe:
@@ -72,7 +73,14 @@ class MybaseLogic {
 
 
     public function update($data) {
-0
+        if (ArrTree::arr_empty($data)) { /*验证数据合法性*/
+            $this->error = '';
+
+            return false;
+        }
+        if ($this->model->fieldExists('create_time')) {
+
+        }
     }
 
 

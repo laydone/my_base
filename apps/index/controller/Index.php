@@ -33,18 +33,27 @@ class Index extends Mybase {
         // dump(ihuyi_sms('13232323232', 'shushushushsu'));
         dump(get_protocol());
         dump(Env::get('extend_path'));
+        $res = explode('_', 'update_time_text');
+        dump($res);
+        $res2 = array_pop($res);
+        dump($res2);
+        dump($res);
+        dump(implode('_', $res));
     }
 
 
     public function model_test() {
         $Model = new Test();
-        $res = $Model->get(1);
+        // $res = $Model->get(1);
+        dump($Model::NO_DEL_DATA);
+        $res = $Model->setDataType($Model::ALL_DATA)->select();
         dump($res);
     }
 
 
-    public function fetch_test(){
+    public function fetch_test() {
         return $this->fetch();
     }
+
 
 }
