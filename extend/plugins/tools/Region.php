@@ -9,7 +9,7 @@
  * +----------------------------------------------------------------------
  * | File Describe:
  */
-namespace plugins;
+namespace plugins\tools;
 
 /**
  * Describe:

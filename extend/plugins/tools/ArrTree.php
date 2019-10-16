@@ -1,5 +1,5 @@
 <?php
-namespace plugins;
+namespace plugins\tools;
 
 /**
  * +----------------------------------------------------------------------
@@ -93,6 +93,22 @@ class ArrTree {
         }
 
         return $new_arr;
+    }
+
+
+    /**
+     * Describe:判断是否为非空数组[数组为空或者非数组都会返回false,非空数组返回true]
+     *
+     * @param array $arr 需要判断的变量
+     *
+     * @return bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/16 0016
+     */
+    static public function arr_empty($arr) {
+        if (is_array($arr) && !empty($arr)) return true;
+
+        return false;
     }
 
 
