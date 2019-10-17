@@ -58,7 +58,7 @@ class Debug
 
     /**
      * 记录时间（微秒）和内存使用情况
-     * @access public
+     * @access common
      * @param  string    $name 标记位置
      * @param  mixed     $value 标记值 留空则取当前 time 表示仅记录时间 否则同时记录时间和内存
      * @return void
@@ -76,7 +76,7 @@ class Debug
 
     /**
      * 统计某个区间的时间（微秒）使用情况
-     * @access public
+     * @access common
      * @param  string            $start 开始标签
      * @param  string            $end 结束标签
      * @param  integer|string    $dec 小数位
@@ -93,7 +93,7 @@ class Debug
 
     /**
      * 统计从开始到统计时的时间（微秒）使用情况
-     * @access public
+     * @access common
      * @param  integer|string $dec 小数位
      * @return integer
      */
@@ -104,7 +104,7 @@ class Debug
 
     /**
      * 获取当前访问的吞吐率情况
-     * @access public
+     * @access common
      * @return string
      */
     public function getThroughputRate()
@@ -114,7 +114,7 @@ class Debug
 
     /**
      * 记录区间的内存使用情况
-     * @access public
+     * @access common
      * @param  string            $start 开始标签
      * @param  string            $end 结束标签
      * @param  integer|string    $dec 小数位
@@ -140,7 +140,7 @@ class Debug
 
     /**
      * 统计从开始到统计时的内存使用情况
-     * @access public
+     * @access common
      * @param  integer|string $dec 小数位
      * @return string
      */
@@ -160,7 +160,7 @@ class Debug
 
     /**
      * 统计区间的内存峰值情况
-     * @access public
+     * @access common
      * @param  string            $start 开始标签
      * @param  string            $end 结束标签
      * @param  integer|string    $dec 小数位
@@ -186,7 +186,7 @@ class Debug
 
     /**
      * 获取文件加载信息
-     * @access public
+     * @access common
      * @param  bool  $detail 是否显示详细
      * @return integer|array
      */
@@ -208,7 +208,7 @@ class Debug
 
     /**
      * 浏览器友好的变量输出
-     * @access public
+     * @access common
      * @param  mixed         $var 变量
      * @param  boolean       $echo 是否输出 默认为true 如果为false 则返回输出字符串
      * @param  string        $label 标签 默认为空

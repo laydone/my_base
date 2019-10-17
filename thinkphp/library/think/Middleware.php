@@ -41,7 +41,7 @@ class Middleware
 
     /**
      * 导入中间件
-     * @access public
+     * @access common
      * @param  array  $middlewares
      * @param  string $type  中间件类型
      */
@@ -54,7 +54,7 @@ class Middleware
 
     /**
      * 注册中间件
-     * @access public
+     * @access common
      * @param  mixed  $middleware
      * @param  string $type  中间件类型
      */
@@ -73,7 +73,7 @@ class Middleware
 
     /**
      * 注册控制器中间件
-     * @access public
+     * @access common
      * @param  mixed  $middleware
      */
     public function controller($middleware)
@@ -83,7 +83,7 @@ class Middleware
 
     /**
      * 移除中间件
-     * @access public
+     * @access common
      * @param  mixed  $middleware
      * @param  string $type  中间件类型
      */
@@ -102,7 +102,7 @@ class Middleware
 
     /**
      * 获取注册的中间件
-     * @access public
+     * @access common
      * @param  string $type  中间件类型
      */
     public function all($type = 'route')
@@ -112,7 +112,7 @@ class Middleware
 
     /**
      * 清除中间件
-     * @access public
+     * @access common
      */
     public function clear()
     {
@@ -121,7 +121,7 @@ class Middleware
 
     /**
      * 中间件调度
-     * @access public
+     * @access common
      * @param  Request  $request
      * @param  string   $type  中间件类型
      */

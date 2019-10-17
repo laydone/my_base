@@ -50,7 +50,7 @@ class Download extends Response
             $size     = filesize($data);
         }
 
-        $this->header['Pragma']                    = 'public';
+        $this->header['Pragma']                    = 'common';
         $this->header['Content-Type']              = $mimeType ?: 'application/octet-stream';
         $this->header['Cache-control']             = 'max-age=' . $this->expire;
         $this->header['Content-Disposition']       = $this->openinBrowser ? 'inline' : 'attachment; filename="' . $name . '"';
@@ -66,7 +66,7 @@ class Download extends Response
 
     /**
      * 设置是否为内容 必须配合mimeType方法使用
-     * @access public
+     * @access common
      * @param  bool $content
      * @return $this
      */
@@ -78,7 +78,7 @@ class Download extends Response
 
     /**
      * 设置有效期
-     * @access public
+     * @access common
      * @param  integer $expire 有效期
      * @return $this
      */
@@ -90,7 +90,7 @@ class Download extends Response
 
     /**
      * 设置文件类型
-     * @access public
+     * @access common
      * @param  string $filename 文件名
      * @return $this
      */
@@ -102,7 +102,7 @@ class Download extends Response
 
     /**
      * 获取文件类型信息
-     * @access public
+     * @access common
      * @param  string $filename 文件名
      * @return string
      */
@@ -119,7 +119,7 @@ class Download extends Response
 
     /**
      * 设置下载文件的显示名称
-     * @access public
+     * @access common
      * @param  string $filename 文件名
      * @param  bool   $extension 后缀自动识别
      * @return $this
@@ -137,7 +137,7 @@ class Download extends Response
 
     /**
      * 设置是否在浏览器中显示文件
-     * @access public
+     * @access common
      * @param  bool  $openinBrowser 是否在浏览器中显示文件
      * @return $this
      */

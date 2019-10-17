@@ -153,7 +153,7 @@ class Route
 
     /**
      * 配置
-     * @access public
+     * @access common
      * @param  array $config
      * @return void
      */
@@ -176,7 +176,7 @@ class Route
 
     /**
      * 设置路由的请求对象实例
-     * @access public
+     * @access common
      * @param  Request     $request   请求对象实例
      * @return void
      */
@@ -187,7 +187,7 @@ class Route
 
     /**
      * 设置路由域名及分组（包括资源路由）是否延迟解析
-     * @access public
+     * @access common
      * @param  bool     $lazy   路由是否延迟解析
      * @return $this
      */
@@ -199,7 +199,7 @@ class Route
 
     /**
      * 设置路由为测试模式
-     * @access public
+     * @access common
      * @param  bool     $test   路由是否测试模式
      * @return void
      */
@@ -210,7 +210,7 @@ class Route
 
     /**
      * 检查路由是否为测试模式
-     * @access public
+     * @access common
      * @return bool
      */
     public function isTest()
@@ -220,7 +220,7 @@ class Route
 
     /**
      * 设置路由域名及分组（包括资源路由）是否合并解析
-     * @access public
+     * @access common
      * @param  bool     $merge   路由是否合并解析
      * @return $this
      */
@@ -234,7 +234,7 @@ class Route
 
     /**
      * 设置路由自动解析是否搜索多级控制器
-     * @access public
+     * @access common
      * @param  bool     $auto   是否自动搜索多级控制器
      * @return $this
      */
@@ -265,7 +265,7 @@ class Route
 
     /**
      * 设置当前域名
-     * @access public
+     * @access common
      * @param  RuleGroup    $group 域名
      * @return void
      */
@@ -276,7 +276,7 @@ class Route
 
     /**
      * 获取当前分组
-     * @access public
+     * @access common
      * @return RuleGroup
      */
     public function getGroup()
@@ -286,7 +286,7 @@ class Route
 
     /**
      * 注册变量规则
-     * @access public
+     * @access common
      * @param  string|array  $name 变量名
      * @param  string        $rule 变量规则
      * @return $this
@@ -300,7 +300,7 @@ class Route
 
     /**
      * 注册路由参数
-     * @access public
+     * @access common
      * @param  string|array  $name  参数名
      * @param  mixed         $value 值
      * @return $this
@@ -314,7 +314,7 @@ class Route
 
     /**
      * 注册域名路由
-     * @access public
+     * @access common
      * @param  string|array  $name 子域名
      * @param  mixed         $rule 路由规则
      * @param  array         $option 路由参数
@@ -358,7 +358,7 @@ class Route
 
     /**
      * 获取域名
-     * @access public
+     * @access common
      * @return array
      */
     public function getDomains()
@@ -368,7 +368,7 @@ class Route
 
     /**
      * 设置路由绑定
-     * @access public
+     * @access common
      * @param  string     $bind 绑定信息
      * @param  string     $domain 域名
      * @return $this
@@ -384,7 +384,7 @@ class Route
 
     /**
      * 读取路由绑定
-     * @access public
+     * @access common
      * @param  string    $domain 域名
      * @return string|null
      */
@@ -419,7 +419,7 @@ class Route
 
     /**
      * 读取路由标识
-     * @access public
+     * @access common
      * @param  string    $name 路由标识
      * @param  string    $domain 域名
      * @return mixed
@@ -431,7 +431,7 @@ class Route
 
     /**
      * 读取路由
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  string    $domain 域名
      * @return array
@@ -447,7 +447,7 @@ class Route
 
     /**
      * 读取路由
-     * @access public
+     * @access common
      * @param  string    $domain 域名
      * @return array
      */
@@ -458,7 +458,7 @@ class Route
 
     /**
      * 批量导入路由标识
-     * @access public
+     * @access common
      * @param  array    $name 路由标识
      * @return $this
      */
@@ -470,7 +470,7 @@ class Route
 
     /**
      * 导入配置文件的路由规则
-     * @access public
+     * @access common
      * @param  array     $rules 路由规则
      * @param  string    $type  请求类型
      * @return void
@@ -530,7 +530,7 @@ class Route
 
     /**
      * 注册路由规则
-     * @access public
+     * @access common
      * @param  string    $rule       路由规则
      * @param  mixed     $route      路由地址
      * @param  string    $method     请求类型
@@ -545,7 +545,7 @@ class Route
 
     /**
      * 设置跨域有效路由规则
-     * @access public
+     * @access common
      * @param  Rule      $rule      路由规则
      * @param  string    $method    请求类型
      * @return $this
@@ -563,7 +563,7 @@ class Route
 
     /**
      * 批量注册路由规则
-     * @access public
+     * @access common
      * @param  array     $rules      路由规则
      * @param  string    $method     请求类型
      * @param  array     $option     路由参数
@@ -577,7 +577,7 @@ class Route
 
     /**
      * 注册路由分组
-     * @access public
+     * @access common
      * @param  string|array      $name       分组名称或者参数
      * @param  array|\Closure    $route      分组路由
      * @param  array             $option     路由参数
@@ -598,7 +598,7 @@ class Route
 
     /**
      * 注册路由
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  mixed     $route 路由地址
      * @param  array     $option 路由参数
@@ -612,7 +612,7 @@ class Route
 
     /**
      * 注册GET路由
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  mixed     $route 路由地址
      * @param  array     $option 路由参数
@@ -626,7 +626,7 @@ class Route
 
     /**
      * 注册POST路由
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  mixed     $route 路由地址
      * @param  array     $option 路由参数
@@ -640,7 +640,7 @@ class Route
 
     /**
      * 注册PUT路由
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  mixed     $route 路由地址
      * @param  array     $option 路由参数
@@ -654,7 +654,7 @@ class Route
 
     /**
      * 注册DELETE路由
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  mixed     $route 路由地址
      * @param  array     $option 路由参数
@@ -668,7 +668,7 @@ class Route
 
     /**
      * 注册PATCH路由
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  mixed     $route 路由地址
      * @param  array     $option 路由参数
@@ -682,7 +682,7 @@ class Route
 
     /**
      * 注册资源路由
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  string    $route 路由地址
      * @param  array     $option 路由参数
@@ -697,7 +697,7 @@ class Route
 
     /**
      * 注册控制器路由 操作方法对应不同的请求前缀
-     * @access public
+     * @access common
      * @param  string    $rule 路由规则
      * @param  string    $route 路由地址
      * @param  array     $option 路由参数
@@ -717,7 +717,7 @@ class Route
 
     /**
      * 注册视图路由
-     * @access public
+     * @access common
      * @param  string|array $rule 路由规则
      * @param  string       $template 路由模板地址
      * @param  array        $vars 模板变量
@@ -732,7 +732,7 @@ class Route
 
     /**
      * 注册重定向路由
-     * @access public
+     * @access common
      * @param  string|array $rule 路由规则
      * @param  string       $route 路由地址
      * @param  array        $status 状态码
@@ -747,7 +747,7 @@ class Route
 
     /**
      * 注册别名路由
-     * @access public
+     * @access common
      * @param  string  $rule 路由别名
      * @param  string  $route 路由地址
      * @param  array   $option 路由参数
@@ -764,7 +764,7 @@ class Route
 
     /**
      * 获取别名路由定义
-     * @access public
+     * @access common
      * @param  string    $name 路由别名
      * @return string|array|null
      */
@@ -779,7 +779,7 @@ class Route
 
     /**
      * 设置不同请求类型下面的方法前缀
-     * @access public
+     * @access common
      * @param  string|array  $method 请求类型
      * @param  string        $prefix 类型前缀
      * @return $this
@@ -797,7 +797,7 @@ class Route
 
     /**
      * 获取请求类型的方法前缀
-     * @access public
+     * @access common
      * @param  string    $method 请求类型
      * @param  string    $prefix 类型前缀
      * @return string|null
@@ -811,7 +811,7 @@ class Route
 
     /**
      * rest方法定义和修改
-     * @access public
+     * @access common
      * @param  string        $name 方法名称
      * @param  array|bool    $resource 资源
      * @return $this
@@ -829,7 +829,7 @@ class Route
 
     /**
      * 获取rest方法定义的参数
-     * @access public
+     * @access common
      * @param  string        $name 方法名称
      * @return array|null
      */
@@ -844,7 +844,7 @@ class Route
 
     /**
      * 注册未匹配路由规则后的处理
-     * @access public
+     * @access common
      * @param  string    $route 路由地址
      * @param  string    $method 请求类型
      * @param  array     $option 路由参数
@@ -857,7 +857,7 @@ class Route
 
     /**
      * 注册一个自动解析的URL路由
-     * @access public
+     * @access common
      * @param  string    $route 路由地址
      * @return RuleItem
      */
@@ -868,7 +868,7 @@ class Route
 
     /**
      * 检测URL路由
-     * @access public
+     * @access common
      * @param  string    $url URL地址
      * @param  bool      $must 是否强制路由
      * @return Dispatch
@@ -959,7 +959,7 @@ class Route
 
     /**
      * 清空路由规则
-     * @access public
+     * @access common
      * @return void
      */
     public function clear()
@@ -970,7 +970,7 @@ class Route
 
     /**
      * 设置全局的路由分组参数
-     * @access public
+     * @access common
      * @param  string    $method     方法名
      * @param  array     $args       调用参数
      * @return RuleGroup

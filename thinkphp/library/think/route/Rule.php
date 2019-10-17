@@ -99,7 +99,7 @@ abstract class Rule
 
     /**
      * 获取Name
-     * @access public
+     * @access common
      * @return string
      */
     public function getName()
@@ -109,7 +109,7 @@ abstract class Rule
 
     /**
      * 获取当前路由规则
-     * @access public
+     * @access common
      * @return string
      */
     public function getRule()
@@ -119,7 +119,7 @@ abstract class Rule
 
     /**
      * 获取当前路由地址
-     * @access public
+     * @access common
      * @return mixed
      */
     public function getRoute()
@@ -129,7 +129,7 @@ abstract class Rule
 
     /**
      * 获取当前路由的请求类型
-     * @access public
+     * @access common
      * @return string
      */
     public function getMethod()
@@ -139,7 +139,7 @@ abstract class Rule
 
     /**
      * 获取当前路由的变量
-     * @access public
+     * @access common
      * @return array
      */
     public function getVars()
@@ -149,7 +149,7 @@ abstract class Rule
 
     /**
      * 获取路由对象
-     * @access public
+     * @access common
      * @return Route
      */
     public function getRouter()
@@ -159,7 +159,7 @@ abstract class Rule
 
     /**
      * 路由是否有后置操作
-     * @access public
+     * @access common
      * @return bool
      */
     public function doAfter()
@@ -169,7 +169,7 @@ abstract class Rule
 
     /**
      * 获取路由分组
-     * @access public
+     * @access common
      * @return RuleGroup|null
      */
     public function getParent()
@@ -179,7 +179,7 @@ abstract class Rule
 
     /**
      * 获取路由所在域名
-     * @access public
+     * @access common
      * @return string
      */
     public function getDomain()
@@ -189,7 +189,7 @@ abstract class Rule
 
     /**
      * 获取变量规则定义
-     * @access public
+     * @access common
      * @param  string  $name 变量名
      * @return mixed
      */
@@ -204,7 +204,7 @@ abstract class Rule
 
     /**
      * 获取路由参数
-     * @access public
+     * @access common
      * @param  string  $name 变量名
      * @return mixed
      */
@@ -215,7 +215,7 @@ abstract class Rule
 
     /**
      * 获取路由参数定义
-     * @access public
+     * @access common
      * @param  string  $name 参数名
      * @return mixed
      */
@@ -230,7 +230,7 @@ abstract class Rule
 
     /**
      * 注册路由参数
-     * @access public
+     * @access common
      * @param  string|array  $name  参数名
      * @param  mixed         $value 值
      * @return $this
@@ -248,7 +248,7 @@ abstract class Rule
 
     /**
      * 注册变量规则
-     * @access public
+     * @access common
      * @param  string|array  $name 变量名
      * @param  string        $rule 变量规则
      * @return $this
@@ -266,7 +266,7 @@ abstract class Rule
 
     /**
      * 设置标识
-     * @access public
+     * @access common
      * @param  string  $name 标识名
      * @return $this
      */
@@ -279,7 +279,7 @@ abstract class Rule
 
     /**
      * 设置变量
-     * @access public
+     * @access common
      * @param  array  $vars 变量
      * @return $this
      */
@@ -292,7 +292,7 @@ abstract class Rule
 
     /**
      * 设置路由请求类型
-     * @access public
+     * @access common
      * @param  string     $method
      * @return $this
      */
@@ -303,7 +303,7 @@ abstract class Rule
 
     /**
      * 设置路由前置行为
-     * @access public
+     * @access common
      * @param  array|\Closure    $before
      * @return $this
      */
@@ -314,7 +314,7 @@ abstract class Rule
 
     /**
      * 设置路由后置行为
-     * @access public
+     * @access common
      * @param  array|\Closure     $after
      * @return $this
      */
@@ -325,7 +325,7 @@ abstract class Rule
 
     /**
      * 检查后缀
-     * @access public
+     * @access common
      * @param  string     $ext
      * @return $this
      */
@@ -336,7 +336,7 @@ abstract class Rule
 
     /**
      * 检查禁止后缀
-     * @access public
+     * @access common
      * @param  string     $ext
      * @return $this
      */
@@ -347,7 +347,7 @@ abstract class Rule
 
     /**
      * 检查域名
-     * @access public
+     * @access common
      * @param  string     $domain
      * @return $this
      */
@@ -358,7 +358,7 @@ abstract class Rule
 
     /**
      * 设置参数过滤检查
-     * @access public
+     * @access common
      * @param  string|array     $name
      * @param  mixed            $value
      * @return $this
@@ -376,7 +376,7 @@ abstract class Rule
 
     /**
      * 绑定模型
-     * @access public
+     * @access common
      * @param  array|string      $var  路由变量名 多个使用 & 分割
      * @param  string|\Closure   $model 绑定模型类
      * @param  bool              $exception 是否抛出异常
@@ -399,7 +399,7 @@ abstract class Rule
 
     /**
      * 附加路由隐式参数
-     * @access public
+     * @access common
      * @param  array     $append
      * @return $this
      */
@@ -416,7 +416,7 @@ abstract class Rule
 
     /**
      * 绑定验证
-     * @access public
+     * @access common
      * @param  mixed    $validate 验证器类
      * @param  string   $scene 验证场景
      * @param  array    $message 验证提示
@@ -432,7 +432,7 @@ abstract class Rule
 
     /**
      * 绑定Response对象
-     * @access public
+     * @access common
      * @param  mixed     $response
      * @return $this
      */
@@ -444,7 +444,7 @@ abstract class Rule
 
     /**
      * 设置Response Header信息
-     * @access public
+     * @access common
      * @param  string|array $name  参数名
      * @param  string       $value 参数值
      * @return $this
@@ -462,7 +462,7 @@ abstract class Rule
 
     /**
      * 指定路由中间件
-     * @access public
+     * @access common
      * @param  string|array|\Closure    $middleware
      * @param  mixed                    $param
      * @return $this
@@ -482,7 +482,7 @@ abstract class Rule
 
     /**
      * 设置路由缓存
-     * @access public
+     * @access common
      * @param  array|string     $cache
      * @return $this
      */
@@ -493,7 +493,7 @@ abstract class Rule
 
     /**
      * 检查URL分隔符
-     * @access public
+     * @access common
      * @param  bool     $depr
      * @return $this
      */
@@ -504,7 +504,7 @@ abstract class Rule
 
     /**
      * 是否合并额外参数
-     * @access public
+     * @access common
      * @param  bool     $merge
      * @return $this
      */
@@ -515,7 +515,7 @@ abstract class Rule
 
     /**
      * 设置需要合并的路由参数
-     * @access public
+     * @access common
      * @param  array     $option
      * @return $this
      */
@@ -527,7 +527,7 @@ abstract class Rule
 
     /**
      * 检查是否为HTTPS请求
-     * @access public
+     * @access common
      * @param  bool     $https
      * @return $this
      */
@@ -538,7 +538,7 @@ abstract class Rule
 
     /**
      * 检查是否为AJAX请求
-     * @access public
+     * @access common
      * @param  bool     $ajax
      * @return $this
      */
@@ -549,7 +549,7 @@ abstract class Rule
 
     /**
      * 检查是否为PJAX请求
-     * @access public
+     * @access common
      * @param  bool     $pjax
      * @return $this
      */
@@ -560,7 +560,7 @@ abstract class Rule
 
     /**
      * 检查是否为手机访问
-     * @access public
+     * @access common
      * @param  bool     $mobile
      * @return $this
      */
@@ -571,7 +571,7 @@ abstract class Rule
 
     /**
      * 当前路由到一个模板地址 当使用数组的时候可以传入模板变量
-     * @access public
+     * @access common
      * @param  bool|array     $view
      * @return $this
      */
@@ -582,7 +582,7 @@ abstract class Rule
 
     /**
      * 当前路由为重定向
-     * @access public
+     * @access common
      * @param  bool   $redirect 是否为重定向
      * @return $this
      */
@@ -593,7 +593,7 @@ abstract class Rule
 
     /**
      * 设置路由完整匹配
-     * @access public
+     * @access common
      * @param  bool     $match
      * @return $this
      */
@@ -604,7 +604,7 @@ abstract class Rule
 
     /**
      * 是否去除URL最后的斜线
-     * @access public
+     * @access common
      * @param  bool     $remove
      * @return $this
      */
@@ -615,7 +615,7 @@ abstract class Rule
 
     /**
      * 设置是否允许跨域
-     * @access public
+     * @access common
      * @param  bool     $allow
      * @param  array    $header
      * @return $this
@@ -635,7 +635,7 @@ abstract class Rule
 
     /**
      * 检查OPTIONS请求
-     * @access public
+     * @access common
      * @param  Request     $request
      * @return Dispatch|void
      */
@@ -672,7 +672,7 @@ abstract class Rule
 
     /**
      * 设置路由规则全局有效
-     * @access public
+     * @access common
      * @return $this
      */
     public function crossDomainRule()
@@ -690,7 +690,7 @@ abstract class Rule
 
     /**
      * 合并分组参数
-     * @access public
+     * @access common
      * @return array
      */
     public function mergeGroupOptions()
@@ -713,7 +713,7 @@ abstract class Rule
 
     /**
      * 解析匹配到的规则路由
-     * @access public
+     * @access common
      * @param  Request   $request 请求对象
      * @param  string    $rule 路由规则
      * @param  string    $route 路由地址
@@ -953,7 +953,7 @@ abstract class Rule
 
     /**
      * 解析URL的pathinfo参数和变量
-     * @access public
+     * @access common
      * @param  string    $url URL地址
      * @return array
      */
@@ -1095,7 +1095,7 @@ abstract class Rule
 
     /**
      * 设置路由参数
-     * @access public
+     * @access common
      * @param  string    $method     方法名
      * @param  array     $args       调用参数
      * @return $this

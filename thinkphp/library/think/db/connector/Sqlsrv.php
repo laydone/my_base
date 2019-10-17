@@ -49,7 +49,7 @@ class Sqlsrv extends Connection
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access common
      * @param  string $tableName
      * @return array
      */
@@ -106,7 +106,7 @@ class Sqlsrv extends Connection
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access common
      * @param  string $dbName
      * @return array
      */
@@ -130,7 +130,7 @@ class Sqlsrv extends Connection
 
     /**
      * 得到某个列的数组
-     * @access public
+     * @access common
      * @param  Query     $query 查询对象
      * @param  string    $field 字段名 多个字段用逗号分隔
      * @param  string    $key   索引

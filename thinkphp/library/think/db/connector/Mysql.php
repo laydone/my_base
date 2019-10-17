@@ -71,7 +71,7 @@ class Mysql extends Connection
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access common
      * @param  string $tableName
      * @return array
      */
@@ -110,7 +110,7 @@ class Mysql extends Connection
 
     /**
      * 取得数据库的表信息
-     * @access public
+     * @access common
      * @param  string $dbName
      * @return array
      */
@@ -176,7 +176,7 @@ class Mysql extends Connection
 
     /**
      * 启动XA事务
-     * @access public
+     * @access common
      * @param  string $xid XA事务id
      * @return void
      */
@@ -192,7 +192,7 @@ class Mysql extends Connection
 
     /**
      * 预编译XA事务
-     * @access public
+     * @access common
      * @param  string $xid XA事务id
      * @return void
      */
@@ -205,7 +205,7 @@ class Mysql extends Connection
 
     /**
      * 提交XA事务
-     * @access public
+     * @access common
      * @param  string $xid XA事务id
      * @return void
      */
@@ -217,7 +217,7 @@ class Mysql extends Connection
 
     /**
      * 回滚XA事务
-     * @access public
+     * @access common
      * @param  string $xid XA事务id
      * @return void
      */

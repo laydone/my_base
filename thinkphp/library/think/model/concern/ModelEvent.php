@@ -45,7 +45,7 @@ trait ModelEvent
 
     /**
      * 注册回调方法
-     * @access public
+     * @access common
      * @param  string   $event    事件名
      * @param  callable $callback 回调方法
      * @param  bool     $override 是否覆盖
@@ -64,7 +64,7 @@ trait ModelEvent
 
     /**
      * 清除回调方法
-     * @access public
+     * @access common
      * @return void
      */
     public static function flushEvent()

@@ -81,7 +81,7 @@ class Template
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  array $config
      */
     public function __construct(App $app, array $config = [])
@@ -111,7 +111,7 @@ class Template
 
     /**
      * 模板变量赋值
-     * @access public
+     * @access common
      * @param  mixed $name
      * @param  mixed $value
      * @return void
@@ -127,7 +127,7 @@ class Template
 
     /**
      * 模板引擎参数赋值
-     * @access public
+     * @access common
      * @param  mixed $name
      * @param  mixed $value
      */
@@ -138,7 +138,7 @@ class Template
 
     /**
      * 模板引擎配置项
-     * @access public
+     * @access common
      * @param  array|string $config
      * @return void|array
      */
@@ -153,7 +153,7 @@ class Template
 
     /**
      * 模板变量获取
-     * @access public
+     * @access common
      * @param  string $name 变量名
      * @return mixed
      */
@@ -179,7 +179,7 @@ class Template
 
     /**
      * 渲染模板文件
-     * @access public
+     * @access common
      * @param  string    $template 模板文件
      * @param  array     $vars 模板变量
      * @param  array     $config 模板参数
@@ -239,7 +239,7 @@ class Template
 
     /**
      * 渲染模板内容
-     * @access public
+     * @access common
      * @param  string    $content 模板内容
      * @param  array     $vars 模板变量
      * @param  array     $config 模板参数
@@ -268,7 +268,7 @@ class Template
 
     /**
      * 设置布局
-     * @access public
+     * @access common
      * @param  mixed     $name 布局模板名称 false 则关闭布局
      * @param  string    $replace 布局模板内容替换标识
      * @return object
@@ -335,7 +335,7 @@ class Template
 
     /**
      * 检查编译缓存是否存在
-     * @access public
+     * @access common
      * @param  string $cacheId 缓存的id
      * @return boolean
      */
@@ -404,7 +404,7 @@ class Template
     /**
      * 模板解析入口
      * 支持普通标签和TagLib解析 支持自定义标签库
-     * @access public
+     * @access common
      * @param  string $content 要解析的模板内容
      * @return void
      */
@@ -755,7 +755,7 @@ class Template
 
     /**
      * TagLib库解析
-     * @access public
+     * @access common
      * @param  string   $tagLib 要解析的标签库
      * @param  string   $content 要解析的模板内容
      * @param  boolean  $hide 是否隐藏标签库前缀
@@ -778,7 +778,7 @@ class Template
 
     /**
      * 分析标签属性
-     * @access public
+     * @access common
      * @param  string   $str 属性字符串
      * @param  string   $name 不为空时返回指定的属性名
      * @return array
@@ -941,7 +941,7 @@ class Template
     /**
      * 模板变量解析,支持使用函数
      * 格式： {$varname|function1|function2=arg1,arg2}
-     * @access public
+     * @access common
      * @param  string $varStr 变量数据
      * @return void
      */
@@ -1007,7 +1007,7 @@ class Template
     /**
      * 对模板中使用了函数的变量进行解析
      * 格式 {$varname|function1|function2=arg1,arg2}
-     * @access public
+     * @access common
      * @param  string    $varStr     变量字符串
      * @param  bool      $autoescape 自动转义
      * @return void
@@ -1101,7 +1101,7 @@ class Template
     /**
      * 特殊模板变量解析
      * 格式 以 $Think. 打头的变量属于特殊模板变量
-     * @access public
+     * @access common
      * @param  array $vars 变量数组
      * @return string
      */

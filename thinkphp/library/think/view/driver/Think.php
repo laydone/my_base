@@ -52,7 +52,7 @@ class Think
 
     /**
      * 检测是否存在模板文件
-     * @access public
+     * @access common
      * @param  string $template 模板文件或者模板规则
      * @return bool
      */
@@ -68,7 +68,7 @@ class Think
 
     /**
      * 渲染模板文件
-     * @access public
+     * @access common
      * @param  string    $template 模板文件
      * @param  array     $data 模板变量
      * @param  array     $config 模板参数
@@ -95,7 +95,7 @@ class Think
 
     /**
      * 渲染模板内容
-     * @access public
+     * @access common
      * @param  string    $template 模板内容
      * @param  array     $data 模板变量
      * @param  array     $config 模板参数

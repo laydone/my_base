@@ -34,7 +34,7 @@ class Console
 
     /**
      * 调试输出接口
-     * @access public
+     * @access common
      * @param  Response  $response Response对象
      * @param  array     $log 日志信息
      * @return bool

@@ -26,7 +26,7 @@ class RunServer extends Command
             ->addOption('port', 'p', Option::VALUE_OPTIONAL,
                 'The port to server the application on', 8000)
             ->addOption('root', 'r', Option::VALUE_OPTIONAL,
-                'The document root of the application', App::getRootPath() . 'public')
+                'The document root of the application', App::getRootPath() . 'common')
             ->setDescription('PHP Built-in Server for ThinkPHP');
     }
 

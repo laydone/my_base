@@ -17,7 +17,7 @@ class AliasRule extends Domain
 {
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  Route             $router 路由实例
      * @param  RuleGroup         $parent 上级对象
      * @param  string            $name   路由别名
@@ -35,7 +35,7 @@ class AliasRule extends Domain
 
     /**
      * 检测路由别名
-     * @access public
+     * @access common
      * @param  Request      $request  请求对象
      * @param  string       $url      访问地址
      * @param  bool         $completeMatch   路由是否完全匹配
@@ -96,7 +96,7 @@ class AliasRule extends Domain
 
     /**
      * 设置允许的操作方法
-     * @access public
+     * @access common
      * @param  array      $action  操作方法
      * @return $this
      */
@@ -107,7 +107,7 @@ class AliasRule extends Domain
 
     /**
      * 设置排除的操作方法
-     * @access public
+     * @access common
      * @param  array      $action  操作方法
      * @return $this
      */

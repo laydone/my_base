@@ -26,7 +26,7 @@ class Error
 
     /**
      * 注册异常处理
-     * @access public
+     * @access common
      * @return void
      */
     public static function register()
@@ -39,7 +39,7 @@ class Error
 
     /**
      * Exception Handler
-     * @access public
+     * @access common
      * @param  \Exception|\Throwable $e
      */
     public static function appException($e)
@@ -59,7 +59,7 @@ class Error
 
     /**
      * Error Handler
-     * @access public
+     * @access common
      * @param  integer $errno   错误编号
      * @param  integer $errstr  详细错误信息
      * @param  string  $errfile 出错的文件
@@ -79,7 +79,7 @@ class Error
 
     /**
      * Shutdown Handler
-     * @access public
+     * @access common
      */
     public static function appShutdown()
     {
@@ -109,7 +109,7 @@ class Error
     /**
      * 设置异常处理类
      *
-     * @access public
+     * @access common
      * @param  mixed $handle
      * @return void
      */
@@ -121,7 +121,7 @@ class Error
     /**
      * Get an instance of the exception handler.
      *
-     * @access public
+     * @access common
      * @return Handle
      */
     public static function getExceptionHandler()

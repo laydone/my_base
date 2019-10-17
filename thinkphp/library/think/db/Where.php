@@ -41,7 +41,7 @@ class Where implements ArrayAccess
 
     /**
      * 设置是否添加括号
-     * @access public
+     * @access common
      * @param  bool $enclose
      * @return $this
      */
@@ -53,7 +53,7 @@ class Where implements ArrayAccess
 
     /**
      * 解析为Query对象可识别的查询条件数组
-     * @access public
+     * @access common
      * @return array
      */
     public function parse()
@@ -111,7 +111,7 @@ class Where implements ArrayAccess
 
     /**
      * 修改器 设置数据对象的值
-     * @access public
+     * @access common
      * @param  string $name  名称
      * @param  mixed  $value 值
      * @return void
@@ -123,7 +123,7 @@ class Where implements ArrayAccess
 
     /**
      * 获取器 获取数据对象的值
-     * @access public
+     * @access common
      * @param  string $name 名称
      * @return mixed
      */
@@ -134,7 +134,7 @@ class Where implements ArrayAccess
 
     /**
      * 检测数据对象的值
-     * @access public
+     * @access common
      * @param  string $name 名称
      * @return boolean
      */
@@ -145,7 +145,7 @@ class Where implements ArrayAccess
 
     /**
      * 销毁数据对象的值
-     * @access public
+     * @access common
      * @param  string $name 名称
      * @return void
      */

@@ -40,7 +40,7 @@ abstract class Relation
 
     /**
      * 获取关联的所属模型
-     * @access public
+     * @access common
      * @return Model
      */
     public function getParent()
@@ -50,7 +50,7 @@ abstract class Relation
 
     /**
      * 获取当前的关联模型类的实例
-     * @access public
+     * @access common
      * @return Model
      */
     public function getModel()
@@ -60,7 +60,7 @@ abstract class Relation
 
     /**
      * 获取当前的关联模型类的实例
-     * @access public
+     * @access common
      * @return Query
      */
     public function getQuery()
@@ -70,7 +70,7 @@ abstract class Relation
 
     /**
      * 设置当前关联为自关联
-     * @access public
+     * @access common
      * @param  bool $self 是否自关联
      * @return $this
      */
@@ -82,7 +82,7 @@ abstract class Relation
 
     /**
      * 当前关联是否为自关联
-     * @access public
+     * @access common
      * @return bool
      */
     public function isSelfRelation()
@@ -92,7 +92,7 @@ abstract class Relation
 
     /**
      * 封装关联数据集
-     * @access public
+     * @access common
      * @param  array $resultSet 数据集
      * @return mixed
      */
@@ -141,7 +141,7 @@ abstract class Relation
 
     /**
      * 更新数据
-     * @access public
+     * @access common
      * @param  array $data 更新数据
      * @return integer|string
      */
@@ -152,7 +152,7 @@ abstract class Relation
 
     /**
      * 删除记录
-     * @access public
+     * @access common
      * @param  mixed $data 表达式 true 表示强制删除
      * @return int
      * @throws Exception

@@ -143,7 +143,7 @@ abstract class Connection
 
     /**
      * 架构函数 读取数据库配置信息
-     * @access public
+     * @access common
      * @param  array $config 数据库配置数组
      */
     public function __construct(array $config = [])
@@ -171,7 +171,7 @@ abstract class Connection
 
     /**
      * 取得数据库连接类实例
-     * @access public
+     * @access common
      * @param  mixed         $config 连接配置
      * @param  bool|string   $name 连接标识 true 强制重新连接
      * @return Connection
@@ -203,7 +203,7 @@ abstract class Connection
 
     /**
      * 获取当前连接器类对应的Builder类
-     * @access public
+     * @access common
      * @return string
      */
     public function getBuilderClass()
@@ -230,7 +230,7 @@ abstract class Connection
 
     /**
      * 获取当前的builder实例对象
-     * @access public
+     * @access common
      * @return Builder
      */
     public function getBuilder()
@@ -248,7 +248,7 @@ abstract class Connection
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access common
      * @param  string $tableName
      * @return array
      */
@@ -256,7 +256,7 @@ abstract class Connection
 
     /**
      * 取得数据库的表信息
-     * @access public
+     * @access common
      * @param string $dbName
      * @return array
      */
@@ -272,7 +272,7 @@ abstract class Connection
 
     /**
      * 对返数据表字段信息进行大小写转换出来
-     * @access public
+     * @access common
      * @param  array $info 字段信息
      * @return array
      */
@@ -296,7 +296,7 @@ abstract class Connection
 
     /**
      * 获取字段绑定类型
-     * @access public
+     * @access common
      * @param  string $type 字段类型
      * @return integer
      */
@@ -319,7 +319,7 @@ abstract class Connection
 
     /**
      * 将SQL语句中的__TABLE_NAME__字符串替换成带前缀的表名（小写）
-     * @access public
+     * @access common
      * @param  string $sql sql语句
      * @return string
      */
@@ -336,7 +336,7 @@ abstract class Connection
 
     /**
      * 获取数据表信息
-     * @access public
+     * @access common
      * @param  mixed  $tableName 数据表名 留空自动获取
      * @param  string $fetch     获取信息类型 包括 fields type bind pk
      * @return mixed
@@ -405,7 +405,7 @@ abstract class Connection
 
     /**
      * 获取数据表的主键
-     * @access public
+     * @access common
      * @param  string $tableName 数据表名
      * @return string|array
      */
@@ -416,7 +416,7 @@ abstract class Connection
 
     /**
      * 获取数据表字段信息
-     * @access public
+     * @access common
      * @param  string $tableName 数据表名
      * @return array
      */
@@ -427,7 +427,7 @@ abstract class Connection
 
     /**
      * 获取数据表字段类型
-     * @access public
+     * @access common
      * @param  string $tableName 数据表名
      * @param  string $field    字段名
      * @return array|string
@@ -445,7 +445,7 @@ abstract class Connection
 
     /**
      * 获取数据表绑定信息
-     * @access public
+     * @access common
      * @param  string $tableName 数据表名
      * @return array
      */
@@ -456,7 +456,7 @@ abstract class Connection
 
     /**
      * 获取数据库的配置参数
-     * @access public
+     * @access common
      * @param  string $config 配置名称
      * @return mixed
      */
@@ -467,7 +467,7 @@ abstract class Connection
 
     /**
      * 设置数据库的配置参数
-     * @access public
+     * @access common
      * @param  string|array      $config 配置名称
      * @param  mixed             $value 配置值
      * @return void
@@ -483,7 +483,7 @@ abstract class Connection
 
     /**
      * 连接数据库方法
-     * @access public
+     * @access common
      * @param  array         $config 连接参数
      * @param  integer       $linkNum 连接序号
      * @param  array|bool    $autoConnection 是否自动连接主数据库（用于分布式）
@@ -545,7 +545,7 @@ abstract class Connection
 
     /**
      * 释放查询结果
-     * @access public
+     * @access common
      */
     public function free()
     {
@@ -554,7 +554,7 @@ abstract class Connection
 
     /**
      * 获取PDO对象
-     * @access public
+     * @access common
      * @return \PDO|false
      */
     public function getPdo()
@@ -568,7 +568,7 @@ abstract class Connection
 
     /**
      * 执行查询 使用生成器返回数据
-     * @access public
+     * @access common
      * @param  string    $sql sql指令
      * @param  array     $bind 参数绑定
      * @param  bool      $master 是否在主服务器读操作
@@ -628,7 +628,7 @@ abstract class Connection
 
     /**
      * 执行查询 返回数据集
-     * @access public
+     * @access common
      * @param  string    $sql sql指令
      * @param  array     $bind 参数绑定
      * @param  bool      $master 是否在主服务器读操作
@@ -702,7 +702,7 @@ abstract class Connection
 
     /**
      * 执行语句
-     * @access public
+     * @access common
      * @param  string        $sql sql指令
      * @param  array         $bind 参数绑定
      * @param  Query         $query 查询对象
@@ -779,7 +779,7 @@ abstract class Connection
 
     /**
      * 查找单条记录
-     * @access public
+     * @access common
      * @param  Query  $query        查询对象
      * @return array|null|\PDOStatement|string
      * @throws DbException
@@ -861,7 +861,7 @@ abstract class Connection
 
     /**
      * 使用游标查询记录
-     * @access public
+     * @access common
      * @param  Query   $query        查询对象
      * @return \Generator
      */
@@ -884,7 +884,7 @@ abstract class Connection
 
     /**
      * 查找记录
-     * @access public
+     * @access common
      * @param  Query   $query        查询对象
      * @return array|\PDOStatement|string
      * @throws DbException
@@ -938,7 +938,7 @@ abstract class Connection
 
     /**
      * 插入记录
-     * @access public
+     * @access common
      * @param  Query   $query        查询对象
      * @param  boolean $replace      是否replace
      * @param  boolean $getLastInsID 返回自增主键
@@ -990,7 +990,7 @@ abstract class Connection
 
     /**
      * 批量插入记录
-     * @access public
+     * @access common
      * @param  Query     $query      查询对象
      * @param  mixed     $dataSet    数据集
      * @param  bool      $replace    是否replace
@@ -1051,7 +1051,7 @@ abstract class Connection
 
     /**
      * 通过Select方式插入记录
-     * @access public
+     * @access common
      * @param  Query     $query      查询对象
      * @param  string    $fields     要插入的数据表字段名
      * @param  string    $table      要插入的数据表名
@@ -1078,7 +1078,7 @@ abstract class Connection
 
     /**
      * 更新记录
-     * @access public
+     * @access common
      * @param  Query     $query  查询对象
      * @return integer|string
      * @throws Exception
@@ -1173,7 +1173,7 @@ abstract class Connection
 
     /**
      * 删除记录
-     * @access public
+     * @access common
      * @param  Query $query 查询对象
      * @return int
      * @throws Exception
@@ -1243,7 +1243,7 @@ abstract class Connection
 
     /**
      * 得到某个字段的值
-     * @access public
+     * @access common
      * @param  Query     $query 查询对象
      * @param  string    $field   字段名
      * @param  mixed     $default   默认值
@@ -1310,7 +1310,7 @@ abstract class Connection
 
     /**
      * 得到某个字段的值
-     * @access public
+     * @access common
      * @param  Query     $query     查询对象
      * @param  string    $aggregate 聚合方法
      * @param  mixed     $field     字段名
@@ -1329,7 +1329,7 @@ abstract class Connection
 
     /**
      * 得到某个列的数组
-     * @access public
+     * @access common
      * @param  Query     $query 查询对象
      * @param  string    $field 字段名 多个字段用逗号分隔
      * @param  string    $key   索引
@@ -1428,7 +1428,7 @@ abstract class Connection
 
     /**
      * 执行查询但只返回PDOStatement对象
-     * @access public
+     * @access common
      * @return \PDOStatement|string
      */
     public function pdo(Query $query)
@@ -1452,7 +1452,7 @@ abstract class Connection
 
     /**
      * 根据参数绑定组装最终的SQL语句 便于调试
-     * @access public
+     * @access common
      * @param  string    $sql 带参数绑定的sql语句
      * @param  array     $bind 参数绑定列表
      * @return string
@@ -1486,7 +1486,7 @@ abstract class Connection
      * 参数绑定
      * 支持 ['name'=>'value','id'=>123] 对应命名占位符
      * 或者 ['value',123] 对应问号占位符
-     * @access public
+     * @access common
      * @param  array $bind 要绑定的参数列表
      * @return void
      * @throws BindParamException
@@ -1523,7 +1523,7 @@ abstract class Connection
 
     /**
      * 存储过程的输入输出参数绑定
-     * @access public
+     * @access common
      * @param  array $bind 要绑定的参数列表
      * @return void
      * @throws BindParamException
@@ -1602,7 +1602,7 @@ abstract class Connection
 
     /**
      * 执行数据库事务
-     * @access public
+     * @access common
      * @param  callable $callback 数据操作方法回调
      * @return mixed
      * @throws PDOException
@@ -1632,7 +1632,7 @@ abstract class Connection
 
     /**
      * 启动XA事务
-     * @access public
+     * @access common
      * @param  string $xid XA事务id
      * @return void
      */
@@ -1641,7 +1641,7 @@ abstract class Connection
 
     /**
      * 预编译XA事务
-     * @access public
+     * @access common
      * @param  string $xid XA事务id
      * @return void
      */
@@ -1650,7 +1650,7 @@ abstract class Connection
 
     /**
      * 提交XA事务
-     * @access public
+     * @access common
      * @param  string $xid XA事务id
      * @return void
      */
@@ -1659,7 +1659,7 @@ abstract class Connection
 
     /**
      * 回滚XA事务
-     * @access public
+     * @access common
      * @param  string $xid XA事务id
      * @return void
      */
@@ -1668,7 +1668,7 @@ abstract class Connection
 
     /**
      * 启动事务
-     * @access public
+     * @access common
      * @return void
      * @throws \PDOException
      * @throws \Exception
@@ -1701,7 +1701,7 @@ abstract class Connection
 
     /**
      * 用于非自动提交状态下面的查询提交
-     * @access public
+     * @access common
      * @return void
      * @throws PDOException
      */
@@ -1718,7 +1718,7 @@ abstract class Connection
 
     /**
      * 事务回滚
-     * @access public
+     * @access common
      * @return void
      * @throws PDOException
      */
@@ -1771,7 +1771,7 @@ abstract class Connection
     /**
      * 批处理执行SQL语句
      * 批处理的指令都认为是execute操作
-     * @access public
+     * @access common
      * @param  array $sqlArray   SQL批处理指令
      * @param  array $bind       参数绑定
      * @return boolean
@@ -1801,7 +1801,7 @@ abstract class Connection
 
     /**
      * 获得查询次数
-     * @access public
+     * @access common
      * @param  boolean $execute 是否包含所有查询
      * @return integer
      */
@@ -1812,7 +1812,7 @@ abstract class Connection
 
     /**
      * 获得执行次数
-     * @access public
+     * @access common
      * @return integer
      */
     public function getExecuteTimes()
@@ -1822,7 +1822,7 @@ abstract class Connection
 
     /**
      * 关闭数据库（或者重新连接）
-     * @access public
+     * @access common
      * @return $this
      */
     public function close()
@@ -1862,7 +1862,7 @@ abstract class Connection
 
     /**
      * 获取最近一次查询的sql语句
-     * @access public
+     * @access common
      * @return string
      */
     public function getLastSql()
@@ -1872,7 +1872,7 @@ abstract class Connection
 
     /**
      * 获取最近插入的ID
-     * @access public
+     * @access common
      * @param  string  $sequence     自增序列名
      * @return string
      */
@@ -1883,7 +1883,7 @@ abstract class Connection
 
     /**
      * 获取返回或者影响的记录数
-     * @access public
+     * @access common
      * @return integer
      */
     public function getNumRows()
@@ -1893,7 +1893,7 @@ abstract class Connection
 
     /**
      * 获取最近的错误信息
-     * @access public
+     * @access common
      * @return string
      */
     public function getError()
@@ -1948,7 +1948,7 @@ abstract class Connection
 
     /**
      * 监听SQL执行
-     * @access public
+     * @access common
      * @param  callable $callback 回调方法
      * @return void
      */
@@ -2079,7 +2079,7 @@ abstract class Connection
 
     /**
      * 析构方法
-     * @access public
+     * @access common
      */
     public function __destruct()
     {

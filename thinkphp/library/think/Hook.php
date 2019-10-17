@@ -44,7 +44,7 @@ class Hook
 
     /**
      * 指定入口方法名称
-     * @access public
+     * @access common
      * @param  string  $name     方法名
      * @return $this
      */
@@ -56,7 +56,7 @@ class Hook
 
     /**
      * 指定行为标识 便于调用
-     * @access public
+     * @access common
      * @param  string|array  $name     行为标识
      * @param  mixed         $behavior 行为
      * @return $this
@@ -74,7 +74,7 @@ class Hook
 
     /**
      * 动态添加行为扩展到某个标签
-     * @access public
+     * @access common
      * @param  string    $tag 标签名称
      * @param  mixed     $behavior 行为名称
      * @param  bool      $first 是否放到开头执行
@@ -100,7 +100,7 @@ class Hook
 
     /**
      * 批量导入插件
-     * @access public
+     * @access common
      * @param  array     $tags 插件信息
      * @param  bool      $recursive 是否递归合并
      * @return void
@@ -118,7 +118,7 @@ class Hook
 
     /**
      * 获取插件信息
-     * @access public
+     * @access common
      * @param  string $tag 插件位置 留空获取全部
      * @return array
      */
@@ -134,7 +134,7 @@ class Hook
 
     /**
      * 监听标签的行为
-     * @access public
+     * @access common
      * @param  string $tag    标签名称
      * @param  mixed  $params 传入参数
      * @param  bool   $once   只获取一个有效返回值
@@ -158,7 +158,7 @@ class Hook
 
     /**
      * 执行行为
-     * @access public
+     * @access common
      * @param  mixed     $class  行为
      * @param  mixed     $params 参数
      * @return mixed

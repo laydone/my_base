@@ -49,7 +49,7 @@ abstract class Builder
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  Connection    $connection 数据库连接对象实例
      */
     public function __construct(Connection $connection)
@@ -59,7 +59,7 @@ abstract class Builder
 
     /**
      * 获取当前的连接对象实例
-     * @access public
+     * @access common
      * @return Connection
      */
     public function getConnection()
@@ -69,7 +69,7 @@ abstract class Builder
 
     /**
      * 注册查询表达式解析
-     * @access public
+     * @access common
      * @param  string    $name   解析方法
      * @param  array     $parser 匹配表达式数据
      * @return $this
@@ -181,7 +181,7 @@ abstract class Builder
 
     /**
      * 字段名分析
-     * @access public
+     * @access common
      * @param  Query  $query    查询对象
      * @param  mixed  $key      字段名
      * @param  bool   $strict   严格检测
@@ -277,7 +277,7 @@ abstract class Builder
 
     /**
      * 生成查询条件SQL
-     * @access public
+     * @access common
      * @param  Query     $query     查询对象
      * @param  mixed     $where     查询条件
      * @return string
@@ -979,7 +979,7 @@ abstract class Builder
 
     /**
      * 生成查询SQL
-     * @access public
+     * @access common
      * @param  Query  $query  查询对象
      * @return string
      */
@@ -1009,7 +1009,7 @@ abstract class Builder
 
     /**
      * 生成Insert SQL
-     * @access public
+     * @access common
      * @param  Query     $query   查询对象
      * @param  bool      $replace 是否replace
      * @return string
@@ -1041,7 +1041,7 @@ abstract class Builder
 
     /**
      * 生成insertall SQL
-     * @access public
+     * @access common
      * @param  Query     $query   查询对象
      * @param  array     $dataSet 数据集
      * @param  bool      $replace 是否replace
@@ -1091,7 +1091,7 @@ abstract class Builder
 
     /**
      * 生成slect insert SQL
-     * @access public
+     * @access common
      * @param  Query     $query  查询对象
      * @param  array     $fields 数据
      * @param  string    $table  数据表
@@ -1112,7 +1112,7 @@ abstract class Builder
 
     /**
      * 生成update SQL
-     * @access public
+     * @access common
      * @param  Query     $query  查询对象
      * @return string
      */
@@ -1147,7 +1147,7 @@ abstract class Builder
 
     /**
      * 生成delete SQL
-     * @access public
+     * @access common
      * @param  Query  $query  查询对象
      * @return string
      */

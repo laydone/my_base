@@ -44,7 +44,7 @@ class View extends Response
 
     /**
      * 设置是否为内容渲染
-     * @access public
+     * @access common
      * @param  bool $content
      * @return $this
      */
@@ -56,7 +56,7 @@ class View extends Response
 
     /**
      * 获取视图变量
-     * @access public
+     * @access common
      * @param  string $name 模板变量
      * @return mixed
      */
@@ -71,7 +71,7 @@ class View extends Response
 
     /**
      * 模板变量赋值
-     * @access public
+     * @access common
      * @param  mixed $name  变量名
      * @param  mixed $value 变量值
      * @return $this
@@ -95,7 +95,7 @@ class View extends Response
 
     /**
      * 视图内容过滤
-     * @access public
+     * @access common
      * @param callable $filter
      * @return $this
      */

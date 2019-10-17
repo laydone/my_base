@@ -103,7 +103,7 @@ class Table
 
     /**
      * 设置表格头信息 以及对齐方式
-     * @access public
+     * @access common
      * @param array $header     要输出的Header信息
      * @param int   $align      对齐方式 默认1 ALGIN_LEFT 0 ALIGN_RIGHT 2 ALIGN_CENTER
      * @return void
@@ -118,7 +118,7 @@ class Table
 
     /**
      * 设置输出表格数据 及对齐方式
-     * @access public
+     * @access common
      * @param array $rows       要输出的表格数据（二维数组）
      * @param int   $align      对齐方式 默认1 ALGIN_LEFT 0 ALIGN_RIGHT 2 ALIGN_CENTER
      * @return void
@@ -135,7 +135,7 @@ class Table
 
     /**
      * 检查列数据的显示宽度
-     * @access public
+     * @access common
      * @param  mixed $row       行数据
      * @return void
      */
@@ -152,7 +152,7 @@ class Table
 
     /**
      * 增加一行表格数据
-     * @access public
+     * @access common
      * @param  mixed $row       行数据
      * @param  bool  $first     是否在开头插入
      * @return void
@@ -170,7 +170,7 @@ class Table
 
     /**
      * 设置输出表格的样式
-     * @access public
+     * @access common
      * @param  string $style       样式名
      * @return void
      */
@@ -181,7 +181,7 @@ class Table
 
     /**
      * 输出分隔行
-     * @access public
+     * @access common
      * @param  string $pos       位置
      * @return string
      */
@@ -199,7 +199,7 @@ class Table
 
     /**
      * 输出表格头部
-     * @access public
+     * @access common
      * @return string
      */
     protected function renderHeader()
@@ -235,7 +235,7 @@ class Table
 
     /**
      * 输出表格
-     * @access public
+     * @access common
      * @param  array $dataList       表格数据
      * @return string
      */

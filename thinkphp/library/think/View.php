@@ -39,7 +39,7 @@ class View
 
     /**
      * 初始化
-     * @access public
+     * @access common
      * @param  mixed $engine  模板引擎参数
      * @return $this
      */
@@ -58,7 +58,7 @@ class View
 
     /**
      * 模板变量静态赋值
-     * @access public
+     * @access common
      * @param  mixed $name  变量名
      * @param  mixed $value 变量值
      * @return $this
@@ -76,7 +76,7 @@ class View
 
     /**
      * 清理模板变量
-     * @access public
+     * @access common
      * @return void
      */
     public function clear()
@@ -87,7 +87,7 @@ class View
 
     /**
      * 模板变量赋值
-     * @access public
+     * @access common
      * @param  mixed $name  变量名
      * @param  mixed $value 变量值
      * @return $this
@@ -105,7 +105,7 @@ class View
 
     /**
      * 设置当前模板解析的引擎
-     * @access public
+     * @access common
      * @param  array|string $options 引擎参数
      * @return $this
      */
@@ -129,7 +129,7 @@ class View
 
     /**
      * 配置模板引擎
-     * @access public
+     * @access common
      * @param  string|array  $name 参数名
      * @param  mixed         $value 参数值
      * @return $this
@@ -143,7 +143,7 @@ class View
 
     /**
      * 检查模板是否存在
-     * @access public
+     * @access common
      * @param  string|array  $name 参数名
      * @return bool
      */
@@ -154,7 +154,7 @@ class View
 
     /**
      * 视图过滤
-     * @access public
+     * @access common
      * @param Callable  $filter 过滤方法或闭包
      * @return $this
      */
@@ -169,7 +169,7 @@ class View
 
     /**
      * 解析和获取模板内容 用于输出
-     * @access public
+     * @access common
      * @param  string    $template 模板文件名或者内容
      * @param  array     $vars     模板输出变量
      * @param  array     $config     模板参数
@@ -207,7 +207,7 @@ class View
 
     /**
      * 渲染内容输出
-     * @access public
+     * @access common
      * @param  string $content 内容
      * @param  array  $vars    模板输出变量
      * @param  array  $config  模板参数
@@ -220,7 +220,7 @@ class View
 
     /**
      * 模板变量赋值
-     * @access public
+     * @access common
      * @param  string    $name  变量名
      * @param  mixed     $value 变量值
      */
@@ -242,7 +242,7 @@ class View
 
     /**
      * 检测模板变量是否设置
-     * @access public
+     * @access common
      * @param  string $name 模板变量名
      * @return bool
      */

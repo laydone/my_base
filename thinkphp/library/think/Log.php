@@ -71,7 +71,7 @@ class Log implements LoggerInterface
 
     /**
      * 日志初始化
-     * @access public
+     * @access common
      * @param  array $config
      * @return $this
      */
@@ -94,7 +94,7 @@ class Log implements LoggerInterface
 
     /**
      * 获取日志信息
-     * @access public
+     * @access common
      * @param  string $type 信息类型
      * @return array
      */
@@ -105,7 +105,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录日志信息
-     * @access public
+     * @access common
      * @param  mixed  $msg       日志信息
      * @param  string $type      日志级别
      * @param  array  $context   替换内容
@@ -140,7 +140,7 @@ class Log implements LoggerInterface
 
     /**
      * 清空日志信息
-     * @access public
+     * @access common
      * @return $this
      */
     public function clear()
@@ -152,7 +152,7 @@ class Log implements LoggerInterface
 
     /**
      * 当前日志记录的授权key
-     * @access public
+     * @access common
      * @param  string  $key  授权key
      * @return $this
      */
@@ -165,7 +165,7 @@ class Log implements LoggerInterface
 
     /**
      * 检查日志写入权限
-     * @access public
+     * @access common
      * @param  array  $config  当前日志配置参数
      * @return bool
      */
@@ -180,7 +180,7 @@ class Log implements LoggerInterface
 
     /**
      * 关闭本次请求日志写入
-     * @access public
+     * @access common
      * @return $this
      */
     public function close()
@@ -193,7 +193,7 @@ class Log implements LoggerInterface
 
     /**
      * 保存调试信息
-     * @access public
+     * @access common
      * @return bool
      */
     public function save()
@@ -232,7 +232,7 @@ class Log implements LoggerInterface
 
     /**
      * 实时写入日志信息 并支持行为
-     * @access public
+     * @access common
      * @param  mixed  $msg   调试信息
      * @param  string $type  日志级别
      * @param  bool   $force 是否强制写入
@@ -260,7 +260,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录日志信息
-     * @access public
+     * @access common
      * @param  string $level     日志级别
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
@@ -273,7 +273,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录emergency信息
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void
@@ -285,7 +285,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录警报信息
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void
@@ -297,7 +297,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录紧急情况
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void
@@ -309,7 +309,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录错误信息
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void
@@ -321,7 +321,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录warning信息
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void
@@ -333,7 +333,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录notice信息
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void
@@ -345,7 +345,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录一般信息
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void
@@ -357,7 +357,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录调试信息
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void
@@ -369,7 +369,7 @@ class Log implements LoggerInterface
 
     /**
      * 记录sql信息
-     * @access public
+     * @access common
      * @param  mixed  $message   日志信息
      * @param  array  $context   替换内容
      * @return void

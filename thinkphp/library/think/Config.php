@@ -47,7 +47,7 @@ class Config implements \ArrayAccess
 
     /**
      * 构造方法
-     * @access public
+     * @access common
      */
     public function __construct($path = '', $ext = '.php')
     {
@@ -65,7 +65,7 @@ class Config implements \ArrayAccess
 
     /**
      * 设置开启Yaconf
-     * @access public
+     * @access common
      * @param  bool|string    $yaconf  是否使用Yaconf
      * @return void
      */
@@ -78,7 +78,7 @@ class Config implements \ArrayAccess
 
     /**
      * 设置配置参数默认前缀
-     * @access public
+     * @access common
      * @param string    $prefix 前缀
      * @return void
      */
@@ -89,7 +89,7 @@ class Config implements \ArrayAccess
 
     /**
      * 解析配置文件或内容
-     * @access public
+     * @access common
      * @param  string    $config 配置文件路径或内容
      * @param  string    $type 配置解析类型
      * @param  string    $name 配置名（如设置即表示二级配置）
@@ -108,7 +108,7 @@ class Config implements \ArrayAccess
 
     /**
      * 加载配置文件（多种格式）
-     * @access public
+     * @access common
      * @param  string    $file 配置文件名
      * @param  string    $name 一级配置名
      * @return mixed
@@ -147,7 +147,7 @@ class Config implements \ArrayAccess
 
     /**
      * 获取yaconf配置
-     * @access public
+     * @access common
      * @param  string    $name 配置参数名
      * @param  mixed     $default   默认值
      * @return mixed
@@ -181,7 +181,7 @@ class Config implements \ArrayAccess
 
     /**
      * 检测配置是否存在
-     * @access public
+     * @access common
      * @param  string    $name 配置参数名（支持多级配置 .号分割）
      * @return bool
      */
@@ -196,7 +196,7 @@ class Config implements \ArrayAccess
 
     /**
      * 获取一级配置
-     * @access public
+     * @access common
      * @param  string    $name 一级配置名
      * @return array
      */
@@ -218,7 +218,7 @@ class Config implements \ArrayAccess
 
     /**
      * 获取配置参数 为空则获取所有配置
-     * @access public
+     * @access common
      * @param  string    $name      配置参数名（支持多级配置 .号分割）
      * @param  mixed     $default   默认值
      * @return mixed
@@ -264,7 +264,7 @@ class Config implements \ArrayAccess
 
     /**
      * 设置配置参数 name为数组则为批量设置
-     * @access public
+     * @access common
      * @param  string|array  $name 配置参数名（支持三级配置 .号分割）
      * @param  mixed         $value 配置值
      * @return mixed
@@ -308,7 +308,7 @@ class Config implements \ArrayAccess
 
     /**
      * 移除配置
-     * @access public
+     * @access common
      * @param  string  $name 配置参数名（支持三级配置 .号分割）
      * @return void
      */
@@ -329,7 +329,7 @@ class Config implements \ArrayAccess
 
     /**
      * 重置配置参数
-     * @access public
+     * @access common
      * @param  string    $prefix  配置前缀名
      * @return void
      */
@@ -344,7 +344,7 @@ class Config implements \ArrayAccess
 
     /**
      * 设置配置
-     * @access public
+     * @access common
      * @param  string    $name  参数名
      * @param  mixed     $value 值
      */
@@ -355,7 +355,7 @@ class Config implements \ArrayAccess
 
     /**
      * 获取配置参数
-     * @access public
+     * @access common
      * @param  string $name 参数名
      * @return mixed
      */
@@ -366,7 +366,7 @@ class Config implements \ArrayAccess
 
     /**
      * 检测是否存在参数
-     * @access public
+     * @access common
      * @param  string $name 参数名
      * @return bool
      */

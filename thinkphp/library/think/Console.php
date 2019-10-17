@@ -55,7 +55,7 @@ class Console
 
     /**
      * Console constructor.
-     * @access public
+     * @access common
      * @param  string     $name    名称
      * @param  string     $version 版本
      * @param null|string $user    执行用户
@@ -92,7 +92,7 @@ class Console
 
     /**
      * 初始化 Console
-     * @access public
+     * @access common
      * @param  bool $run 是否运行 Console
      * @return int|Console
      */
@@ -119,7 +119,7 @@ class Console
     }
 
     /**
-     * @access public
+     * @access common
      * @param  array $config
      * @return array
      */
@@ -159,7 +159,7 @@ class Console
     }
 
     /**
-     * @access public
+     * @access common
      * @param  string $command
      * @param  array  $parameters
      * @param  string $driver
@@ -182,7 +182,7 @@ class Console
 
     /**
      * 执行当前的指令
-     * @access public
+     * @access common
      * @return int
      * @throws \Exception
      * @api
@@ -227,7 +227,7 @@ class Console
 
     /**
      * 执行指令
-     * @access public
+     * @access common
      * @param  Input  $input
      * @param  Output $output
      * @return int
@@ -265,7 +265,7 @@ class Console
 
     /**
      * 设置输入参数定义
-     * @access public
+     * @access common
      * @param  InputDefinition $definition
      */
     public function setDefinition(InputDefinition $definition)
@@ -275,7 +275,7 @@ class Console
 
     /**
      * 获取输入参数定义
-     * @access public
+     * @access common
      * @return InputDefinition The InputDefinition instance
      */
     public function getDefinition()
@@ -285,7 +285,7 @@ class Console
 
     /**
      * Gets the help message.
-     * @access public
+     * @access common
      * @return string A help message.
      */
     public function getHelp()
@@ -295,7 +295,7 @@ class Console
 
     /**
      * 是否捕获异常
-     * @access public
+     * @access common
      * @param  bool $boolean
      * @api
      */
@@ -306,7 +306,7 @@ class Console
 
     /**
      * 是否自动退出
-     * @access public
+     * @access common
      * @param  bool $boolean
      * @api
      */
@@ -317,7 +317,7 @@ class Console
 
     /**
      * 获取名称
-     * @access public
+     * @access common
      * @return string
      */
     public function getName()
@@ -327,7 +327,7 @@ class Console
 
     /**
      * 设置名称
-     * @access public
+     * @access common
      * @param  string $name
      */
     public function setName($name)
@@ -337,7 +337,7 @@ class Console
 
     /**
      * 获取版本
-     * @access public
+     * @access common
      * @return string
      * @api
      */
@@ -348,7 +348,7 @@ class Console
 
     /**
      * 设置版本
-     * @access public
+     * @access common
      * @param  string $version
      */
     public function setVersion($version)
@@ -358,7 +358,7 @@ class Console
 
     /**
      * 获取完整的版本号
-     * @access public
+     * @access common
      * @return string
      */
     public function getLongVersion()
@@ -372,7 +372,7 @@ class Console
 
     /**
      * 注册一个指令 （便于动态创建指令）
-     * @access public
+     * @access common
      * @param  string $name     指令名
      * @return Command
      */
@@ -383,7 +383,7 @@ class Console
 
     /**
      * 添加指令集
-     * @access public
+     * @access common
      * @param  array $commands
      */
     public function addCommands(array $commands)
@@ -398,7 +398,7 @@ class Console
 
     /**
      * 注册一个指令（对象）
-     * @access public
+     * @access common
      * @param  mixed    $command    指令对象或者指令类名
      * @param  string   $name       指令名 留空则自动获取
      * @return mixed
@@ -436,7 +436,7 @@ class Console
 
     /**
      * 获取指令
-     * @access public
+     * @access common
      * @param  string $name 指令名称
      * @return Command
      * @throws \InvalidArgumentException
@@ -470,7 +470,7 @@ class Console
 
     /**
      * 某个指令是否存在
-     * @access public
+     * @access common
      * @param  string $name 指令名称
      * @return bool
      */
@@ -481,7 +481,7 @@ class Console
 
     /**
      * 获取所有的命名空间
-     * @access public
+     * @access common
      * @return array
      */
     public function getNamespaces()
@@ -505,7 +505,7 @@ class Console
 
     /**
      * 查找注册命名空间中的名称或缩写。
-     * @access public
+     * @access common
      * @param  string $namespace
      * @return string
      * @throws \InvalidArgumentException
@@ -544,7 +544,7 @@ class Console
 
     /**
      * 查找指令
-     * @access public
+     * @access common
      * @param  string $name 名称或者别名
      * @return Command
      * @throws \InvalidArgumentException
@@ -590,7 +590,7 @@ class Console
 
     /**
      * 获取所有的指令
-     * @access public
+     * @access common
      * @param  string $namespace 命名空间
      * @return Command[]
      * @api
@@ -613,7 +613,7 @@ class Console
 
     /**
      * 获取可能的指令名
-     * @access public
+     * @access common
      * @param  array $names
      * @return array
      */
@@ -723,7 +723,7 @@ class Console
 
     /**
      * 返回命名空间部分
-     * @access public
+     * @access common
      * @param  string $name  指令
      * @param  string $limit 部分的命名空间的最大数量
      * @return string
@@ -789,7 +789,7 @@ class Console
 
     /**
      * 设置默认的指令
-     * @access public
+     * @access common
      * @param  string $commandName The Command name
      */
     public function setDefaultCommand($commandName)

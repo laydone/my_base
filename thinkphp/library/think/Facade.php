@@ -28,7 +28,7 @@ class Facade
     /**
      * 绑定类的静态代理
      * @static
-     * @access public
+     * @access common
      * @param  string|array  $name    类标识
      * @param  string        $class   类名
      * @return object
@@ -84,7 +84,7 @@ class Facade
 
     /**
      * 带参数实例化当前Facade类
-     * @access public
+     * @access common
      * @return mixed
      */
     public static function instance(...$args)
@@ -96,7 +96,7 @@ class Facade
 
     /**
      * 调用类的实例
-     * @access public
+     * @access common
      * @param  string        $class          类名或者标识
      * @param  array|true    $args           变量
      * @param  bool          $newInstance    是否每次创建新的实例

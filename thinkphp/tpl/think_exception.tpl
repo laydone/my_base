@@ -82,7 +82,7 @@
     <title>系统发生错误</title>
     <meta name="robots" content="noindex,nofollow" />
     <style>
-        /* Base */
+        /* base */
         body {
             color: #333;
             font: 16px Verdana, "Helvetica Neue", helvetica, Arial, 'Microsoft YaHei', sans-serif;

@@ -286,7 +286,7 @@ class Request
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  array  $options 参数
      */
     public function __construct(array $options = [])
@@ -336,7 +336,7 @@ class Request
 
     /**
      * Hook 方法注入
-     * @access public
+     * @access common
      * @param  string|array  $method 方法名
      * @param  mixed         $callback callable
      * @return void
@@ -352,7 +352,7 @@ class Request
 
     /**
      * 创建一个URL请求
-     * @access public
+     * @access common
      * @param  string    $uri URL地址
      * @param  string    $method 请求类型
      * @param  array     $params 请求参数
@@ -448,7 +448,7 @@ class Request
 
     /**
      * 获取当前包含协议、端口的域名
-     * @access public
+     * @access common
      * @param  bool $port 是否需要去除端口号
      * @return string
      */
@@ -459,7 +459,7 @@ class Request
 
     /**
      * 获取当前根域名
-     * @access public
+     * @access common
      * @return string
      */
     public function rootDomain()
@@ -477,7 +477,7 @@ class Request
 
     /**
      * 获取当前子域名
-     * @access public
+     * @access common
      * @return string
      */
     public function subDomain()
@@ -501,7 +501,7 @@ class Request
 
     /**
      * 设置当前泛域名的值
-     * @access public
+     * @access common
      * @param  string $domain 域名
      * @return $this
      */
@@ -513,7 +513,7 @@ class Request
 
     /**
      * 获取当前泛域名的值
-     * @access public
+     * @access common
      * @return string
      */
     public function panDomain()
@@ -523,7 +523,7 @@ class Request
 
     /**
      * 设置当前完整URL 包括QUERY_STRING
-     * @access public
+     * @access common
      * @param  string $url URL
      * @return $this
      */
@@ -535,7 +535,7 @@ class Request
 
     /**
      * 获取当前完整URL 包括QUERY_STRING
-     * @access public
+     * @access common
      * @param  bool $complete 是否包含域名
      * @return string
      */
@@ -560,7 +560,7 @@ class Request
 
     /**
      * 设置当前完整URL 不包括QUERY_STRING
-     * @access public
+     * @access common
      * @param  string $url URL
      * @return $this
      */
@@ -572,7 +572,7 @@ class Request
 
     /**
      * 获取当前URL 不含QUERY_STRING
-     * @access public
+     * @access common
      * @param  bool     $domain 是否包含域名
      * @return string|$this
      */
@@ -588,7 +588,7 @@ class Request
 
     /**
      * 设置或获取当前执行的文件 SCRIPT_NAME
-     * @access public
+     * @access common
      * @param  bool     $domain 是否包含域名
      * @return string|$this
      */
@@ -618,7 +618,7 @@ class Request
 
     /**
      * 设置URL访问根地址
-     * @access public
+     * @access common
      * @param  string $url URL地址
      * @return string|$this
      */
@@ -630,7 +630,7 @@ class Request
 
     /**
      * 获取URL访问根地址
-     * @access public
+     * @access common
      * @param  bool     $domain 是否包含域名
      * @return string|$this
      */
@@ -649,7 +649,7 @@ class Request
 
     /**
      * 获取URL访问根目录
-     * @access public
+     * @access common
      * @return string
      */
     public function rootUrl()
@@ -672,7 +672,7 @@ class Request
 
     /**
      * 获取当前请求URL的pathinfo信息（含URL后缀）
-     * @access public
+     * @access common
      * @return string
      */
     public function pathinfo()
@@ -715,7 +715,7 @@ class Request
 
     /**
      * 获取当前请求URL的pathinfo信息(不含URL后缀)
-     * @access public
+     * @access common
      * @return string
      */
     public function path()
@@ -741,7 +741,7 @@ class Request
 
     /**
      * 当前URL的访问后缀
-     * @access public
+     * @access common
      * @return string
      */
     public function ext()
@@ -751,7 +751,7 @@ class Request
 
     /**
      * 获取当前请求的时间
-     * @access public
+     * @access common
      * @param  bool $float 是否使用浮点类型
      * @return integer|float
      */
@@ -762,7 +762,7 @@ class Request
 
     /**
      * 当前请求的资源类型
-     * @access public
+     * @access common
      * @return false|string
      */
     public function type()
@@ -787,7 +787,7 @@ class Request
 
     /**
      * 设置资源类型
-     * @access public
+     * @access common
      * @param  string|array  $type 资源类型名
      * @param  string        $val 资源类型
      * @return void
@@ -803,7 +803,7 @@ class Request
 
     /**
      * 当前的请求类型
-     * @access public
+     * @access common
      * @param  bool $origin  是否获取原始请求类型
      * @return string
      */
@@ -834,7 +834,7 @@ class Request
 
     /**
      * 是否为GET请求
-     * @access public
+     * @access common
      * @return bool
      */
     public function isGet()
@@ -844,7 +844,7 @@ class Request
 
     /**
      * 是否为POST请求
-     * @access public
+     * @access common
      * @return bool
      */
     public function isPost()
@@ -854,7 +854,7 @@ class Request
 
     /**
      * 是否为PUT请求
-     * @access public
+     * @access common
      * @return bool
      */
     public function isPut()
@@ -864,7 +864,7 @@ class Request
 
     /**
      * 是否为DELTE请求
-     * @access public
+     * @access common
      * @return bool
      */
     public function isDelete()
@@ -874,7 +874,7 @@ class Request
 
     /**
      * 是否为HEAD请求
-     * @access public
+     * @access common
      * @return bool
      */
     public function isHead()
@@ -884,7 +884,7 @@ class Request
 
     /**
      * 是否为PATCH请求
-     * @access public
+     * @access common
      * @return bool
      */
     public function isPatch()
@@ -894,7 +894,7 @@ class Request
 
     /**
      * 是否为OPTIONS请求
-     * @access public
+     * @access common
      * @return bool
      */
     public function isOptions()
@@ -904,7 +904,7 @@ class Request
 
     /**
      * 是否为cli
-     * @access public
+     * @access common
      * @return bool
      */
     public function isCli()
@@ -914,7 +914,7 @@ class Request
 
     /**
      * 是否为cgi
-     * @access public
+     * @access common
      * @return bool
      */
     public function isCgi()
@@ -924,7 +924,7 @@ class Request
 
     /**
      * 获取当前请求的参数
-     * @access public
+     * @access common
      * @param  mixed         $name 变量名
      * @param  mixed         $default 默认值
      * @param  string|array  $filter 过滤方法
@@ -968,7 +968,7 @@ class Request
 
     /**
      * 设置路由变量
-     * @access public
+     * @access common
      * @param  array         $route 路由变量
      * @return $this
      */
@@ -980,7 +980,7 @@ class Request
 
     /**
      * 获取路由参数
-     * @access public
+     * @access common
      * @param  string|false  $name 变量名
      * @param  mixed         $default 默认值
      * @param  string|array  $filter 过滤方法
@@ -993,7 +993,7 @@ class Request
 
     /**
      * 获取GET参数
-     * @access public
+     * @access common
      * @param  string|false  $name 变量名
      * @param  mixed         $default 默认值
      * @param  string|array  $filter 过滤方法
@@ -1010,7 +1010,7 @@ class Request
 
     /**
      * 获取POST参数
-     * @access public
+     * @access common
      * @param  string|false  $name 变量名
      * @param  mixed         $default 默认值
      * @param  string|array  $filter 过滤方法
@@ -1027,7 +1027,7 @@ class Request
 
     /**
      * 获取PUT参数
-     * @access public
+     * @access common
      * @param  string|false      $name 变量名
      * @param  mixed             $default 默认值
      * @param  string|array      $filter 过滤方法
@@ -1056,7 +1056,7 @@ class Request
 
     /**
      * 获取DELETE参数
-     * @access public
+     * @access common
      * @param  string|false      $name 变量名
      * @param  mixed             $default 默认值
      * @param  string|array      $filter 过滤方法
@@ -1069,7 +1069,7 @@ class Request
 
     /**
      * 获取PATCH参数
-     * @access public
+     * @access common
      * @param  string|false      $name 变量名
      * @param  mixed             $default 默认值
      * @param  string|array      $filter 过滤方法
@@ -1082,7 +1082,7 @@ class Request
 
     /**
      * 获取request变量
-     * @access public
+     * @access common
      * @param  string|false  $name 变量名
      * @param  mixed         $default 默认值
      * @param  string|array  $filter 过滤方法
@@ -1099,7 +1099,7 @@ class Request
 
     /**
      * 获取session数据
-     * @access public
+     * @access common
      * @param  string        $name 数据名称
      * @param  string        $default 默认值
      * @return mixed
@@ -1121,7 +1121,7 @@ class Request
 
     /**
      * 获取cookie参数
-     * @access public
+     * @access common
      * @param  string        $name 变量名
      * @param  string        $default 默认值
      * @param  string|array  $filter 过滤方法
@@ -1154,7 +1154,7 @@ class Request
 
     /**
      * 获取server参数
-     * @access public
+     * @access common
      * @param  string        $name 数据名称
      * @param  string        $default 默认值
      * @return mixed
@@ -1172,7 +1172,7 @@ class Request
 
     /**
      * 获取上传的文件信息
-     * @access public
+     * @access common
      * @param  string   $name 名称
      * @return null|array|\think\File
      */
@@ -1268,7 +1268,7 @@ class Request
 
     /**
      * 获取环境变量
-     * @access public
+     * @access common
      * @param  string        $name 数据名称
      * @param  string        $default 默认值
      * @return mixed
@@ -1286,7 +1286,7 @@ class Request
 
     /**
      * 获取当前的Header
-     * @access public
+     * @access common
      * @param  string   $name header名称
      * @param  string   $default 默认值
      * @return string|array
@@ -1326,7 +1326,7 @@ class Request
 
     /**
      * 递归重置数组指针
-     * @access public
+     * @access common
      * @param array $data 数据源
      * @return void
      */
@@ -1342,7 +1342,7 @@ class Request
 
     /**
      * 获取变量 支持过滤和默认值
-     * @access public
+     * @access common
      * @param  array         $data 数据源
      * @param  string|false  $name 字段名
      * @param  mixed         $default 默认值
@@ -1397,7 +1397,7 @@ class Request
 
     /**
      * 获取数据
-     * @access public
+     * @access common
      * @param  array         $data 数据源
      * @param  string|false  $name 字段名
      * @return mixed
@@ -1417,7 +1417,7 @@ class Request
 
     /**
      * 设置或获取当前的过滤规则
-     * @access public
+     * @access common
      * @param  mixed $filter 过滤规则
      * @return mixed
      */
@@ -1450,7 +1450,7 @@ class Request
 
     /**
      * 递归过滤给定的值
-     * @access public
+     * @access common
      * @param  mixed     $value 键值
      * @param  mixed     $key 键名
      * @param  array     $filters 过滤方法+默认值
@@ -1489,7 +1489,7 @@ class Request
 
     /**
      * 强制类型转换
-     * @access public
+     * @access common
      * @param  string $data
      * @param  string $type
      * @return mixed
@@ -1526,7 +1526,7 @@ class Request
 
     /**
      * 是否存在某个请求参数
-     * @access public
+     * @access common
      * @param  string    $name 变量名
      * @param  string    $type 变量类型
      * @param  bool      $checkEmpty 是否检测空值
@@ -1558,7 +1558,7 @@ class Request
 
     /**
      * 获取指定的参数
-     * @access public
+     * @access common
      * @param  string|array  $name 变量名
      * @param  string        $type 变量类型
      * @return mixed
@@ -1593,7 +1593,7 @@ class Request
 
     /**
      * 排除指定参数获取
-     * @access public
+     * @access common
      * @param  string|array  $name 变量名
      * @param  string        $type 变量类型
      * @return mixed
@@ -1616,7 +1616,7 @@ class Request
 
     /**
      * 当前是否ssl
-     * @access public
+     * @access common
      * @return bool
      */
     public function isSsl()
@@ -1638,7 +1638,7 @@ class Request
 
     /**
      * 当前是否JSON请求
-     * @access public
+     * @access common
      * @return bool
      */
     public function isJson()
@@ -1651,7 +1651,7 @@ class Request
 
     /**
      * 当前是否Ajax请求
-     * @access public
+     * @access common
      * @param  bool $ajax  true 获取原始ajax请求
      * @return bool
      */
@@ -1671,7 +1671,7 @@ class Request
 
     /**
      * 当前是否Pjax请求
-     * @access public
+     * @access common
      * @param  bool $pjax  true 获取原始pjax请求
      * @return bool
      */
@@ -1690,7 +1690,7 @@ class Request
 
     /**
      * 获取客户端IP地址
-     * @access public
+     * @access common
      * @param  integer   $type 返回类型 0 返回IP地址 1 返回IPV4地址数字
      * @param  boolean   $adv 是否进行高级模式获取（有可能被伪装）
      * @return mixed
@@ -1743,7 +1743,7 @@ class Request
 
     /**
      * 检测是否使用手机访问
-     * @access public
+     * @access common
      * @return bool
      */
     public function isMobile()
@@ -1763,7 +1763,7 @@ class Request
 
     /**
      * 当前URL地址中的scheme参数
-     * @access public
+     * @access common
      * @return string
      */
     public function scheme()
@@ -1773,7 +1773,7 @@ class Request
 
     /**
      * 当前请求URL地址中的query参数
-     * @access public
+     * @access common
      * @return string
      */
     public function query()
@@ -1783,7 +1783,7 @@ class Request
 
     /**
      * 设置当前请求的host（包含端口）
-     * @access public
+     * @access common
      * @param  string $host 主机名（含端口）
      * @return $this
      */
@@ -1796,7 +1796,7 @@ class Request
 
     /**
      * 当前请求的host
-     * @access public
+     * @access common
      * @param bool $strict  true 仅仅获取HOST
      * @return string
      */
@@ -1811,7 +1811,7 @@ class Request
 
     /**
      * 当前请求URL地址中的port参数
-     * @access public
+     * @access common
      * @return integer
      */
     public function port()
@@ -1821,7 +1821,7 @@ class Request
 
     /**
      * 当前请求 SERVER_PROTOCOL
-     * @access public
+     * @access common
      * @return string
      */
     public function protocol()
@@ -1831,7 +1831,7 @@ class Request
 
     /**
      * 当前请求 REMOTE_PORT
-     * @access public
+     * @access common
      * @return integer
      */
     public function remotePort()
@@ -1841,7 +1841,7 @@ class Request
 
     /**
      * 当前请求 HTTP_CONTENT_TYPE
-     * @access public
+     * @access common
      * @return string
      */
     public function contentType()
@@ -1862,7 +1862,7 @@ class Request
 
     /**
      * 获取当前请求的路由信息
-     * @access public
+     * @access common
      * @param  array $route 路由名称
      * @return array
      */
@@ -1877,7 +1877,7 @@ class Request
 
     /**
      * 设置或者获取当前请求的调度信息
-     * @access public
+     * @access common
      * @param  \think\route\Dispatch  $dispatch 调度信息
      * @return \think\route\Dispatch
      */
@@ -1892,7 +1892,7 @@ class Request
 
     /**
      * 获取当前请求的安全Key
-     * @access public
+     * @access common
      * @return string
      */
     public function secureKey()
@@ -1906,7 +1906,7 @@ class Request
 
     /**
      * 设置当前的模块名
-     * @access public
+     * @access common
      * @param  string $module 模块名
      * @return $this
      */
@@ -1918,7 +1918,7 @@ class Request
 
     /**
      * 设置当前的控制器名
-     * @access public
+     * @access common
      * @param  string $controller 控制器名
      * @return $this
      */
@@ -1930,7 +1930,7 @@ class Request
 
     /**
      * 设置当前的操作名
-     * @access public
+     * @access common
      * @param  string $action 操作名
      * @return $this
      */
@@ -1942,7 +1942,7 @@ class Request
 
     /**
      * 获取当前的模块名
-     * @access public
+     * @access common
      * @return string
      */
     public function module()
@@ -1952,7 +1952,7 @@ class Request
 
     /**
      * 获取当前的控制器名
-     * @access public
+     * @access common
      * @param  bool $convert 转换为小写
      * @return string
      */
@@ -1964,7 +1964,7 @@ class Request
 
     /**
      * 获取当前的操作名
-     * @access public
+     * @access common
      * @param  bool $convert 转换为驼峰
      * @return string
      */
@@ -1976,7 +1976,7 @@ class Request
 
     /**
      * 设置当前的语言
-     * @access public
+     * @access common
      * @param  string $lang 语言名
      * @return $this
      */
@@ -1988,7 +1988,7 @@ class Request
 
     /**
      * 获取当前的语言
-     * @access public
+     * @access common
      * @return string
      */
     public function langset()
@@ -1998,7 +1998,7 @@ class Request
 
     /**
      * 设置或者获取当前请求的content
-     * @access public
+     * @access common
      * @return string
      */
     public function getContent()
@@ -2012,7 +2012,7 @@ class Request
 
     /**
      * 获取当前请求的php://input
-     * @access public
+     * @access common
      * @return string
      */
     public function getInput()
@@ -2022,7 +2022,7 @@ class Request
 
     /**
      * 生成请求令牌
-     * @access public
+     * @access common
      * @param  string $name 令牌名称
      * @param  mixed  $type 令牌生成方法
      * @return string
@@ -2043,7 +2043,7 @@ class Request
 
     /**
      * 设置当前地址的请求缓存
-     * @access public
+     * @access common
      * @param  string $key 缓存标识，支持变量规则 ，例如 item/:name/:id
      * @param  mixed  $expire 缓存有效期
      * @param  array  $except 缓存排除
@@ -2111,7 +2111,7 @@ class Request
 
     /**
      * 读取请求缓存设置
-     * @access public
+     * @access common
      * @return array
      */
     public function getCache()
@@ -2121,7 +2121,7 @@ class Request
 
     /**
      * 设置GET数据
-     * @access public
+     * @access common
      * @param  array $get 数据
      * @return $this
      */
@@ -2133,7 +2133,7 @@ class Request
 
     /**
      * 设置POST数据
-     * @access public
+     * @access common
      * @param  array $post 数据
      * @return $this
      */
@@ -2145,7 +2145,7 @@ class Request
 
     /**
      * 设置php://input数据
-     * @access public
+     * @access common
      * @param  string $input RAW数据
      * @return $this
      */
@@ -2157,7 +2157,7 @@ class Request
 
     /**
      * 设置文件上传数据
-     * @access public
+     * @access common
      * @param  array $files 上传信息
      * @return $this
      */
@@ -2169,7 +2169,7 @@ class Request
 
     /**
      * 设置COOKIE数据
-     * @access public
+     * @access common
      * @param  array $cookie 数据
      * @return $this
      */
@@ -2181,7 +2181,7 @@ class Request
 
     /**
      * 设置SERVER数据
-     * @access public
+     * @access common
      * @param  array $server 数据
      * @return $this
      */
@@ -2193,7 +2193,7 @@ class Request
 
     /**
      * 设置HEADER数据
-     * @access public
+     * @access common
      * @param  array $header 数据
      * @return $this
      */
@@ -2205,7 +2205,7 @@ class Request
 
     /**
      * 设置ENV数据
-     * @access public
+     * @access common
      * @param  array $env 数据
      * @return $this
      */
@@ -2217,7 +2217,7 @@ class Request
 
     /**
      * 设置ROUTE变量
-     * @access public
+     * @access common
      * @param  array $route 数据
      * @return $this
      */
@@ -2229,7 +2229,7 @@ class Request
 
     /**
      * 设置请求数据
-     * @access public
+     * @access common
      * @param  string    $name  参数名
      * @param  mixed     $value 值
      */
@@ -2240,7 +2240,7 @@ class Request
 
     /**
      * 获取请求数据的值
-     * @access public
+     * @access common
      * @param  string $name 参数名
      * @return mixed
      */
@@ -2251,7 +2251,7 @@ class Request
 
     /**
      * 检测请求数据的值
-     * @access public
+     * @access common
      * @param  string $name 名称
      * @return boolean
      */

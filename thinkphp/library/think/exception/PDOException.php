@@ -19,7 +19,7 @@ class PDOException extends DbException
 {
     /**
      * PDOException constructor.
-     * @access public
+     * @access common
      * @param  \PDOException $exception
      * @param  array         $config
      * @param  string        $sql

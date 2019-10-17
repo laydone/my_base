@@ -19,7 +19,7 @@ class ModelNotFoundException extends DbException
 
     /**
      * 构造方法
-     * @access public
+     * @access common
      * @param  string $message
      * @param  string $model
      * @param  array  $config
@@ -34,7 +34,7 @@ class ModelNotFoundException extends DbException
 
     /**
      * 获取模型类名
-     * @access public
+     * @access common
      * @return string
      */
     public function getModel()

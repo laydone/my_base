@@ -84,7 +84,7 @@ class Db
 
     /**
      * 配置
-     * @access public
+     * @access common
      * @param  mixed $config
      * @return void
      */
@@ -99,7 +99,7 @@ class Db
 
     /**
      * 获取数据库配置
-     * @access public
+     * @access common
      * @param  string $config 配置名称
      * @return mixed
      */
@@ -114,7 +114,7 @@ class Db
 
     /**
      * 切换数据库连接
-     * @access public
+     * @access common
      * @param  mixed         $config 连接配置
      * @param  bool|string   $name 连接标识 true 强制重新连接
      * @param  string        $query 查询对象类名

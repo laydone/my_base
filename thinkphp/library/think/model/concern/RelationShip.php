@@ -56,7 +56,7 @@ trait RelationShip
 
     /**
      * 设置父关联对象
-     * @access public
+     * @access common
      * @param  Model $model  模型对象
      * @return $this
      */
@@ -69,7 +69,7 @@ trait RelationShip
 
     /**
      * 获取父关联对象
-     * @access public
+     * @access common
      * @return Model
      */
     public function getParent()
@@ -79,7 +79,7 @@ trait RelationShip
 
     /**
      * 获取当前模型的关联模型数据
-     * @access public
+     * @access common
      * @param  string $name 关联方法名
      * @return mixed
      */
@@ -95,7 +95,7 @@ trait RelationShip
 
     /**
      * 设置关联数据对象值
-     * @access public
+     * @access common
      * @param  string $name  属性名
      * @param  mixed  $value 属性值
      * @param  array  $data  数据
@@ -117,7 +117,7 @@ trait RelationShip
 
     /**
      * 关联数据写入
-     * @access public
+     * @access common
      * @param  array|string $relation 关联
      * @return $this
      */
@@ -136,7 +136,7 @@ trait RelationShip
 
     /**
      * 根据关联条件查询当前模型
-     * @access public
+     * @access common
      * @param  string  $relation 关联方法名
      * @param  mixed   $operator 比较操作符
      * @param  integer $count    个数
@@ -157,7 +157,7 @@ trait RelationShip
 
     /**
      * 根据关联条件查询当前模型
-     * @access public
+     * @access common
      * @param  string $relation 关联方法名
      * @param  mixed  $where    查询条件（数组或者闭包）
      * @param  mixed  $fields   字段
@@ -170,7 +170,7 @@ trait RelationShip
 
     /**
      * 查询当前模型的关联数据
-     * @access public
+     * @access common
      * @param  string|array $relations          关联名
      * @param  array        $withRelationAttr   关联获取器
      * @return $this
@@ -215,7 +215,7 @@ trait RelationShip
 
     /**
      * 预载入关联查询 返回数据集
-     * @access public
+     * @access common
      * @param  array  $resultSet        数据集
      * @param  string $relation         关联名
      * @param  array  $withRelationAttr 关联获取器
@@ -257,7 +257,7 @@ trait RelationShip
 
     /**
      * 预载入关联查询 返回模型对象
-     * @access public
+     * @access common
      * @param  Model  $result           数据对象
      * @param  string $relation         关联名
      * @param  array  $withRelationAttr 关联获取器
@@ -299,7 +299,7 @@ trait RelationShip
 
     /**
      * 关联统计
-     * @access public
+     * @access common
      * @param  Model    $result     数据对象
      * @param  array    $relations  关联名
      * @param  string   $aggregate  聚合查询方法
@@ -333,7 +333,7 @@ trait RelationShip
 
     /**
      * HAS ONE 关联定义
-     * @access public
+     * @access common
      * @param  string $model      模型名
      * @param  string $foreignKey 关联外键
      * @param  string $localKey   当前主键
@@ -351,7 +351,7 @@ trait RelationShip
 
     /**
      * BELONGS TO 关联定义
-     * @access public
+     * @access common
      * @param  string $model      模型名
      * @param  string $foreignKey 关联外键
      * @param  string $localKey   关联主键
@@ -371,7 +371,7 @@ trait RelationShip
 
     /**
      * HAS MANY 关联定义
-     * @access public
+     * @access common
      * @param  string $model      模型名
      * @param  string $foreignKey 关联外键
      * @param  string $localKey   当前主键
@@ -389,7 +389,7 @@ trait RelationShip
 
     /**
      * HAS MANY 远程关联定义
-     * @access public
+     * @access common
      * @param  string $model      模型名
      * @param  string $through    中间模型名
      * @param  string $foreignKey 关联外键
@@ -411,7 +411,7 @@ trait RelationShip
 
     /**
      * BELONGS TO MANY 关联定义
-     * @access public
+     * @access common
      * @param  string $model      模型名
      * @param  string $table      中间表名
      * @param  string $foreignKey 关联外键
@@ -432,7 +432,7 @@ trait RelationShip
 
     /**
      * MORPH  One 关联定义
-     * @access public
+     * @access common
      * @param  string       $model 模型名
      * @param  string|array $morph 多态字段信息
      * @param  string       $type  多态类型
@@ -462,7 +462,7 @@ trait RelationShip
 
     /**
      * MORPH  MANY 关联定义
-     * @access public
+     * @access common
      * @param  string       $model 模型名
      * @param  string|array $morph 多态字段信息
      * @param  string       $type  多态类型
@@ -492,7 +492,7 @@ trait RelationShip
 
     /**
      * MORPH TO 关联定义
-     * @access public
+     * @access common
      * @param  string|array $morph 多态字段信息
      * @param  array        $alias 多态别名定义
      * @return MorphTo

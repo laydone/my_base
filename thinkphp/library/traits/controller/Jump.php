@@ -5,7 +5,7 @@
  * class index
  * {
  *     use \traits\controller\Jump;
- *     public function index(){
+ *     common function index(){
  *         $this->error();
  *         $this->redirect();
  *     }

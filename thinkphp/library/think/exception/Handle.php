@@ -31,7 +31,7 @@ class Handle
     /**
      * Report or log an exception.
      *
-     * @access public
+     * @access common
      * @param  \Exception $exception
      * @return void
      */
@@ -77,7 +77,7 @@ class Handle
     /**
      * Render an exception into an HTTP response.
      *
-     * @access public
+     * @access common
      * @param  \Exception $e
      * @return Response
      */
@@ -99,7 +99,7 @@ class Handle
     }
 
     /**
-     * @access public
+     * @access common
      * @param  Output    $output
      * @param  Exception $e
      */

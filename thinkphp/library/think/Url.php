@@ -50,7 +50,7 @@ class Url
 
     /**
      * 初始化
-     * @access public
+     * @access common
      * @param  array $config
      * @return void
      */
@@ -66,7 +66,7 @@ class Url
 
     /**
      * URL生成 支持路由反射
-     * @access public
+     * @access common
      * @param  string            $url 路由地址
      * @param  string|array      $vars 参数（支持数组和字符串）a=val&b=val2... ['a'=>'val1', 'b'=>'val2']
      * @param  string|bool       $suffix 伪静态后缀，默认为true表示获取配置值

@@ -27,7 +27,7 @@ class Lite extends Driver
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      *
      * @param  array $options
      */
@@ -56,7 +56,7 @@ class Lite extends Driver
 
     /**
      * 判断缓存是否存在
-     * @access public
+     * @access common
      * @param  string $name 缓存变量名
      * @return mixed
      */
@@ -67,7 +67,7 @@ class Lite extends Driver
 
     /**
      * 读取缓存
-     * @access public
+     * @access common
      * @param  string $name 缓存变量名
      * @param  mixed  $default 默认值
      * @return mixed
@@ -96,7 +96,7 @@ class Lite extends Driver
 
     /**
      * 写入缓存
-     * @access public
+     * @access common
      * @param  string        $name  缓存变量名
      * @param  mixed         $value 存储数据
      * @param  int|\DateTime $expire 有效时间 0为永久
@@ -136,7 +136,7 @@ class Lite extends Driver
 
     /**
      * 自增缓存（针对数值缓存）
-     * @access public
+     * @access common
      * @param  string    $name 缓存变量名
      * @param  int       $step 步长
      * @return false|int
@@ -154,7 +154,7 @@ class Lite extends Driver
 
     /**
      * 自减缓存（针对数值缓存）
-     * @access public
+     * @access common
      * @param  string    $name 缓存变量名
      * @param  int       $step 步长
      * @return false|int
@@ -172,7 +172,7 @@ class Lite extends Driver
 
     /**
      * 删除缓存
-     * @access public
+     * @access common
      * @param  string $name 缓存变量名
      * @return boolean
      */
@@ -185,7 +185,7 @@ class Lite extends Driver
 
     /**
      * 清除缓存
-     * @access public
+     * @access common
      * @param  string $tag 标签名
      * @return bool
      */

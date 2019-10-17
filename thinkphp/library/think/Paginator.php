@@ -100,7 +100,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
     }
 
     /**
-     * @access public
+     * @access common
      * @param       $items
      * @param       $listRows
      * @param null  $currentPage
@@ -158,7 +158,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * 自动获取当前页码
-     * @access public
+     * @access common
      * @param  string $varPage
      * @param  int    $default
      * @return int
@@ -176,7 +176,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * 自动获取当前的path
-     * @access public
+     * @access common
      * @return string
      */
     public static function getCurrentPath()
@@ -214,7 +214,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * 数据是否足够分页
-     * @access public
+     * @access common
      * @return boolean
      */
     public function hasPages()
@@ -225,7 +225,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
     /**
      * 创建一组分页链接
      *
-     * @access public
+     * @access common
      * @param  int $start
      * @param  int $end
      * @return array
@@ -244,7 +244,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
     /**
      * 设置URL锚点
      *
-     * @access public
+     * @access common
      * @param  string|null $fragment
      * @return $this
      */
@@ -258,7 +258,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
     /**
      * 添加URL参数
      *
-     * @access public
+     * @access common
      * @param  array|string $key
      * @param  string|null  $value
      * @return $this
@@ -283,7 +283,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
     /**
      * 构造锚点字符串
      *
-     * @access public
+     * @access common
      * @return string
      */
     protected function buildFragment()
@@ -293,7 +293,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * 渲染分页html
-     * @access public
+     * @access common
      * @return mixed
      */
     abstract public function render();
@@ -316,7 +316,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
     /**
      * 给每个元素执行个回调
      *
-     * @access public
+     * @access common
      * @param  callable $callback
      * @return $this
      */
@@ -337,7 +337,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * Retrieve an external iterator
-     * @access public
+     * @access common
      * @return Traversable An instance of an object implementing <b>Iterator</b> or
      * <b>Traversable</b>
      */
@@ -348,7 +348,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * Whether a offset exists
-     * @access public
+     * @access common
      * @param  mixed $offset
      * @return bool
      */
@@ -359,7 +359,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * Offset to retrieve
-     * @access public
+     * @access common
      * @param  mixed $offset
      * @return mixed
      */
@@ -370,7 +370,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * Offset to set
-     * @access public
+     * @access common
      * @param  mixed $offset
      * @param  mixed $value
      */
@@ -381,7 +381,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
     /**
      * Offset to unset
-     * @access public
+     * @access common
      * @param  mixed $offset
      * @return void
      * @since  5.0.0

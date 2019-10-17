@@ -71,7 +71,7 @@ class Response
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  mixed $data    输出数据
      * @param  int   $code
      * @param  array $header
@@ -94,7 +94,7 @@ class Response
 
     /**
      * 创建Response对象
-     * @access public
+     * @access common
      * @param  mixed  $data    输出数据
      * @param  string $type    输出类型
      * @param  int    $code
@@ -115,7 +115,7 @@ class Response
 
     /**
      * 发送数据到客户端
-     * @access public
+     * @access common
      * @return void
      * @throws \InvalidArgumentException
      */
@@ -192,7 +192,7 @@ class Response
 
     /**
      * 输出的参数
-     * @access public
+     * @access common
      * @param  mixed $options 输出参数
      * @return $this
      */
@@ -205,7 +205,7 @@ class Response
 
     /**
      * 输出数据设置
-     * @access public
+     * @access common
      * @param  mixed $data 输出数据
      * @return $this
      */
@@ -218,7 +218,7 @@ class Response
 
     /**
      * 是否允许请求缓存
-     * @access public
+     * @access common
      * @param  bool $cache 允许请求缓存
      * @return $this
      */
@@ -231,7 +231,7 @@ class Response
 
     /**
      * 设置响应头
-     * @access public
+     * @access common
      * @param  string|array $name  参数名
      * @param  string       $value 参数值
      * @return $this
@@ -249,7 +249,7 @@ class Response
 
     /**
      * 设置页面输出内容
-     * @access public
+     * @access common
      * @param  mixed $content
      * @return $this
      */
@@ -270,7 +270,7 @@ class Response
 
     /**
      * 发送HTTP状态
-     * @access public
+     * @access common
      * @param  integer $code 状态码
      * @return $this
      */
@@ -283,7 +283,7 @@ class Response
 
     /**
      * LastModified
-     * @access public
+     * @access common
      * @param  string $time
      * @return $this
      */
@@ -296,7 +296,7 @@ class Response
 
     /**
      * Expires
-     * @access public
+     * @access common
      * @param  string $time
      * @return $this
      */
@@ -309,7 +309,7 @@ class Response
 
     /**
      * ETag
-     * @access public
+     * @access common
      * @param  string $eTag
      * @return $this
      */
@@ -322,7 +322,7 @@ class Response
 
     /**
      * 页面缓存控制
-     * @access public
+     * @access common
      * @param  string $cache 缓存设置
      * @return $this
      */
@@ -335,7 +335,7 @@ class Response
 
     /**
      * 设置页面不做任何缓存
-     * @access public
+     * @access common
      * @return $this
      */
     public function noCache()
@@ -348,7 +348,7 @@ class Response
 
     /**
      * 页面输出类型
-     * @access public
+     * @access common
      * @param  string $contentType 输出类型
      * @param  string $charset     输出编码
      * @return $this
@@ -362,7 +362,7 @@ class Response
 
     /**
      * 获取头部信息
-     * @access public
+     * @access common
      * @param  string $name 头部名称
      * @return mixed
      */
@@ -377,7 +377,7 @@ class Response
 
     /**
      * 获取原始数据
-     * @access public
+     * @access common
      * @return mixed
      */
     public function getData()
@@ -387,7 +387,7 @@ class Response
 
     /**
      * 获取输出数据
-     * @access public
+     * @access common
      * @return mixed
      */
     public function getContent()
@@ -411,7 +411,7 @@ class Response
 
     /**
      * 获取状态码
-     * @access public
+     * @access common
      * @return integer
      */
     public function getCode()

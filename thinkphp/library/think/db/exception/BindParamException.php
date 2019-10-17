@@ -21,7 +21,7 @@ class BindParamException extends DbException
 
     /**
      * BindParamException constructor.
-     * @access public
+     * @access common
      * @param  string $message
      * @param  array  $config
      * @param  string $sql

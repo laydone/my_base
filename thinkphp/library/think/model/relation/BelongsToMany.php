@@ -32,7 +32,7 @@ class BelongsToMany extends Relation
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  Model  $parent     上级模型对象
      * @param  string $model      模型名
      * @param  string $table      中间表名
@@ -59,7 +59,7 @@ class BelongsToMany extends Relation
 
     /**
      * 设置中间表模型
-     * @access public
+     * @access common
      * @param  $pivot
      * @return $this
      */
@@ -71,7 +71,7 @@ class BelongsToMany extends Relation
 
     /**
      * 设置中间表数据名称
-     * @access public
+     * @access common
      * @param  string $name
      * @return $this
      */
@@ -96,7 +96,7 @@ class BelongsToMany extends Relation
 
     /**
      * 实例化中间表模型
-     * @access public
+     * @access common
      * @param  array    $data
      * @param  bool     $isUpdate
      * @return Pivot
@@ -159,7 +159,7 @@ class BelongsToMany extends Relation
 
     /**
      * 延迟获取关联数据
-     * @access public
+     * @access common
      * @param  string   $subRelation 子关联名
      * @param  \Closure $closure     闭包查询条件
      * @return Collection
@@ -178,7 +178,7 @@ class BelongsToMany extends Relation
 
     /**
      * 重载select方法
-     * @access public
+     * @access common
      * @param  mixed $data
      * @return Collection
      */
@@ -192,7 +192,7 @@ class BelongsToMany extends Relation
 
     /**
      * 重载paginate方法
-     * @access public
+     * @access common
      * @param  null  $listRows
      * @param  bool  $simple
      * @param  array $config
@@ -208,7 +208,7 @@ class BelongsToMany extends Relation
 
     /**
      * 重载find方法
-     * @access public
+     * @access common
      * @param  mixed $data
      * @return Model
      */
@@ -224,7 +224,7 @@ class BelongsToMany extends Relation
 
     /**
      * 查找多条记录 如果不存在则抛出异常
-     * @access public
+     * @access common
      * @param  array|string|Query|\Closure $data
      * @return Collection
      */
@@ -235,7 +235,7 @@ class BelongsToMany extends Relation
 
     /**
      * 查找单条记录 如果不存在则抛出异常
-     * @access public
+     * @access common
      * @param  array|string|Query|\Closure $data
      * @return Model
      */
@@ -246,7 +246,7 @@ class BelongsToMany extends Relation
 
     /**
      * 根据关联条件查询当前模型
-     * @access public
+     * @access common
      * @param  string  $operator 比较操作符
      * @param  integer $count    个数
      * @param  string  $id       关联表的统计字段
@@ -260,7 +260,7 @@ class BelongsToMany extends Relation
 
     /**
      * 根据关联条件查询当前模型
-     * @access public
+     * @access common
      * @param  mixed     $where 查询条件（数组或者闭包）
      * @param  mixed     $fields 字段
      * @return Query
@@ -273,7 +273,7 @@ class BelongsToMany extends Relation
 
     /**
      * 设置中间表的查询条件
-     * @access public
+     * @access common
      * @param  string    $field
      * @param  string    $op
      * @param  mixed     $condition
@@ -287,7 +287,7 @@ class BelongsToMany extends Relation
 
     /**
      * 预载入关联查询（数据集）
-     * @access public
+     * @access common
      * @param  array    $resultSet   数据集
      * @param  string   $relation    当前关联名
      * @param  string   $subRelation 子关联名
@@ -330,7 +330,7 @@ class BelongsToMany extends Relation
 
     /**
      * 预载入关联查询（单个数据）
-     * @access public
+     * @access common
      * @param  Model    $result      数据对象
      * @param  string   $relation    当前关联名
      * @param  string   $subRelation 子关联名
@@ -359,7 +359,7 @@ class BelongsToMany extends Relation
 
     /**
      * 关联统计
-     * @access public
+     * @access common
      * @param  Model    $result  数据对象
      * @param  \Closure $closure 闭包
      * @param  string   $aggregate 聚合查询方法
@@ -392,7 +392,7 @@ class BelongsToMany extends Relation
 
     /**
      * 获取关联统计子查询
-     * @access public
+     * @access common
      * @param  \Closure $closure 闭包
      * @param  string   $aggregate 聚合查询方法
      * @param  string   $field 字段
@@ -488,7 +488,7 @@ class BelongsToMany extends Relation
 
     /**
      * 保存（新增）当前关联数据对象
-     * @access public
+     * @access common
      * @param  mixed $data  数据 可以使用数组 关联模型对象 和 关联对象的主键
      * @param  array $pivot 中间表额外数据
      * @return array|Pivot
@@ -501,7 +501,7 @@ class BelongsToMany extends Relation
 
     /**
      * 批量保存当前关联数据对象
-     * @access public
+     * @access common
      * @param  array $dataSet   数据集
      * @param  array $pivot     中间表额外数据
      * @param  bool  $samePivot 额外数据是否相同
@@ -526,7 +526,7 @@ class BelongsToMany extends Relation
 
     /**
      * 附加关联的一个中间表数据
-     * @access public
+     * @access common
      * @param  mixed $data  数据 可以使用数组、关联模型对象 或者 关联对象的主键
      * @param  array $pivot 中间表额外数据
      * @return array|Pivot
@@ -579,7 +579,7 @@ class BelongsToMany extends Relation
 
     /**
      * 判断是否存在关联数据
-     * @access public
+     * @access common
      * @param  mixed $data  数据 可以使用关联模型对象 或者 关联对象的主键
      * @return Pivot
      * @throws Exception
@@ -602,7 +602,7 @@ class BelongsToMany extends Relation
 
     /**
      * 解除关联的一个中间表数据
-     * @access public
+     * @access common
      * @param  integer|array $data        数据 可以使用关联对象的主键
      * @param  bool          $relationDel 是否同时删除关联表数据
      * @return integer
@@ -641,7 +641,7 @@ class BelongsToMany extends Relation
 
     /**
      * 数据同步
-     * @access public
+     * @access common
      * @param  array $ids
      * @param  bool  $detaching
      * @return array

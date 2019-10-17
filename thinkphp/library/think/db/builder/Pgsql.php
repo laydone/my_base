@@ -48,7 +48,7 @@ class Pgsql extends Builder
 
     /**
      * 字段和表名处理
-     * @access public
+     * @access common
      * @param  Query     $query     查询对象
      * @param  mixed     $key       字段名
      * @param  bool      $strict   严格检测

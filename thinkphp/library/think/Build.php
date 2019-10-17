@@ -33,7 +33,7 @@ class Build
 
     /**
      * 根据传入的build资料创建目录和文件
-     * @access public
+     * @access common
      * @param  array  $build build列表
      * @param  string $namespace 应用类库命名空间
      * @param  bool   $suffix 类库后缀
@@ -102,7 +102,7 @@ class Build
 
     /**
      * 创建模块
-     * @access public
+     * @access common
      * @param  string $module 模块名
      * @param  array  $list build列表
      * @param  string $namespace 应用类库命名空间
@@ -182,7 +182,7 @@ class Build
 
     /**
      * 根据注释自动生成路由规则
-     * @access public
+     * @access common
      * @param  bool   $suffix 类库后缀
      * @param  string $layer  控制器层目录名
      * @return string

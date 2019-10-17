@@ -144,7 +144,7 @@ abstract class Dispatch
 
     /**
      * 执行路由调度
-     * @access public
+     * @access common
      * @return mixed
      */
     public function run()

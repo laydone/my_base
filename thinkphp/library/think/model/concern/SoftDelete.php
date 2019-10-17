@@ -18,7 +18,7 @@ trait SoftDelete
 
     /**
      * 判断当前实例是否被软删除
-     * @access public
+     * @access common
      * @return boolean
      */
     public function trashed()
@@ -34,7 +34,7 @@ trait SoftDelete
 
     /**
      * 查询软删除数据
-     * @access public
+     * @access common
      * @return Query
      */
     public static function withTrashed()
@@ -58,7 +58,7 @@ trait SoftDelete
 
     /**
      * 只查询软删除数据
-     * @access public
+     * @access common
      * @return Query
      */
     public static function onlyTrashed()
@@ -88,7 +88,7 @@ trait SoftDelete
 
     /**
      * 删除当前的记录
-     * @access public
+     * @access common
      * @return bool
      */
     public function delete($force = false)
@@ -132,7 +132,7 @@ trait SoftDelete
 
     /**
      * 删除记录
-     * @access public
+     * @access common
      * @param  mixed $data 主键列表 支持闭包查询条件
      * @param  bool  $force 是否强制删除
      * @return bool
@@ -165,7 +165,7 @@ trait SoftDelete
 
     /**
      * 恢复被软删除的记录
-     * @access public
+     * @access common
      * @param  array $where 更新条件
      * @return bool
      */

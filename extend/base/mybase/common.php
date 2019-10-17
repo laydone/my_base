@@ -54,7 +54,6 @@ function ihuyi_sms($mobile, $content) {
     if ($status != 2) {
         return $values[3]['value'];
     }
-
     return $status;
 }
 
@@ -97,7 +96,6 @@ function curl_get($url, $data = [], $ssl = false) {
     if ($info['http_code'] == '200') {
         return $output;
     }
-
     return false;
 }
 
@@ -136,7 +134,6 @@ function curl_post($url, $data = [], $ssl = false) {
     if ($info['http_code'] == '200') {
         return $output;
     }
-
     return false;
 }
 
@@ -161,7 +158,6 @@ function down_file($url, $path = '', &$file_name = '') {
     $file = file_get_contents($url);
     $file_name = $path . $file_name;
     file_put_contents($file_name, $file);
-
     return true;
 }
 
@@ -188,8 +184,29 @@ function thumb($image, $width = 200, $height = 200) {
     $new_img_height = $NewImgResource->height();
     $new_img = $img_info['dirname'] . '/' . $img_info['filename'] . '@' . $new_img_width . 'x' . $new_img_height . '.' . $type;
     $NewImgResource->save($new_img);
-
     return $new_img;
+}
+
+/**
+ * Describe:获取管理员ID
+ *
+ * @return mixed
+ * @author lidong<947714443@qq.com>
+ * @date   2019/10/17 0017
+ */
+function get_admin_id() {
+    return session('admin_id');
+}
+
+/**
+ * Describe:获取用户ID
+ *
+ * @return mixed
+ * @author lidong<947714443@qq.com>
+ * @date   2019/10/17 0017
+ */
+function get_user_id() {
+    return session('user_id');
 }
 
 /**
@@ -201,6 +218,5 @@ function thumb($image, $width = 200, $height = 200) {
  */
 function get_protocol() {
     $http_type = ((isset($_SERVER['HTTPS']) && ($_SERVER['SERVER_PORT'] == 443 || $_SERVER['HTTPS'] == 1 || $_SERVER['HTTPS'] == 'on')) || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
-
     return $http_type;
 }

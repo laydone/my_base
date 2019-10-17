@@ -56,7 +56,7 @@ class Controller
 
     /**
      * 构造方法
-     * @access public
+     * @access common
      */
     public function __construct(App $app = null)
     {

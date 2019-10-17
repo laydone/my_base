@@ -18,7 +18,7 @@ class RuleName
 
     /**
      * 注册路由标识
-     * @access public
+     * @access common
      * @param  string   $name      路由标识
      * @param  array    $value     路由规则
      * @param  bool     $first     是否置顶
@@ -35,7 +35,7 @@ class RuleName
 
     /**
      * 注册路由规则
-     * @access public
+     * @access common
      * @param  string   $rule      路由规则
      * @param  RuleItem $route     路由
      * @return void
@@ -47,7 +47,7 @@ class RuleName
 
     /**
      * 根据路由规则获取路由对象（列表）
-     * @access public
+     * @access common
      * @param  string   $name      路由标识
      * @param  string   $domain   域名
      * @return array
@@ -59,7 +59,7 @@ class RuleName
 
     /**
      * 获取全部路由列表
-     * @access public
+     * @access common
      * @param  string   $domain   域名
      * @return array
      */
@@ -91,7 +91,7 @@ class RuleName
 
     /**
      * 导入路由标识
-     * @access public
+     * @access common
      * @param  array   $name      路由标识
      * @return void
      */
@@ -102,7 +102,7 @@ class RuleName
 
     /**
      * 根据路由标识获取路由信息（用于URL生成）
-     * @access public
+     * @access common
      * @param  string   $name      路由标识
      * @param  string   $domain   域名
      * @return array|null
@@ -136,7 +136,7 @@ class RuleName
 
     /**
      * 清空路由规则
-     * @access public
+     * @access common
      * @return void
      */
     public function clear()

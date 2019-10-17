@@ -64,7 +64,7 @@ class Session
 
     /**
      * 设置或者获取session作用域（前缀）
-     * @access public
+     * @access common
      * @param  string $prefix
      * @return string|void
      */
@@ -86,7 +86,7 @@ class Session
 
     /**
      * 配置
-     * @access public
+     * @access common
      * @param  array $config
      * @return void
      */
@@ -105,7 +105,7 @@ class Session
 
     /**
      * 设置已经初始化
-     * @access public
+     * @access common
      * @return void
      */
     public function inited()
@@ -115,7 +115,7 @@ class Session
 
     /**
      * session初始化
-     * @access public
+     * @access common
      * @param  array $config
      * @return void
      * @throws \think\Exception
@@ -207,7 +207,7 @@ class Session
 
     /**
      * session自动启动或者初始化
-     * @access public
+     * @access common
      * @return void
      */
     public function boot()
@@ -226,7 +226,7 @@ class Session
 
     /**
      * session设置
-     * @access public
+     * @access common
      * @param  string        $name session名称
      * @param  mixed         $value session值
      * @param  string|null   $prefix 作用域（前缀）
@@ -259,7 +259,7 @@ class Session
 
     /**
      * session获取
-     * @access public
+     * @access common
      * @param  string        $name session名称
      * @param  string|null   $prefix 作用域（前缀）
      * @return mixed
@@ -366,7 +366,7 @@ class Session
 
     /**
      * session获取并删除
-     * @access public
+     * @access common
      * @param  string        $name session名称
      * @param  string|null   $prefix 作用域（前缀）
      * @return mixed
@@ -385,7 +385,7 @@ class Session
 
     /**
      * session设置 下一次请求有效
-     * @access public
+     * @access common
      * @param  string        $name session名称
      * @param  mixed         $value session值
      * @param  string|null   $prefix 作用域（前缀）
@@ -404,7 +404,7 @@ class Session
 
     /**
      * 清空当前请求的session数据
-     * @access public
+     * @access common
      * @return void
      */
     public function flush()
@@ -428,7 +428,7 @@ class Session
 
     /**
      * 删除session数据
-     * @access public
+     * @access common
      * @param  string|array  $name session名称
      * @param  string|null   $prefix 作用域（前缀）
      * @return void
@@ -461,7 +461,7 @@ class Session
 
     /**
      * 清空session数据
-     * @access public
+     * @access common
      * @param  string|null   $prefix 作用域（前缀）
      * @return void
      */
@@ -479,7 +479,7 @@ class Session
 
     /**
      * 判断session数据
-     * @access public
+     * @access common
      * @param  string        $name session名称
      * @param  string|null   $prefix
      * @return bool
@@ -506,7 +506,7 @@ class Session
 
     /**
      * 添加数据到一个session数组
-     * @access public
+     * @access common
      * @param  string  $key
      * @param  mixed   $value
      * @return void
@@ -526,7 +526,7 @@ class Session
 
     /**
      * 启动session
-     * @access public
+     * @access common
      * @return void
      */
     public function start()
@@ -538,7 +538,7 @@ class Session
 
     /**
      * 销毁session
-     * @access public
+     * @access common
      * @return void
      */
     public function destroy()
@@ -556,7 +556,7 @@ class Session
 
     /**
      * 重新生成session_id
-     * @access public
+     * @access common
      * @param  bool $delete 是否删除关联会话文件
      * @return void
      */
@@ -567,7 +567,7 @@ class Session
 
     /**
      * 暂停session
-     * @access public
+     * @access common
      * @return void
      */
     public function pause()

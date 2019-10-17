@@ -23,7 +23,7 @@ class Resource extends RuleGroup
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  Route         $router     路由对象
      * @param  RuleGroup     $parent     上级对象
      * @param  string        $name       资源名称
@@ -108,7 +108,7 @@ class Resource extends RuleGroup
 
     /**
      * rest方法定义和修改
-     * @access public
+     * @access common
      * @param  string        $name 方法名称
      * @param  array|bool    $resource 资源
      * @return $this

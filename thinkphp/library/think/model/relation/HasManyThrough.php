@@ -31,7 +31,7 @@ class HasManyThrough extends Relation
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  Model  $parent     上级模型对象
      * @param  string $model      模型名
      * @param  string $through    中间模型名
@@ -53,7 +53,7 @@ class HasManyThrough extends Relation
 
     /**
      * 延迟获取关联数据
-     * @access public
+     * @access common
      * @param  string   $subRelation 子关联名
      * @param  \Closure $closure     闭包查询条件
      * @return \think\Collection
@@ -71,7 +71,7 @@ class HasManyThrough extends Relation
 
     /**
      * 根据关联条件查询当前模型
-     * @access public
+     * @access common
      * @param  string  $operator 比较操作符
      * @param  integer $count    个数
      * @param  string  $id       关联表的统计字段
@@ -106,7 +106,7 @@ class HasManyThrough extends Relation
 
     /**
      * 根据关联条件查询当前模型
-     * @access public
+     * @access common
      * @param  mixed     $where 查询条件（数组或者闭包）
      * @param  mixed     $fields 字段
      * @return Query
@@ -222,7 +222,7 @@ class HasManyThrough extends Relation
 
     /**
      * 关联模型预查询
-     * @access public
+     * @access common
      * @param  array   $where       关联预查询条件
      * @param  string  $key         关联键名
      * @param  string  $relation    关联名
@@ -255,7 +255,7 @@ class HasManyThrough extends Relation
 
     /**
      * 关联统计
-     * @access public
+     * @access common
      * @param  Model   $result  数据对象
      * @param  Closure $closure 闭包
      * @param  string  $aggregate 聚合查询方法
@@ -298,7 +298,7 @@ class HasManyThrough extends Relation
 
     /**
      * 创建关联统计子查询
-     * @access public
+     * @access common
      * @param  Closure $closure 闭包
      * @param  string  $aggregate 聚合查询方法
      * @param  string  $field 字段

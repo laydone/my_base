@@ -29,7 +29,7 @@ class ErrorException extends Exception
 
     /**
      * 错误异常构造函数
-     * @access public
+     * @access common
      * @param  integer $severity 错误级别
      * @param  string  $message  错误详细信息
      * @param  string  $file     出错文件路径
@@ -46,7 +46,7 @@ class ErrorException extends Exception
 
     /**
      * 获取错误级别
-     * @access public
+     * @access common
      * @return integer 错误级别
      */
     final public function getSeverity()

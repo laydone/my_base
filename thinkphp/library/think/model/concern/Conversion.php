@@ -48,7 +48,7 @@ trait Conversion
 
     /**
      * 设置需要附加的输出属性
-     * @access public
+     * @access common
      * @param  array $append   属性列表
      * @param  bool  $override 是否覆盖
      * @return $this
@@ -62,7 +62,7 @@ trait Conversion
 
     /**
      * 设置附加关联对象的属性
-     * @access public
+     * @access common
      * @param  string       $attr    关联属性
      * @param  string|array $append  追加属性名
      * @return $this
@@ -97,7 +97,7 @@ trait Conversion
 
     /**
      * 设置需要隐藏的输出属性
-     * @access public
+     * @access common
      * @param  array $hidden   属性列表
      * @param  bool  $override 是否覆盖
      * @return $this
@@ -111,7 +111,7 @@ trait Conversion
 
     /**
      * 设置需要输出的属性
-     * @access public
+     * @access common
      * @param  array $visible
      * @param  bool  $override 是否覆盖
      * @return $this
@@ -125,7 +125,7 @@ trait Conversion
 
     /**
      * 转换当前模型对象为数组
-     * @access public
+     * @access common
      * @return array
      */
     public function toArray()
@@ -219,7 +219,7 @@ trait Conversion
 
     /**
      * 转换当前模型对象为JSON字符串
-     * @access public
+     * @access common
      * @param  integer $options json参数
      * @return string
      */
@@ -230,7 +230,7 @@ trait Conversion
 
     /**
      * 移除当前模型的关联属性
-     * @access public
+     * @access common
      * @return $this
      */
     public function removeRelation()
@@ -252,7 +252,7 @@ trait Conversion
 
     /**
      * 转换数据集为数据集对象
-     * @access public
+     * @access common
      * @param  array|Collection $collection 数据集
      * @param  string           $resultSetType 数据集类
      * @return Collection

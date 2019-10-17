@@ -19,7 +19,7 @@ class DataNotFoundException extends DbException
 
     /**
      * DbException constructor.
-     * @access public
+     * @access common
      * @param  string $message
      * @param  string $table
      * @param  array $config
@@ -34,7 +34,7 @@ class DataNotFoundException extends DbException
 
     /**
      * 获取数据表名
-     * @access public
+     * @access common
      * @return string
      */
     public function getTable()

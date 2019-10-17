@@ -132,7 +132,7 @@ class App extends Container
 
     /**
      * 绑定模块或者控制器
-     * @access public
+     * @access common
      * @param  string $bind
      * @return $this
      */
@@ -144,7 +144,7 @@ class App extends Container
 
     /**
      * 设置应用类库目录
-     * @access public
+     * @access common
      * @param  string $path 路径
      * @return $this
      */
@@ -157,7 +157,7 @@ class App extends Container
 
     /**
      * 初始化应用
-     * @access public
+     * @access common
      * @return void
      */
     public function initialize()
@@ -261,7 +261,7 @@ class App extends Container
 
     /**
      * 初始化应用或模块
-     * @access public
+     * @access common
      * @param  string $module 模块名
      * @return void
      */
@@ -368,7 +368,7 @@ class App extends Container
 
     /**
      * 执行应用程序
-     * @access public
+     * @access common
      * @return Response
      * @throws Exception
      */
@@ -473,7 +473,7 @@ class App extends Container
 
     /**
      * 设置当前地址的请求缓存
-     * @access public
+     * @access common
      * @param  string $key 缓存标识，支持变量规则 ，例如 item/:name/:id
      * @param  mixed  $expire 缓存有效期
      * @param  array  $except 缓存排除
@@ -507,7 +507,7 @@ class App extends Container
 
     /**
      * 设置当前请求的调度信息
-     * @access public
+     * @access common
      * @param  Dispatch  $dispatch 调度信息
      * @return $this
      */
@@ -519,7 +519,7 @@ class App extends Container
 
     /**
      * 记录调试信息
-     * @access public
+     * @access common
      * @param  mixed  $msg  调试信息
      * @param  string $type 信息类型
      * @return void
@@ -531,7 +531,7 @@ class App extends Container
 
     /**
      * 获取配置参数 为空则获取所有配置
-     * @access public
+     * @access common
      * @param  string    $name 配置参数名（支持二级配置 .号分割）
      * @return mixed
      */
@@ -542,7 +542,7 @@ class App extends Container
 
     /**
      * 路由初始化 导入路由定义规则
-     * @access public
+     * @access common
      * @return void
      */
     public function routeInit()
@@ -577,7 +577,7 @@ class App extends Container
 
     /**
      * URL路由检测（根据PATH_INFO)
-     * @access public
+     * @access common
      * @return Dispatch
      */
     public function routeCheck()
@@ -620,7 +620,7 @@ class App extends Container
 
     /**
      * 设置应用的路由检测机制
-     * @access public
+     * @access common
      * @param  bool $must  是否强制检测路由
      * @return $this
      */
@@ -658,7 +658,7 @@ class App extends Container
 
     /**
      * 实例化应用类库
-     * @access public
+     * @access common
      * @param  string $name         类名称
      * @param  string $layer        业务层名称
      * @param  bool   $appendSuffix 是否添加类名后缀
@@ -694,7 +694,7 @@ class App extends Container
 
     /**
      * 实例化（分层）模型
-     * @access public
+     * @access common
      * @param  string $name         Model名称
      * @param  string $layer        业务层名称
      * @param  bool   $appendSuffix 是否添加类名后缀
@@ -709,7 +709,7 @@ class App extends Container
 
     /**
      * 实例化（分层）控制器 格式：[模块名/]控制器名
-     * @access public
+     * @access common
      * @param  string $name              资源地址
      * @param  string $layer             控制层名称
      * @param  bool   $appendSuffix      是否添加类名后缀
@@ -732,7 +732,7 @@ class App extends Container
 
     /**
      * 实例化验证类 格式：[模块名/]验证器名
-     * @access public
+     * @access common
      * @param  string $name         资源地址
      * @param  string $layer        验证层名称
      * @param  bool   $appendSuffix 是否添加类名后缀
@@ -753,7 +753,7 @@ class App extends Container
 
     /**
      * 数据库初始化
-     * @access public
+     * @access common
      * @param  mixed         $config 数据库配置
      * @param  bool|string   $name 连接标识 true 强制重新连接
      * @return \think\db\Query
@@ -765,7 +765,7 @@ class App extends Container
 
     /**
      * 远程调用模块的操作方法 参数格式 [模块/控制器/]操作
-     * @access public
+     * @access common
      * @param  string       $url          调用地址
      * @param  string|array $vars         调用参数 支持字符串和数组
      * @param  string       $layer        要调用的控制层名称
@@ -793,7 +793,7 @@ class App extends Container
 
     /**
      * 解析应用类的类名
-     * @access public
+     * @access common
      * @param  string $module 模块名
      * @param  string $layer  层名 controller model ...
      * @param  string $name   类名
@@ -812,7 +812,7 @@ class App extends Container
 
     /**
      * 获取框架版本
-     * @access public
+     * @access common
      * @return string
      */
     public function version()
@@ -822,7 +822,7 @@ class App extends Container
 
     /**
      * 是否为调试模式
-     * @access public
+     * @access common
      * @return bool
      */
     public function isDebug()
@@ -832,7 +832,7 @@ class App extends Container
 
     /**
      * 获取模块路径
-     * @access public
+     * @access common
      * @return string
      */
     public function getModulePath()
@@ -842,7 +842,7 @@ class App extends Container
 
     /**
      * 设置模块路径
-     * @access public
+     * @access common
      * @param  string $path 路径
      * @return void
      */
@@ -854,7 +854,7 @@ class App extends Container
 
     /**
      * 获取应用根目录
-     * @access public
+     * @access common
      * @return string
      */
     public function getRootPath()
@@ -864,7 +864,7 @@ class App extends Container
 
     /**
      * 获取应用类库目录
-     * @access public
+     * @access common
      * @return string
      */
     public function getAppPath()
@@ -878,7 +878,7 @@ class App extends Container
 
     /**
      * 获取应用运行时目录
-     * @access public
+     * @access common
      * @return string
      */
     public function getRuntimePath()
@@ -888,7 +888,7 @@ class App extends Container
 
     /**
      * 获取核心框架目录
-     * @access public
+     * @access common
      * @return string
      */
     public function getThinkPath()
@@ -898,7 +898,7 @@ class App extends Container
 
     /**
      * 获取路由目录
-     * @access public
+     * @access common
      * @return string
      */
     public function getRoutePath()
@@ -908,7 +908,7 @@ class App extends Container
 
     /**
      * 获取应用配置目录
-     * @access public
+     * @access common
      * @return string
      */
     public function getConfigPath()
@@ -918,7 +918,7 @@ class App extends Container
 
     /**
      * 获取配置后缀
-     * @access public
+     * @access common
      * @return string
      */
     public function getConfigExt()
@@ -928,7 +928,7 @@ class App extends Container
 
     /**
      * 获取应用类库命名空间
-     * @access public
+     * @access common
      * @return string
      */
     public function getNamespace()
@@ -938,7 +938,7 @@ class App extends Container
 
     /**
      * 设置应用类库命名空间
-     * @access public
+     * @access common
      * @param  string $namespace 命名空间名称
      * @return $this
      */
@@ -950,7 +950,7 @@ class App extends Container
 
     /**
      * 是否启用类库后缀
-     * @access public
+     * @access common
      * @return bool
      */
     public function getSuffix()
@@ -960,7 +960,7 @@ class App extends Container
 
     /**
      * 获取应用开启时间
-     * @access public
+     * @access common
      * @return float
      */
     public function getBeginTime()
@@ -970,7 +970,7 @@ class App extends Container
 
     /**
      * 获取应用初始内存占用
-     * @access public
+     * @access common
      * @return integer
      */
     public function getBeginMem()

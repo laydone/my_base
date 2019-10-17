@@ -65,7 +65,7 @@ class Redirect extends Response
 
     /**
      * 获取跳转地址
-     * @access public
+     * @access common
      * @return string
      */
     public function getTargetUrl()
@@ -86,7 +86,7 @@ class Redirect extends Response
 
     /**
      * 记住当前url后跳转
-     * @access public
+     * @access common
      * @param string $url 指定记住的url
      * @return $this
      */
@@ -99,7 +99,7 @@ class Redirect extends Response
 
     /**
      * 跳转到上次记住的url
-     * @access public
+     * @access common
      * @param  string  $url 闪存数据不存在时的跳转地址
      * @return $this
      */

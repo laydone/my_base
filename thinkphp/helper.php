@@ -94,7 +94,7 @@ if (!function_exists('behavior')) {
 if (!function_exists('bind')) {
     /**
      * 绑定一个类到容器
-     * @access public
+     * @access common
      * @param string  $abstract    类标识、接口
      * @param mixed   $concrete    要绑定的类、闭包或者实例
      * @return Container
@@ -336,7 +336,7 @@ if (!function_exists('dump')) {
 if (!function_exists('env')) {
     /**
      * 获取环境变量值
-     * @access public
+     * @access common
      * @param  string    $name 环境变量名（支持二级 .号分割）
      * @param  string    $default  默认值
      * @return mixed

@@ -93,7 +93,7 @@ trait Attribute
 
     /**
      * 获取模型对象的主键
-     * @access public
+     * @access common
      * @return string|array
      */
     public function getPk()
@@ -103,7 +103,7 @@ trait Attribute
 
     /**
      * 判断一个字段名是否为主键字段
-     * @access public
+     * @access common
      * @param  string $key 名称
      * @return bool
      */
@@ -121,7 +121,7 @@ trait Attribute
 
     /**
      * 获取模型对象的主键值
-     * @access public
+     * @access common
      * @return integer
      */
     public function getKey()
@@ -136,7 +136,7 @@ trait Attribute
 
     /**
      * 设置允许写入的字段
-     * @access public
+     * @access common
      * @param  array|string|true $field 允许写入的字段 如果为true只允许写入数据表字段
      * @return $this
      */
@@ -153,7 +153,7 @@ trait Attribute
 
     /**
      * 设置只读字段
-     * @access public
+     * @access common
      * @param  array|string $field 只读字段
      * @return $this
      */
@@ -170,7 +170,7 @@ trait Attribute
 
     /**
      * 设置数据对象值
-     * @access public
+     * @access common
      * @param  mixed $data  数据或者属性名
      * @param  mixed $value 值
      * @return $this
@@ -218,7 +218,7 @@ trait Attribute
 
     /**
      * 批量设置数据对象值
-     * @access public
+     * @access common
      * @param  mixed $data  数据
      * @param  bool  $set   是否需要进行数据处理
      * @return $this
@@ -243,7 +243,7 @@ trait Attribute
 
     /**
      * 获取对象原始数据 如果不存在指定字段返回null
-     * @access public
+     * @access common
      * @param  string $name 字段名 留空获取全部
      * @return mixed
      */
@@ -257,7 +257,7 @@ trait Attribute
 
     /**
      * 获取对象原始数据 如果不存在指定字段返回false
-     * @access public
+     * @access common
      * @param  string $name 字段名 留空获取全部
      * @return mixed
      * @throws InvalidArgumentException
@@ -276,7 +276,7 @@ trait Attribute
 
     /**
      * 获取变化的数据 并排除只读数据
-     * @access public
+     * @access common
      * @return array
      */
     public function getChangedData()
@@ -307,7 +307,7 @@ trait Attribute
 
     /**
      * 修改器 设置数据对象值
-     * @access public
+     * @access common
      * @param  string $name  属性名
      * @param  mixed  $value 属性值
      * @param  array  $data  数据
@@ -346,7 +346,7 @@ trait Attribute
 
     /**
      * 是否需要自动写入时间字段
-     * @access public
+     * @access common
      * @param  bool $auto
      * @return $this
      */
@@ -463,7 +463,7 @@ trait Attribute
 
     /**
      * 获取器 获取数据对象的值
-     * @access public
+     * @access common
      * @param  string $name 名称
      * @param  array  $item 数据
      * @return mixed
@@ -632,7 +632,7 @@ trait Attribute
 
     /**
      * 设置数据字段获取器
-     * @access public
+     * @access common
      * @param  string|array $name       字段名
      * @param  callable     $callback   闭包获取器
      * @return $this

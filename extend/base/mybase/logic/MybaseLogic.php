@@ -72,15 +72,51 @@ class MybaseLogic {
     }
 
 
+    /**
+     * Describe: 数据表数据更新
+     *
+     * @param array $data 需要更新的数据
+     *
+     * @return bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/17 0017
+     */
     public function update($data) {
         if (ArrTree::arr_empty($data)) { /*验证数据合法性*/
             $this->error = '';
-
             return false;
         }
-        if ($this->model->fieldExists('create_time')) {
-
+        $time = time();
+        if ($this->model->fieldExists('update_time') && !array_key_exists('update_time', $data)) {
+            $data['update_time'] = $time;
         }
+        if (isset ($data [$this->model->getPk()]) && $data [$this->model->getPk()] > 0) { /* 执行更新操作 */
+            try {
+                $check = $this->validate->check($data);
+                if ($check === false) {
+                    throw new \Exception ($this->validate->getError());
+                }
+                $this->model->allowField(true)->isUpdate(true)->save($data);
+            } catch (\Exception $e) {
+                $this->error = $e->getMessage();
+                return false;
+            }
+        } else { /* 执行插入操作 */
+            if ($this->model->fieldExists('create_time') && !array_key_exists('create_time', $data)) {
+                $data['create_time'] = $time;
+            }
+            try {
+                $check = $this->validate->check($data);
+                if ($check === false) {
+                    throw new \Exception ($this->validate->getError());
+                }
+                $this->model->allowField(true)->save($data);
+            } catch (\Exception $e) {
+                $this->error = $e->getMessage();
+                return false;
+            }
+        }
+        return true;
     }
 
 

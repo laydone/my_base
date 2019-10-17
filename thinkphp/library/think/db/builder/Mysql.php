@@ -41,7 +41,7 @@ class Mysql extends Builder
 
     /**
      * 生成insertall SQL
-     * @access public
+     * @access common
      * @param  Query     $query   查询对象
      * @param  array     $dataSet 数据集
      * @param  bool      $replace 是否replace
@@ -109,7 +109,7 @@ class Mysql extends Builder
 
     /**
      * 字段和表名处理
-     * @access public
+     * @access common
      * @param  Query     $query 查询对象
      * @param  mixed     $key   字段名
      * @param  bool      $strict   严格检测

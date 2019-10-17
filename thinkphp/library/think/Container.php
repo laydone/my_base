@@ -96,7 +96,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 获取当前容器的实例（单例）
-     * @access public
+     * @access common
      * @return static
      */
     public static function getInstance()
@@ -110,7 +110,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 设置当前容器的实例
-     * @access public
+     * @access common
      * @param  object        $instance
      * @return void
      */
@@ -121,7 +121,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 获取容器中的对象实例
-     * @access public
+     * @access common
      * @param  string        $abstract       类名或者标识
      * @param  array|true    $vars           变量
      * @param  bool          $newInstance    是否每次创建新的实例
@@ -134,7 +134,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 绑定一个类、闭包、实例、接口实现到容器
-     * @access public
+     * @access common
      * @param  string  $abstract    类标识、接口
      * @param  mixed   $concrete    要绑定的类、闭包或者实例
      * @return Container
@@ -146,7 +146,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 移除容器中的对象实例
-     * @access public
+     * @access common
      * @param  string  $abstract    类标识、接口
      * @return void
      */
@@ -157,7 +157,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 清除容器中的对象实例
-     * @access public
+     * @access common
      * @return void
      */
     public static function clear()
@@ -167,7 +167,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 绑定一个类、闭包、实例、接口实现到容器
-     * @access public
+     * @access common
      * @param  string|array  $abstract    类标识、接口
      * @param  mixed         $concrete    要绑定的类、闭包或者实例
      * @return $this
@@ -192,7 +192,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 绑定一个类实例当容器
-     * @access public
+     * @access common
      * @param  string           $abstract    类名或者标识
      * @param  object|\Closure  $instance    类的实例
      * @return $this
@@ -214,7 +214,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 判断容器中是否存在类及标识
-     * @access public
+     * @access common
      * @param  string    $abstract    类名或者标识
      * @return bool
      */
@@ -225,7 +225,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 判断容器中是否存在对象实例
-     * @access public
+     * @access common
      * @param  string    $abstract    类名或者标识
      * @return bool
      */
@@ -240,7 +240,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 判断容器中是否存在类及标识
-     * @access public
+     * @access common
      * @param  string    $name    类名或者标识
      * @return bool
      */
@@ -251,7 +251,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 创建类的实例
-     * @access public
+     * @access common
      * @param  string        $abstract       类名或者标识
      * @param  array|true    $vars           变量
      * @param  bool          $newInstance    是否每次创建新的实例
@@ -293,7 +293,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 删除容器中的对象实例
-     * @access public
+     * @access common
      * @param  string|array    $abstract    类名或者标识
      * @return void
      */
@@ -310,7 +310,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 获取容器中的对象实例
-     * @access public
+     * @access common
      * @return array
      */
     public function all()
@@ -320,7 +320,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 清除容器中的对象实例
-     * @access public
+     * @access common
      * @return void
      */
     public function flush()
@@ -332,7 +332,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 执行函数或者闭包方法 支持参数调用
-     * @access public
+     * @access common
      * @param  mixed  $function 函数或者闭包
      * @param  array  $vars     参数
      * @return mixed
@@ -352,7 +352,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 调用反射执行类的方法 支持参数绑定
-     * @access public
+     * @access common
      * @param  mixed   $method 方法
      * @param  array   $vars   参数
      * @return mixed
@@ -382,7 +382,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 调用反射执行类的方法 支持参数绑定
-     * @access public
+     * @access common
      * @param  object  $instance 对象实例
      * @param  mixed   $reflect 反射类
      * @param  array   $vars   参数
@@ -397,7 +397,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 调用反射执行callable 支持参数绑定
-     * @access public
+     * @access common
      * @param  mixed $callable
      * @param  array $vars   参数
      * @return mixed
@@ -413,7 +413,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
 
     /**
      * 调用反射执行类的实例化 支持依赖注入
-     * @access public
+     * @access common
      * @param  string    $class 类名
      * @param  array     $vars  参数
      * @return mixed

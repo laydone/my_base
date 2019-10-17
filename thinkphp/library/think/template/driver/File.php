@@ -19,7 +19,7 @@ class File
 
     /**
      * 写入编译缓存
-     * @access public
+     * @access common
      * @param  string $cacheFile 缓存的文件名
      * @param  string $content 缓存的内容
      * @return void|array
@@ -41,7 +41,7 @@ class File
 
     /**
      * 读取编译编译
-     * @access public
+     * @access common
      * @param  string  $cacheFile 缓存的文件名
      * @param  array   $vars 变量数组
      * @return void
@@ -61,7 +61,7 @@ class File
 
     /**
      * 检查编译缓存是否有效
-     * @access public
+     * @access common
      * @param  string  $cacheFile 缓存的文件名
      * @param  int     $cacheTime 缓存时间
      * @return boolean

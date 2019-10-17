@@ -55,7 +55,7 @@ class Cx extends Taglib
      * php标签解析
      * 格式：
      * {php}echo $name{/php}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -73,7 +73,7 @@ class Cx extends Taglib
      * {user.username}
      * {user.email}
      * {/volist}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string|void
@@ -129,7 +129,7 @@ class Cx extends Taglib
      * {foreach name="userList" id="user" key="key" index="i" mod="2" offset="3" length="5" empty=""}
      * {user.username}
      * {/foreach}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string|void
@@ -218,7 +218,7 @@ class Cx extends Taglib
      * {else /}
      * {/if}
      * 表达式支持 eq neq gt egt lt elt == > >= < <= or and || &&
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -235,7 +235,7 @@ class Cx extends Taglib
     /**
      * elseif标签解析
      * 格式：见if标签
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -252,7 +252,7 @@ class Cx extends Taglib
     /**
      * else标签解析
      * 格式：见if标签
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @return string
      */
@@ -271,7 +271,7 @@ class Cx extends Taglib
      * {case value="2" }2{/case}
      * {default /}other
      * {/switch}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -287,7 +287,7 @@ class Cx extends Taglib
 
     /**
      * case标签解析 需要配合switch才有效
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -323,7 +323,7 @@ class Cx extends Taglib
     /**
      * default标签解析 需要配合switch才有效
      * 使用： {default /}ddfdf
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -339,7 +339,7 @@ class Cx extends Taglib
      * compare标签解析
      * 用于值的比较 支持 eq neq gt lt egt elt heq nheq 默认是eq
      * 格式： {compare name="" type="eq" value="" }content{/compare}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -377,7 +377,7 @@ class Cx extends Taglib
      * 如果某个变量存在于某个范围 则输出内容 type= in 表示在范围内 否则表示在范围外
      * 格式： {range name="var|function"  value="val" type='in|notin' }content{/range}
      * example: {range name="a"  value="1,2,3" type='in' }content{/range}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -415,7 +415,7 @@ class Cx extends Taglib
      * present标签解析
      * 如果某个变量已经设置 则输出内容
      * 格式： {present name="" }content{/present}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -433,7 +433,7 @@ class Cx extends Taglib
      * notpresent标签解析
      * 如果某个变量没有设置，则输出内容
      * 格式： {notpresent name="" }content{/notpresent}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -451,7 +451,7 @@ class Cx extends Taglib
      * empty标签解析
      * 如果某个变量为empty 则输出内容
      * 格式： {empty name="" }content{/empty}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -469,7 +469,7 @@ class Cx extends Taglib
      * notempty标签解析
      * 如果某个变量不为empty 则输出内容
      * 格式： {notempty name="" }content{/notempty}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -486,7 +486,7 @@ class Cx extends Taglib
     /**
      * 判断是否已经定义了该常量
      * {defined name='TXT'}已定义{/defined}
-     * @access public
+     * @access common
      * @param  array $tag
      * @param  string $content
      * @return string
@@ -502,7 +502,7 @@ class Cx extends Taglib
     /**
      * 判断是否没有定义了该常量
      * {notdefined name='TXT'}已定义{/notdefined}
-     * @access public
+     * @access common
      * @param  array $tag
      * @param  string $content
      * @return string
@@ -518,7 +518,7 @@ class Cx extends Taglib
     /**
      * load 标签解析 {load file="/static/js/base.js" /}
      * 格式：{load file="/static/css/base.css" /}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -565,7 +565,7 @@ class Cx extends Taglib
      * assign标签解析
      * 在模板中给某个变量赋值 支持变量赋值
      * 格式： {assign name="" value="" /}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -590,7 +590,7 @@ class Cx extends Taglib
      * define标签解析
      * 在模板中定义常量 支持变量赋值
      * 格式： {define name="" value="" /}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -617,7 +617,7 @@ class Cx extends Taglib
      * {for start="" end="" comparison="" step="" name=""}
      * content
      * {/for}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -670,7 +670,7 @@ class Cx extends Taglib
     /**
      * url函数的tag标签
      * 格式：{url link="模块/控制器/方法" vars="参数" suffix="true或者false 是否带有后缀" domain="true或者false 是否携带域名" /}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string
@@ -697,7 +697,7 @@ class Cx extends Taglib
      *          {$data}
      *      {/if}
      * {/function}
-     * @access public
+     * @access common
      * @param  array $tag 标签属性
      * @param  string $content 标签内容
      * @return string

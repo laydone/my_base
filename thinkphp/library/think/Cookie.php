@@ -36,7 +36,7 @@ class Cookie
 
     /**
      * 构造方法
-     * @access public
+     * @access common
      */
     public function __construct(array $config = [])
     {
@@ -45,7 +45,7 @@ class Cookie
 
     /**
      * Cookie初始化
-     * @access public
+     * @access common
      * @param  array $config
      * @return void
      */
@@ -65,7 +65,7 @@ class Cookie
 
     /**
      * 设置或者获取cookie作用域（前缀）
-     * @access public
+     * @access common
      * @param  string $prefix
      * @return string|void
      */
@@ -81,7 +81,7 @@ class Cookie
     /**
      * Cookie 设置、获取、删除
      *
-     * @access public
+     * @access common
      * @param  string $name  cookie名称
      * @param  mixed  $value cookie值
      * @param  mixed  $option 可选参数 可能会是 null|integer|string
@@ -122,7 +122,7 @@ class Cookie
     /**
      * Cookie 设置保存
      *
-     * @access public
+     * @access common
      * @param  string $name  cookie名称
      * @param  mixed  $value cookie值
      * @param  array  $option 可选参数
@@ -135,7 +135,7 @@ class Cookie
 
     /**
      * 永久保存Cookie数据
-     * @access public
+     * @access common
      * @param  string $name  cookie名称
      * @param  mixed  $value cookie值
      * @param  mixed  $option 可选参数 可能会是 null|integer|string
@@ -154,7 +154,7 @@ class Cookie
 
     /**
      * 判断Cookie数据
-     * @access public
+     * @access common
      * @param  string        $name cookie名称
      * @param  string|null   $prefix cookie前缀
      * @return bool
@@ -169,7 +169,7 @@ class Cookie
 
     /**
      * Cookie获取
-     * @access public
+     * @access common
      * @param  string        $name cookie名称 留空获取全部
      * @param  string|null   $prefix cookie前缀
      * @return mixed
@@ -207,7 +207,7 @@ class Cookie
 
     /**
      * Cookie删除
-     * @access public
+     * @access common
      * @param  string        $name cookie名称
      * @param  string|null   $prefix cookie前缀
      * @return void
@@ -228,7 +228,7 @@ class Cookie
 
     /**
      * Cookie清空
-     * @access public
+     * @access common
      * @param  string|null $prefix cookie前缀
      * @return void
      */

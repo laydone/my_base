@@ -47,7 +47,7 @@ class RuleGroup extends Rule
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  Route       $router   路由对象
      * @param  RuleGroup   $parent   上级对象
      * @param  string      $name     分组名称
@@ -82,7 +82,7 @@ class RuleGroup extends Rule
 
     /**
      * 设置分组的路由规则
-     * @access public
+     * @access common
      * @return void
      */
     protected function setFullName()
@@ -100,7 +100,7 @@ class RuleGroup extends Rule
 
     /**
      * 获取所属域名
-     * @access public
+     * @access common
      * @return string
      */
     public function getDomain()
@@ -110,7 +110,7 @@ class RuleGroup extends Rule
 
     /**
      * 检测分组路由
-     * @access public
+     * @access common
      * @param  Request      $request  请求对象
      * @param  string       $url      访问地址
      * @param  bool         $completeMatch   路由是否完全匹配
@@ -231,7 +231,7 @@ class RuleGroup extends Rule
 
     /**
      * 延迟解析分组的路由规则
-     * @access public
+     * @access common
      * @param  bool     $lazy   路由是否延迟解析
      * @return $this
      */
@@ -247,7 +247,7 @@ class RuleGroup extends Rule
 
     /**
      * 解析分组和域名的路由规则及绑定
-     * @access public
+     * @access common
      * @param  mixed        $rule    路由规则
      * @return void
      */
@@ -269,7 +269,7 @@ class RuleGroup extends Rule
 
     /**
      * 检测分组路由
-     * @access public
+     * @access common
      * @param  Request      $request  请求对象
      * @param  array        $rules    路由规则
      * @param  string       $url      访问地址
@@ -368,7 +368,7 @@ class RuleGroup extends Rule
 
     /**
      * 获取分组的MISS路由
-     * @access public
+     * @access common
      * @return RuleItem|null
      */
     public function getMissRule()
@@ -378,7 +378,7 @@ class RuleGroup extends Rule
 
     /**
      * 获取分组的自动路由
-     * @access public
+     * @access common
      * @return string
      */
     public function getAutoRule()
@@ -388,7 +388,7 @@ class RuleGroup extends Rule
 
     /**
      * 注册自动路由
-     * @access public
+     * @access common
      * @param  string     $route   路由规则
      * @return void
      */
@@ -399,7 +399,7 @@ class RuleGroup extends Rule
 
     /**
      * 注册MISS路由
-     * @access public
+     * @access common
      * @param  string    $route      路由地址
      * @param  string    $method     请求类型
      * @param  array     $option     路由参数
@@ -417,7 +417,7 @@ class RuleGroup extends Rule
 
     /**
      * 添加分组下的路由规则或者子分组
-     * @access public
+     * @access common
      * @param  string    $rule       路由规则
      * @param  string    $route      路由地址
      * @param  string    $method     请求类型
@@ -458,7 +458,7 @@ class RuleGroup extends Rule
 
     /**
      * 批量注册路由规则
-     * @access public
+     * @access common
      * @param  array     $rules      路由规则
      * @param  string    $method     请求类型
      * @param  array     $option     路由参数
@@ -498,7 +498,7 @@ class RuleGroup extends Rule
 
     /**
      * 设置分组的路由前缀
-     * @access public
+     * @access common
      * @param  string     $prefix
      * @return $this
      */
@@ -513,7 +513,7 @@ class RuleGroup extends Rule
 
     /**
      * 设置资源允许
-     * @access public
+     * @access common
      * @param  array     $only
      * @return $this
      */
@@ -524,7 +524,7 @@ class RuleGroup extends Rule
 
     /**
      * 设置资源排除
-     * @access public
+     * @access common
      * @param  array     $except
      * @return $this
      */
@@ -535,7 +535,7 @@ class RuleGroup extends Rule
 
     /**
      * 设置资源路由的变量
-     * @access public
+     * @access common
      * @param  array     $vars
      * @return $this
      */
@@ -546,7 +546,7 @@ class RuleGroup extends Rule
 
     /**
      * 合并分组的路由规则正则
-     * @access public
+     * @access common
      * @param  bool     $merge
      * @return $this
      */
@@ -557,7 +557,7 @@ class RuleGroup extends Rule
 
     /**
      * 获取完整分组Name
-     * @access public
+     * @access common
      * @return string
      */
     public function getFullName()
@@ -567,7 +567,7 @@ class RuleGroup extends Rule
 
     /**
      * 获取分组的路由规则
-     * @access public
+     * @access common
      * @param  string     $method
      * @return array
      */
@@ -582,7 +582,7 @@ class RuleGroup extends Rule
 
     /**
      * 清空分组下的路由规则
-     * @access public
+     * @access common
      * @return void
      */
     public function clear()

@@ -47,7 +47,7 @@ class Socket
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  array $config 缓存参数
      */
     public function __construct(App $app, array $config = [])
@@ -61,7 +61,7 @@ class Socket
 
     /**
      * 调试输出接口
-     * @access public
+     * @access common
      * @param  array     $log 日志信息
      * @return bool
      */

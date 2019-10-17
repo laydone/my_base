@@ -26,7 +26,7 @@ class Env
 
     /**
      * 读取环境变量定义文件
-     * @access public
+     * @access common
      * @param  string    $file  环境变量定义文件
      * @return void
      */
@@ -38,7 +38,7 @@ class Env
 
     /**
      * 获取环境变量值
-     * @access public
+     * @access common
      * @param  string    $name 环境变量名
      * @param  mixed     $default  默认值
      * @return mixed
@@ -85,7 +85,7 @@ class Env
 
     /**
      * 设置环境变量值
-     * @access public
+     * @access common
      * @param  string|array  $env   环境变量
      * @param  mixed         $value  值
      * @return void

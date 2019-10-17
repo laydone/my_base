@@ -363,7 +363,7 @@ class Loader
     /**
      * 字符串命名风格转换
      * type 0 将Java风格转换为C的风格 1 将C风格转换为Java的风格
-     * @access public
+     * @access common
      * @param  string  $name 字符串
      * @param  integer $type 转换类型
      * @param  bool    $ucfirst 首字母是否大写（驼峰规则）
@@ -383,7 +383,7 @@ class Loader
 
     /**
      * 创建工厂对象实例
-     * @access public
+     * @access common
      * @param  string $name         工厂类名
      * @param  string $namespace    默认命名空间
      * @return mixed

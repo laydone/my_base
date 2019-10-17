@@ -74,7 +74,7 @@ class Lang
 
     /**
      * 设置语言定义(不区分大小写)
-     * @access public
+     * @access common
      * @param  string|array  $name 语言变量
      * @param  string        $value 语言值
      * @param  string        $range 语言作用域
@@ -97,7 +97,7 @@ class Lang
 
     /**
      * 加载语言定义(不区分大小写)
-     * @access public
+     * @access common
      * @param  string|array  $file   语言文件
      * @param  string        $range  语言作用域
      * @return array
@@ -136,7 +136,7 @@ class Lang
 
     /**
      * 获取语言定义(不区分大小写)
-     * @access public
+     * @access common
      * @param  string|null   $name 语言变量
      * @param  string        $range 语言作用域
      * @return bool
@@ -150,7 +150,7 @@ class Lang
 
     /**
      * 获取语言定义(不区分大小写)
-     * @access public
+     * @access common
      * @param  string|null   $name 语言变量
      * @param  array         $vars 变量替换
      * @param  string        $range 语言作用域
@@ -194,7 +194,7 @@ class Lang
 
     /**
      * 自动侦测设置获取语言选择
-     * @access public
+     * @access common
      * @return string
      */
     public function detect()
@@ -227,7 +227,7 @@ class Lang
 
     /**
      * 设置当前语言到Cookie
-     * @access public
+     * @access common
      * @param  string $lang 语言
      * @return void
      */
@@ -240,7 +240,7 @@ class Lang
 
     /**
      * 设置语言自动侦测的变量
-     * @access public
+     * @access common
      * @param  string $var 变量名称
      * @return void
      */
@@ -251,7 +251,7 @@ class Lang
 
     /**
      * 设置语言的cookie保存变量
-     * @access public
+     * @access common
      * @param  string $var 变量名称
      * @return void
      */
@@ -262,7 +262,7 @@ class Lang
 
     /**
      * 设置允许的语言列表
-     * @access public
+     * @access common
      * @param  array $list 语言列表
      * @return void
      */
@@ -273,7 +273,7 @@ class Lang
 
     /**
      * 设置转义的语言列表
-     * @access public
+     * @access common
      * @param  array $list 语言列表
      * @return void
      */

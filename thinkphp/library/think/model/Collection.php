@@ -18,7 +18,7 @@ class Collection extends BaseCollection
 {
     /**
      * 延迟预载入关联查询
-     * @access public
+     * @access common
      * @param  mixed $relation 关联
      * @return $this
      */
@@ -34,7 +34,7 @@ class Collection extends BaseCollection
 
     /**
      * 设置需要隐藏的输出属性
-     * @access public
+     * @access common
      * @param  array $hidden   属性列表
      * @param  bool  $override 是否覆盖
      * @return $this
@@ -51,7 +51,7 @@ class Collection extends BaseCollection
 
     /**
      * 设置需要输出的属性
-     * @access public
+     * @access common
      * @param  array $visible
      * @param  bool  $override 是否覆盖
      * @return $this
@@ -68,7 +68,7 @@ class Collection extends BaseCollection
 
     /**
      * 设置需要追加的输出属性
-     * @access public
+     * @access common
      * @param  array $append   属性列表
      * @param  bool  $override 是否覆盖
      * @return $this
@@ -85,7 +85,7 @@ class Collection extends BaseCollection
 
     /**
      * 设置数据字段获取器
-     * @access public
+     * @access common
      * @param  string|array $name       字段名
      * @param  callable     $callback   闭包获取器
      * @return $this

@@ -36,7 +36,7 @@ class Redis implements SessionHandlerInterface
 
     /**
      * 打开Session
-     * @access public
+     * @access common
      * @param  string $savePath
      * @param  mixed  $sessName
      * @return bool
@@ -76,7 +76,7 @@ class Redis implements SessionHandlerInterface
 
     /**
      * 关闭Session
-     * @access public
+     * @access common
      */
     public function close()
     {
@@ -89,7 +89,7 @@ class Redis implements SessionHandlerInterface
 
     /**
      * 读取Session
-     * @access public
+     * @access common
      * @param  string $sessID
      * @return string
      */
@@ -100,7 +100,7 @@ class Redis implements SessionHandlerInterface
 
     /**
      * 写入Session
-     * @access public
+     * @access common
      * @param  string $sessID
      * @param  string $sessData
      * @return bool
@@ -118,7 +118,7 @@ class Redis implements SessionHandlerInterface
 
     /**
      * 删除Session
-     * @access public
+     * @access common
      * @param  string $sessID
      * @return bool
      */
@@ -129,7 +129,7 @@ class Redis implements SessionHandlerInterface
 
     /**
      * Session 垃圾回收
-     * @access public
+     * @access common
      * @param  string $sessMaxLifeTime
      * @return bool
      */
@@ -140,7 +140,7 @@ class Redis implements SessionHandlerInterface
 
     /**
      * Redis Session 驱动的加锁机制
-     * @access public
+     * @access common
      * @param  string  $sessID   用于加锁的sessID
      * @param  integer $timeout 默认过期时间
      * @return bool
@@ -165,7 +165,7 @@ class Redis implements SessionHandlerInterface
 
     /**
      * Redis Session 驱动的解锁机制
-     * @access public
+     * @access common
      * @param  string  $sessID   用于解锁的sessID
      */
     public function unlock($sessID)

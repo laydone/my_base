@@ -48,7 +48,7 @@ class File
 
     /**
      * 日志写入接口
-     * @access public
+     * @access common
      * @param  array    $log    日志信息
      * @param  bool     $append 是否追加请求信息
      * @return bool
@@ -130,7 +130,7 @@ class File
 
     /**
      * 获取主日志文件名
-     * @access public
+     * @access common
      * @return string
      */
     protected function getMasterLogFile()
@@ -167,7 +167,7 @@ class File
 
     /**
      * 获取独立日志文件名
-     * @access public
+     * @access common
      * @param  string $path 日志目录
      * @param  string $type 日志类型
      * @return string

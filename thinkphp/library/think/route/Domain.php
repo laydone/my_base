@@ -22,7 +22,7 @@ class Domain extends RuleGroup
 {
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  Route       $router   路由对象
      * @param  string      $name     路由域名
      * @param  mixed       $rule     域名路由
@@ -40,7 +40,7 @@ class Domain extends RuleGroup
 
     /**
      * 检测域名路由
-     * @access public
+     * @access common
      * @param  Request      $request  请求对象
      * @param  string       $url      访问地址
      * @param  bool         $completeMatch   路由是否完全匹配
@@ -78,7 +78,7 @@ class Domain extends RuleGroup
 
     /**
      * 设置路由绑定
-     * @access public
+     * @access common
      * @param  string     $bind 绑定信息
      * @return $this
      */

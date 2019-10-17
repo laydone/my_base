@@ -37,7 +37,7 @@ class Sqlite extends Connection
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access common
      * @param  string $tableName
      * @return array
      */
@@ -69,7 +69,7 @@ class Sqlite extends Connection
 
     /**
      * 取得数据库的表信息
-     * @access public
+     * @access common
      * @param  string $dbName
      * @return array
      */

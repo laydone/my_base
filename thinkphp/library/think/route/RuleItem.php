@@ -21,7 +21,7 @@ class RuleItem extends Rule
 
     /**
      * 架构函数
-     * @access public
+     * @access common
      * @param  Route             $router 路由实例
      * @param  RuleGroup         $parent 上级对象
      * @param  string            $name 路由标识
@@ -50,7 +50,7 @@ class RuleItem extends Rule
 
     /**
      * 路由规则预处理
-     * @access public
+     * @access common
      * @param  string      $rule     路由规则
      * @return void
      */
@@ -81,7 +81,7 @@ class RuleItem extends Rule
 
     /**
      * 检查后缀
-     * @access public
+     * @access common
      * @param  string     $ext
      * @return $this
      */
@@ -95,7 +95,7 @@ class RuleItem extends Rule
 
     /**
      * 设置别名
-     * @access public
+     * @access common
      * @param  string     $name
      * @return $this
      */
@@ -140,7 +140,7 @@ class RuleItem extends Rule
 
     /**
      * 检测路由
-     * @access public
+     * @access common
      * @param  Request      $request  请求对象
      * @param  string       $url      访问地址
      * @param  array        $match    匹配路由变量
@@ -186,7 +186,7 @@ class RuleItem extends Rule
 
     /**
      * 检测路由（含路由匹配）
-     * @access public
+     * @access common
      * @param  Request      $request  请求对象
      * @param  string       $url      访问地址
      * @param  string       $depr     路径分隔符

@@ -105,7 +105,7 @@ class ValidateRule
 
     /**
      * 获取验证规则
-     * @access public
+     * @access common
      * @return array
      */
     public function getRule()
@@ -115,7 +115,7 @@ class ValidateRule
 
     /**
      * 获取验证字段名称
-     * @access public
+     * @access common
      * @return string
      */
     public function getTitle()
@@ -125,7 +125,7 @@ class ValidateRule
 
     /**
      * 获取验证提示
-     * @access public
+     * @access common
      * @return array
      */
     public function getMsg()
@@ -135,7 +135,7 @@ class ValidateRule
 
     /**
      * 设置验证字段名称
-     * @access public
+     * @access common
      * @return $this
      */
     public function title($title)
