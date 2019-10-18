@@ -13,3 +13,4 @@
 use think\facade\Route;
 
 /*Route::rule('admin/login', 'admin/common.login/index');*/
+Route::rule('admin/test/:action', 'admin/test.demo/:action');

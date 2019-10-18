@@ -44,16 +44,7 @@ class base extends MyController {
     public function _init() { }
 
 
-    /**
-     * Describe:首页/列表页展示
-     *
-     * @return mixed
-     * @author lidong<947714443@qq.com>
-     * @date   2019/10/17 0017
-     */
-    public function index() {
-        return $this->fetch();
-    }
+
 
 
 }
