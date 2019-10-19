@@ -1,6 +1,4 @@
 <?php
-namespace plugins\tools;
-
 /**
  * +----------------------------------------------------------------------
  * |
@@ -10,6 +8,16 @@ namespace plugins\tools;
  * | Date 2019/9/29 0029
  * +----------------------------------------------------------------------
  * | File Describe:
+ */
+namespace plugins\tools;
+
+/**
+ * Describe:数组/树状工具类
+ * Class ArrTree
+ *
+ * @package plugins\tools
+ * @author  lidong<947714443@qq.com>
+ * @date    2019/10/19 0019
  */
 class ArrTree {
 
@@ -64,7 +72,6 @@ class ArrTree {
                 }
             }
         }
-
         return $tree;
     }
 
@@ -91,7 +98,6 @@ class ArrTree {
         } catch (\Exception $e) {
             throw $e;
         }
-
         return $new_arr;
     }
 
@@ -107,7 +113,6 @@ class ArrTree {
      */
     static public function arr_empty($arr) {
         if (is_array($arr) && !empty($arr)) return false;
-
         return true;
     }
 

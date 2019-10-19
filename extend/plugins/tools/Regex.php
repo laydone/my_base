@@ -12,7 +12,7 @@
 namespace plugins\tools;
 
 /**
- * Describe:正则表达式
+ * Describe:正则工具类
  * Class Regex
  *
  * @package plugins

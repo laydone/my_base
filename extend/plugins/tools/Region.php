@@ -12,7 +12,7 @@
 namespace plugins\tools;
 
 /**
- * Describe:
+ * Describe:地址信息处理工具类[省市区]
  * Class Region
  *
  * @package plugins

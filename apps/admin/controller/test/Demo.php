@@ -12,6 +12,7 @@
 namespace app\admin\controller\test;
 
 use app\admin\controller\Base;
+use plugins\tools\StrPro;
 
 /**
  * Describe:
@@ -32,6 +33,10 @@ class Demo extends Base {
         dump(url('/admin/test.demo/index', [], true, true));
         dump(url('/admin/test/', ['id'=>'1'], true, true));
         dump(url('/admin/test.demo/index', [], true, true));
+    }
+
+    public function test(){
+        dump(StrPro::rand_salt(88));
     }
 
 
