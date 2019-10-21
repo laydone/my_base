@@ -60,7 +60,6 @@ class Regex {
         } catch (\Exception $e) {
             throw $e;
         }
-
         return true;
     }
 
@@ -89,7 +88,6 @@ class Regex {
         } catch (\Exception $e) {
             throw $e;
         }
-
         return true;
     }
 

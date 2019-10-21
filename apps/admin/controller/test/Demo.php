@@ -31,11 +31,12 @@ class Demo extends Base {
         dump(url('/admin/test.demo/index'));
         dump(url('/admin/test/'));
         dump(url('/admin/test.demo/index', [], true, true));
-        dump(url('/admin/test/', ['id'=>'1'], true, true));
+        dump(url('/admin/test/', ['id' => '1'], true, true));
         dump(url('/admin/test.demo/index', [], true, true));
     }
 
-    public function test(){
+
+    public function test() {
         dump(StrPro::rand_salt(88));
     }
 
