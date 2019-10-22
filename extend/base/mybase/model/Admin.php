@@ -21,4 +21,26 @@ namespace base\mybase\model;
  */
 class Admin extends Mybase {
 
+    /**
+     * Describe:密码字段
+     *
+     * @var string
+     */
+    public $field_password = 'password';
+
+    /**
+     * Describe:登录用户名字段
+     *
+     * @var string
+     */
+    public $field_username = 'username';
+
+    /**
+     * Describe:密码加密随机串字段
+     *
+     * @var string
+     */
+    public $field_salt = 'salt';
+
+
 }

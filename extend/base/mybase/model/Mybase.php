@@ -37,6 +37,20 @@ class Mybase extends Model {
     const NO_DISABLED_DATA = 3;
 
     /**
+     * Describe:删除标记字段
+     *
+     * @var string
+     */
+    public $field_del = 'is_del';
+
+    /**
+     * Describe:禁用标记字段
+     *
+     * @var string
+     */
+    public $field_disable = 'is_disable';
+
+    /**
      * Describe:查询数据格式
      *
      * @var string
@@ -144,19 +158,16 @@ class Mybase extends Model {
     public function base($query) {
         $fields = $query->getTableFields();
         switch ($this->dataType) {
-            case 3:
-                dump(11);
-                if (in_array('is_disable', $fields)) { /* 如果存在删除标记,则默认查询未被删除的数据 */
-                    $query->where('is_disable', 'eq', 0);
+            case ($this->dataType == self::NO_DISABLED_DATA):
+                if (in_array($this->field_disable, $fields)) { /* 如果存在删除标记,则默认查询未被删除的数据 */
+                    $query->where($this->field_disable, 'eq', 0);
                 }
-            case 2:
-                dump(22);
-                if (in_array('is_del', $fields)) { /* 如果存在删除标记,则默认查询未被删除的数据 */
-                    $query->where('is_del', 'eq', 0);
+            case ($this->dataType == self::NO_DEL_DATA):
+                if (in_array($this->field_del, $fields)) { /* 如果存在删除标记,则默认查询未被删除的数据 */
+                    $query->where($this->field_del, 'eq', 0);
                 }
             default:
-                dump(33);
-                dump($this->dataType);
+                ;
         }
     }
 
@@ -224,7 +235,7 @@ class Mybase extends Model {
      * @return string
      */
     public function getIsDisableTextAttr($value, $data) {
-        return (isset ($data ['is_disable']) && isset ($this->is_disable_type [$data ['is_disable']]) ? $this->is_disable_type [$data ['is_disable']] : '');
+        return (isset ($data [$this->field_disable]) && isset ($this->is_disable_type [$data [$this->field_disable]]) ? $this->is_disable_type [$data [$this->field_disable]] : '');
     }
     /******************************************************************************************************************/
     /**
@@ -242,7 +253,6 @@ class Mybase extends Model {
         if (in_array($field, $fields)) {
             return true;
         }
-
         return false;
     }
 
@@ -261,7 +271,6 @@ class Mybase extends Model {
      */
     public function setDataType($type = self::NO_DEL_DATA) {
         $this->dataType = $type;
-
         return $this;
     }
 

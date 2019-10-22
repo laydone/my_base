@@ -1,0 +1,20 @@
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.text_error {
+    color: #f5222d;
+}
+
+.top_10 {
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.margin_top_20 {
+    margin-top: 20px;
+}

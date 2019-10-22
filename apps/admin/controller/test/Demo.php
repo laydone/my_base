@@ -12,6 +12,7 @@
 namespace app\admin\controller\test;
 
 use app\admin\controller\Base;
+use base\mybase\logic\AdminLogic;
 use plugins\tools\StrPro;
 
 /**
@@ -37,7 +38,16 @@ class Demo extends Base {
 
 
     public function test() {
-        dump(StrPro::rand_salt(88));
+        // dump(StrPro::rand_salt(88));
+        dump(StrPro::get_password('123456'));
+    }
+
+
+    public function login() {
+        $Logic = new AdminLogic();
+        $res = $Logic->do_login_username_unique('123','123456');
+        dump($res);
+        dump($Logic->get_error());
     }
 
 

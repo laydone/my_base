@@ -12,6 +12,7 @@
 namespace base\mybase\controller;
 
 use base\mybase\logic\MybaseLogic;
+use think\captcha\Captcha;
 use think\Controller;
 
 /**
@@ -136,6 +137,86 @@ class Mybase extends Controller {
         if (!$this->request->isPost()) { /*TODO:错误提示*/
         }
         /*TODO:数据更新操作*/
+    }
+
+
+    /**
+     * Describe:ajax切换验证码请求
+     *
+     * @return \think\response\Json
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/22 0022
+     */
+    public function change_captcha() {
+        $captcha_id = $this->request->param('captcha', '', 'trim');
+        $params = ['version' => rand()];
+        if (!empty($captcha_id)) {
+            $params['captcha_id'] = $captcha_id;
+        }
+        $url = url('captcha', $params, true, true);
+        return json(['code' => 1, 'url' => $url]);
+    }
+
+
+    /**
+     * Describe:输出图片验证码
+     *
+     * @return \think\Response
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/22 0022
+     */
+    public function captcha() {
+        $config = [
+            /* 默认验证码配置*/
+            'fontSize' => '18',
+            'imageH'   => '38',
+            'imageW'   => '160',
+            'length'   => '5',
+            'bg'       => [200, 200, 200],
+        ];
+        $font_size = $this->request->param('font_size', 0, 'intval');
+        if ($font_size > 0 && $font_size < 100) { /* 设置验证码字号 */
+            $config['fontSize'] = $font_size;
+        }
+        $height = $this->request->param('height', 0, 'intval');
+        if ($height > 0 && $height < 100) { /* 设置验证码图片高度 */
+            $config['imageH'] = $height;
+        }
+        $width = $this->request->param('width', 0, 'intval');
+        if ($width > 0 && $width < 200) { /* 设置验证码图片宽度 */
+            $config['imageW'] = $width;
+        }
+        $len = $this->request->param('len', 0, 'intval');
+        if ($len > 0 && $len <= 20) { /* 设置验证码长度 */
+            $config['length'] = $len;
+        }
+        $bg = $this->request->param('bg', '', 'trim');
+        if (!empty($bg)) {
+            $bg_arr = explode(',', $bg);
+            array_walk($bg_arr, 'intval');
+            if (count($bg_arr) >= 3 && $bg_arr[0] <= 255 && $bg_arr[1] <= 255 && $bg_arr[2] <= 255) {
+                $config['bg'] = $bg_arr;
+            }
+        }
+        $id = $this->request->param('captcha_id', '1', 'trim');
+        $Captcha = new Captcha($config);
+        return $Captcha->entry($id);
+    }
+
+
+    /**
+     * Describe:图片验证码验证
+     *
+     * @param string $value 需要验证的验证码
+     * @param string $id    验证码ID
+     *
+     * @return bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/22 0022
+     */
+    public function captcha_check($value = '', $id = '1') {
+        $Captcha = new Captcha();
+        return $Captcha->check($value, $id);
     }
 
 

@@ -12,6 +12,8 @@
 namespace app\admin\controller;
 
 use base\mybase\controller\Mybase as MyController;
+use think\exception\HttpResponseException;
+use think\facade\Response;
 
 /**
  * Describe:管理后台继承总类
@@ -44,7 +46,72 @@ class base extends MyController {
     public function _init() { }
 
 
+    /**
+     * Describe:ajax成功返回
+     *
+     * @param string $msg    返回提示消息
+     * @param string $data   返回数据
+     * @param string $url    跳转url
+     * @param array  $header 返回头信息
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/22 0022
+     */
+    public function ajax_success($msg = '', $data = '', $url = '', $header = []) {
+        $code = 1;
+        return $this->format_return($msg, $data, $code, $url, $header);
+    }
 
+
+    /**
+     * Describe:ajax错误返回
+     *
+     * @param string $msg    返回提示消息
+     * @param string $data   返回数据
+     * @param array  $header 返回头信息
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/22 0022
+     */
+    public function ajax_error($msg = '', $data = '', $url = '', $header = []) {
+        $code = 0;
+        return $this->format_return($msg, $data, $code, $url, $header);
+    }
+
+
+    /**
+     * Describe:格式化返回数据
+     *
+     * @param string $msg    返回提示消息
+     * @param string $data   返回数据
+     * @param int    $code   返回状态码
+     * @param string $url    跳转链接
+     * @param array  $header 返回头信息
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/22 0022
+     */
+    public function format_return($msg = '', $data = '', $code = 0, $url = '', $header = []) {
+        if (is_array($msg)) {
+            $code = isset($msg['code']) ? $msg['code'] : $code;
+            $msg = isset($msg['msg']) ? $msg['msg'] : $msg;
+            $url = isset($msg['url']) ? $msg['url'] : $url;
+        }
+        $result = [
+            'code' => $code,
+            'msg'  => $msg,
+            'data' => $data,
+        ];
+        $type = $this->getResponseType();
+        $header['Access-Control-Allow-Origin'] = '*';
+        $header['Access-Control-Allow-Headers'] = 'X-Requested-With,Content-Type,XX-Device-Type,XX-Token,XX-Api-Version,XX-Wxapp-AppId';
+        $header['Access-Control-Allow-Origin'] = 'GET,POST,PATCH,PUT,DELETE,OPTIONS';
+        // dump($type);
+        // dump($result);
+        $response = Response::create($result, $type)->header($header);
+        // dump($response);
+        throw new HttpResponseException($response);
+    }
 
 
 }

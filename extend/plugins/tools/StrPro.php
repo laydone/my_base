@@ -109,7 +109,7 @@ class StrPro {
     /**
      * Describe:获取密码加密
      *
-     * @param $str 密码明码串
+     * @param string $str 密码明码串
      *
      * @return array
      * @author lidong<947714443@qq.com>
