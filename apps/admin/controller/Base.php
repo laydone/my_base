@@ -101,15 +101,13 @@ class base extends MyController {
             'code' => $code,
             'msg'  => $msg,
             'data' => $data,
+            'url'  => $url,
         ];
         $type = $this->getResponseType();
         $header['Access-Control-Allow-Origin'] = '*';
         $header['Access-Control-Allow-Headers'] = 'X-Requested-With,Content-Type,XX-Device-Type,XX-Token,XX-Api-Version,XX-Wxapp-AppId';
         $header['Access-Control-Allow-Origin'] = 'GET,POST,PATCH,PUT,DELETE,OPTIONS';
-        // dump($type);
-        // dump($result);
         $response = Response::create($result, $type)->header($header);
-        // dump($response);
         throw new HttpResponseException($response);
     }
 

@@ -48,4 +48,17 @@ class Login extends Base {
     }
 
 
+    /**
+     * Describe:退出登录
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/23 0023
+     */
+    public function logout() {
+        $Logic = new AdminLogic();
+        $Logic->logout();
+        $this->redirect('index');
+    }
+
+
 }

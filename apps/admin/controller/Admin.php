@@ -49,8 +49,14 @@ class Admin extends Base {
      * @date   2019/10/17 0017
      */
     public function check_login() {
+        $uri = session('redirect_url');
         if ($this->get_admin_id() <= 0) {
+            $uri = $_SERVER['REDIRECT_URL'];
+            session('redirect_url', $uri);
             $this->redirect('/admin/login');
+        } elseif ($uri) {
+            session('redirect_url', null);
+            $this->redirect($uri);
         }
     }
 

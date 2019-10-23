@@ -93,8 +93,6 @@ class AdminLogic extends MybaseLogic {
         $map[] = [$this->model->field_username, 'eq', $username];
         $map[] = [$this->model->field_disable, 'in', [0, 1]];
         $admin = $this->model->where($map)->find();
-        // $admin = $this->model->where($map)->select(false);
-        dump($admin);
         if (empty($admin)) {
             $this->error = '用户不存在';
             return false;
@@ -107,7 +105,20 @@ class AdminLogic extends MybaseLogic {
         $this->admin_id = $admin_id = $admin[$this->model->getPk()];
         session('admin', $admin);
         session('admin_id', $admin_id);
-        /* TODO:登录操作记录*/
+        /* TODO:登录操作记录 */
+        return true;
+    }
+
+
+    /**
+     * Describe:
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/23 0023
+     */
+    public function logout() {
+        session('admin', null);
+        session('admin_id', null);
         return true;
     }
 

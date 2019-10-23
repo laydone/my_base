@@ -33,14 +33,14 @@
                                 <h4>Rosella</h4>
                                 <form class="mt-5 mb-5 login-input js_form" action="{:url('do_login')}" method="post">
                                     <div class="form-group">
-                                        <input type="username" class="form-control" placeholder="账号">
+                                        <input type="text" name="username" class="form-control" autocomplete="off" placeholder="账号">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="密码">
+                                        <input type="password" name="password" class="form-control" placeholder="密码">
                                     </div>
                                     <div class="form-group js_verify_group">
                                         <div class="col-sm-6 f_left">
-                                            <input class="form-control js_verify_input" type="text" name="verify_code" placeholder="验证码">
+                                            <input class="form-control js_verify_input" type="text" name="verify_code" autocomplete="off" placeholder="验证码">
                                         </div>
                                         <div class="col-sm-6 f_right">
                                             <img class="js_verify_img" src="{:url('captcha')}" data-change_url="{:url('change_captcha')}" />

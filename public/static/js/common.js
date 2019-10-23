@@ -17,6 +17,7 @@ $('.js_submit').on('click', function(event) {
     var _data = _form.serialize();
     var _url = _form.attr('action');
     $.post(_url, _data, function(res, textStatus, xhr) {
+        console.log(res);
         if (res.code == 1) {
             location.href = res.url;
         } else {
@@ -24,7 +25,7 @@ $('.js_submit').on('click', function(event) {
             $('.js_tips').removeClass('text_success').addClass('text_error').text(res.msg);
 
             /*刷新验证码*/
-            if ($('.js_verify_img') !== undefind) {
+            if ($('.js_verify_img') != undefined) {
                 $('.js_verify_img').click();
             }
         }

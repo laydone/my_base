@@ -168,9 +168,9 @@ class Mybase extends Controller {
     public function captcha() {
         $config = [
             /* 默认验证码配置*/
-            'fontSize' => '18',
+            'fontSize' => '20',
             'imageH'   => '38',
-            'imageW'   => '160',
+            'imageW'   => '170',
             'length'   => '5',
             'bg'       => [200, 200, 200],
         ];
