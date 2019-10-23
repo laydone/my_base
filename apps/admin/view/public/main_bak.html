@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quixlab - Bootstrap Admin Dashboard Template</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
+    <!-- 预先加载的样式 -->
+    <block name="before_style"></block>
+    <!-- Custom Stylesheet -->
+    <link href="__CSS__/style.css" rel="stylesheet" />
+    <!-- 单页面样式 -->
+    <block name="style"></block>
+</head>
+
+<body>
+    <!--******************* Preloader start ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--******************* Preloader end ********************-->
+    <!--********************************** Main wrapper start ***********************************-->
+    <div id="main-wrapper">
+        <!--********************************** Nav header start ***********************************-->
+        <include file="public:logo" />
+        <!--********************************** Nav header end ***********************************-->
+        <!--********************************** Header start ***********************************-->
+        <include file="public:header" />
+        <!--********************************** Header end ti-comment-alt ***********************************-->
+        <!--********************************** Sidebar start ***********************************-->
+        <include file="public:sidebar" />
+        <!--********************************** Sidebar end ***********************************-->
+        <!--********************************** Content body start ***********************************-->
+        <block name="body"></block>
+        <!--********************************** Content body end ***********************************-->
+        <!--********************************** Footer start ***********************************-->
+        <div class="footer">
+            <include file="public:copyright">
+        </div>
+        <!--********************************** Footer end ***********************************-->
+    </div>
+    <!--********************************** Main wrapper end ***********************************-->
+    <!--********************************** Scripts ***********************************-->
+    <script src="__PLUGIN__/common/common.min.js"></script>
+    <script src="__JS__/custom.min.js"></script>
+    <script src="__JS__/settings.js"></script>
+    <script src="__JS__/gleek.js"></script>
+    <script src="__JS__/styleSwitcher.js"></script>
+    <block name="script"></block>
+</body>
+
+</html>
