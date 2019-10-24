@@ -18,3 +18,90 @@
 .margin_top_20 {
     margin-top: 20px;
 }
+
+.color-primary {
+    color: #7571f9;
+}
+
+.color-success {
+    color: #6fd96f;
+}
+
+.color-danger {
+    color: #ff5e5e;
+}
+
+/*显示条数样式选择器*/
+
+.dataTables_length {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+div.dataTables_length label {
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+div.dataTables_length select {
+    width: 75px;
+    display: inline-block;
+    background-color: transparent;
+    background-position: center bottom, center calc(100% - 1px);
+    background-repeat: no-repeat;
+    background-size: 0 2px, 100% 1px;
+    border: 0 none;
+    padding-bottom: 5px;
+    transition: background 0s ease-out 0s;
+}
+
+.form-control-sm {
+    min-height: 36px;
+}
+
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    height: 45px;
+    min-height: 40px;
+}
+
+/*数据显示样式*/
+div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-child {
+    padding-left: 0;
+}
+
+.dataTables_info {
+    display: inline-block;
+    padding-top: 0.85em;
+    white-space: nowrap;
+}
+
+/*翻页按钮样式*/
+.page-item:last-child .page-link {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+div.dataTables_paginate {
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+    padding-top: 0.25em;
+}
+
+div.dataTables_paginate ul.pagination {
+    margin: 2px 0;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}

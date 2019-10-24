@@ -28,7 +28,7 @@ class ArrTree {
      */
     static protected $config = [
         'pk'        => 'id',        /* 需要匹配的键名 */
-        'pid'       => 'parent_id', /* 父级键名 [] */
+        'pid'       => 'pid',       /* 父级键名 [] */
         'child'     => '_child',    /* 子集标记键名[默认为"_child"] */
         'root'      => 0,           /* 起始父级键值[默认为0,从顶级开始] */
         'key'       => '',          /* 树状结构键名字段取值字段[留空表示不设置,默认留空] */
@@ -44,7 +44,7 @@ class ArrTree {
      * @param array $config     树状结构配置
      *                          [
      *                          'pk'    => 'id', //需要匹配的键名
-     *                          'pid'   => 'parent_id', //父级键名 []
+     *                          'pid'   => 'pid', //父级键名 []
      *                          'child' => '_child', // 子集标记键名[默认为"_child"]
      *                          'root'  => 0, // 起始父级键值[默认为0,从顶级开始]
      *                          'key'   => '', // 树状结构键名字段取值字段[留空表示不设置,默认留空]

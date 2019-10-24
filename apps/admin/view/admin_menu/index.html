@@ -1,0 +1,181 @@
+<extend name="public:main" />
+<block name="style">
+    <!-- <link href="__PLUGIN__/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
+</block>
+<block name="body">
+    <div class="row page-titles mx-0">
+        <div class="col p-md-0">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+            </ol>
+        </div>
+    </div>
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Data Table</h4>
+                        <div class="dataTables_length col-sm-12">
+                            <label>每页显示
+                                <select name="DataTables_Table_0_length" class="form-control form-control-sm">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select> 条数据
+                            </label>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th width="40">#</th>
+                                        <th width="40"><input type="checkbox" name=""></th>
+                                        <th>Name</th>
+                                        <th scope="col">Popularity</th>
+                                        <th scope="col">Sales</th>
+                                        <th width="80">Status</th>
+                                        <th>Date</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <th><input type="checkbox" name=""></th>
+                                        <td>Kolor Tea Shirt For Man</td>
+                                        <td>
+                                            <div class="progress" style="height: 10px">
+                                                <div class="progress-bar gradient-1" style="width: 70%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="label gradient-1 btn-rounded">70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-primary px-2">Sale</span>
+                                        </td>
+                                        <td>January 22</td>
+                                        <td class="color-primary">$21.56</td>
+                                        <td>
+                                            <a href="" class="badge badge-primary">查看1</a>
+                                            <a href="" class="badge badge-dark">查看2</a>
+                                            <a href="" class="badge badge-default">查看3</a>
+                                            <a href="" class="badge badge-secondary">查看4</a>
+                                            <a href="" class="badge badge-pill">查看5</a>
+                                            <a href="" class="badge badge-warning">查看6</a>
+                                            <a href="" class="badge badge-light">查看7</a>
+                                            <a href="" class="badge badge-info">编辑</a>
+                                            <a href="" class="badge badge-danger">删除</a>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                    <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                </a>
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Close">
+                                                    <i class="fa fa-close color-danger"></i>
+                                                </a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <th><input type="checkbox" name=""></th>
+                                        <td>Kolor Tea Shirt For Women</td>
+                                        <td>
+                                            <div class="progress" style="height: 10px">
+                                                <div class="progress-bar gradient-2" style="width: 70%;" role="progressbar">
+                                                    <span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="label btn-rounded gradient-2">70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger px-2">Tax</span>
+                                        </td>
+                                        <td>January 30</td>
+                                        <td class="color-success">$55.32</td>
+                                        <td>
+                                            <a href="" class="badge badge-primary">查看1</a>
+                                            <a href="" class="badge badge-dark">查看2</a>
+                                            <a href="" class="badge badge-default">查看3</a>
+                                            <a href="" class="badge badge-secondary">查看4</a>
+                                            <a href="" class="badge badge-pill">查看5</a>
+                                            <a href="" class="badge badge-warning">查看6</a>
+                                            <a href="" class="badge badge-light">查看7</a>
+                                            <a href="" class="badge badge-info">编辑</a>
+                                            <a href="" class="badge badge-danger">删除</a>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                    <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                </a>
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Close">
+                                                    <i class="fa fa-close color-danger"></i>
+                                                </a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <th><input type="checkbox" name=""></th>
+                                        <td>Blue Backpack For Baby</td>
+                                        <td>
+                                            <div class="progress" style="height: 10px">
+                                                <div class="progress-bar gradient-3" style="width: 70%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="label gradient-3 btn-rounded">70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success px-2">Extended</span>
+                                        </td>
+                                        <td>January 25</td>
+                                        <td class="color-danger">$14.85</td>
+                                        <td>
+                                            <a href="" class="badge badge-primary">查看1</a>
+                                            <a href="" class="badge badge-dark">查看2</a>
+                                            <a href="" class="badge badge-default">查看3</a>
+                                            <a href="" class="badge badge-secondary">查看4</a>
+                                            <a href="" class="badge badge-pill">查看5</a>
+                                            <a href="" class="badge badge-warning">查看6</a>
+                                            <a href="" class="badge badge-light">查看7</a>
+                                            <a href="" class="badge badge-info">编辑</a>
+                                            <a href="" class="badge badge-danger">删除</a>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                    <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                </a>
+                                                <a href="#" data-toggle="tooltip" data-placement="top" title="Close">
+                                                    <i class="fa fa-close color-danger"></i>
+                                                </a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <include file="public:page_flip_button" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #/ container -->
+</block>
+<block name="script">
+</block>
