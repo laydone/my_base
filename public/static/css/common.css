@@ -1,38 +1,4 @@
-.f_left {
-    float: left;
-}
-
-.f_right {
-    float: right;
-}
-
-.text_error {
-    color: #f5222d;
-}
-
-.top_10 {
-    padding-top: 10px;
-    display: inline-block;
-}
-
-.margin_top_20 {
-    margin-top: 20px;
-}
-
-.color-primary {
-    color: #7571f9;
-}
-
-.color-success {
-    color: #6fd96f;
-}
-
-.color-danger {
-    color: #ff5e5e;
-}
-
 /*显示条数样式选择器*/
-
 .dataTables_length {
     margin-top: 10px;
     display: inline-block;
@@ -104,4 +70,37 @@ div.dataTables_paginate ul.pagination {
     padding-left: 0;
     list-style: none;
     border-radius: 0.25rem;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.text_error {
+    color: #f5222d;
+}
+
+.top_10 {
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.margin_top_20 {
+    margin-top: 20px;
+}
+
+.color-primary {
+    color: #7571f9;
+}
+
+.color-success {
+    color: #6fd96f;
+}
+
+.color-danger {
+    color: #ff5e5e;
 }

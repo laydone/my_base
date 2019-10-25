@@ -73,6 +73,75 @@ class MybaseLogic {
 
 
     /**
+     * Describe:查询所有数据
+     *
+     * @param mixed|array|string $map  查询条件数组
+     * @param mixed|array|string $sort 排序条件
+     *
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     * @return array|\PDOStatement|string|\think\Collection
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/25 0025
+     */
+    public function lists($map, $sort) {
+        $lists = $this->model->where($map)->order($sort)->select();
+        return $lists;
+    }
+
+
+    /**
+     * Describe:HTML翻页列表
+     *
+     * @param array $map    查询条件
+     * @param int   $page   页码
+     * @param array $query  翻页链接
+     * @param array $sort   排序条件
+     * @param int   $limit  每页显示条数
+     * @param array $config 翻页配置
+     *                      page:当前页,
+     *                      path:url路径,
+     *                      query:url额外参数,
+     *                      fragment:url锚点,
+     *                      var_page:分页变量,
+     *                      list_rows:每页数量
+     *                      type:分页类名
+     *
+     * @throws \think\exception\DbException
+     * @return \think\Paginator
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/25 0025
+     */
+    public function html_pages($map, $page = 1, $query = [], $sort = ['id' => 'desc'], $limit = 10, $config = []) {
+        $D_config = [
+            'page'      => $page,
+            'query'     => $query,
+            'list_rows' => $limit,
+        ];
+        $final_config = array_merge($D_config, $config);
+        /*TODO:加配置判断默认查询的数据类型*/
+        $lists = $this->model->where($map)->order($sort)->paginate($final_config);
+        return $lists;
+    }
+
+
+    /**
+     * Describe:获取详情
+     *
+     * @param int $id
+     *
+     * @return mixed
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/25 0025
+     */
+    public function get_details($id) {
+        $info = $this->model->get($id);
+        return $info;
+    }
+
+
+    /**
      * Describe: 数据表数据更新
      *
      * @param array $data 需要更新的数据

@@ -55,7 +55,7 @@ class Mybase extends Model {
      *
      * @var string
      */
-    protected $dataType = 1;
+    protected $dataType = 3;
 
     /**
      * 启用状态文字
@@ -269,7 +269,7 @@ class Mybase extends Model {
      * @author lidong<947714443@qq.com>
      * @date   2019/10/16 0016
      */
-    public function setDataType($type = self::NO_DEL_DATA) {
+    public function setDataType($type = self::NO_DISABLED_DATA) {
         $this->dataType = $type;
         return $this;
     }

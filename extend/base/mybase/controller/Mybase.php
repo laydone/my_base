@@ -95,11 +95,22 @@ class Mybase extends Controller {
     /**
      * Describe:首页/列表页默认展示
      *
+     * @throws \think\exception\DbException
      * @return mixed
      * @author lidong<947714443@qq.com>
-     * @date   2019/10/16 0016
+     * @date   2019/10/25 0025
      */
     public function index() {
+        $map = [];
+        $page = $this->request->param('page', 2, 'intval');
+        $data['list'] = $list = $this->logic->html_pages($map, $page);
+        $data['page'] = $list->render();
+        $data['total_counts'] = $total = $list->total();
+        $data['limited'] = $limited = $list->listRows();
+        $data['current_page'] = $current_page = $list->currentPage();
+        $data['start_'] = $list->count();
+        /*TODO:修改翻页样式*/
+        $this->assign($data);
         return $this->fetch();
     }
 
@@ -112,7 +123,7 @@ class Mybase extends Controller {
      * @date   2019/10/16 0016
      */
     public function add() {
-        return $this->fetch();
+        return $this->fetch('operate');
     }
 
 
@@ -123,7 +134,10 @@ class Mybase extends Controller {
      * @date   2019/10/16 0016
      */
     public function edit() {
-        return $this->fetch();
+        $id = $this->request->param('id', 0, 'intval');
+        $info = $this->logic->get_details($id);
+        $this->assign('info', $info);
+        return $this->fetch('operate');
     }
 
 
