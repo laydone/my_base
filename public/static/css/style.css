@@ -10858,8 +10858,16 @@ a.text-dark:focus {
     color: rgba(235, 33, 83, 0.8);
 }
 
+.gradient-6 {
+    color: #fff !important;
+}
+
 .gradient-6-shadow {
     box-shadow: 0px 10px 20px 0px rgba(53, 185, 216, 0.3) !important;
+}
+
+.gradient-6-text {
+    color: rgba(53, 185, 216, 0.8);
 }
 
 .gradient-7 {

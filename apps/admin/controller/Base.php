@@ -68,6 +68,7 @@ class base extends MyController {
      *
      * @param string $msg    返回提示消息
      * @param string $data   返回数据
+     * @param string $url    跳转链接
      * @param array  $header 返回头信息
      *
      * @author lidong<947714443@qq.com>

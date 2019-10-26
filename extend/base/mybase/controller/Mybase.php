@@ -102,14 +102,15 @@ class Mybase extends Controller {
      */
     public function index() {
         $map = [];
-        $page = $this->request->param('page', 2, 'intval');
-        $data['list'] = $list = $this->logic->html_pages($map, $page);
+        $page = $this->request->param('page', 1, 'intval');
+        $data['list'] = $list = $this->logic->html_pages($map, $page, [], '', $this->limit, []);
         $data['page'] = $list->render();
         $data['total_counts'] = $total = $list->total();
         $data['limited'] = $limited = $list->listRows();
         $data['current_page'] = $current_page = $list->currentPage();
-        $data['start_'] = $list->count();
-        /*TODO:修改翻页样式*/
+        $current_num = $list->count();
+        $data['show_start'] = ($limited * ($current_page - 1) + 1);
+        $data['show_end'] = ($limited * ($current_page - 1) + $current_num);
         $this->assign($data);
         return $this->fetch();
     }

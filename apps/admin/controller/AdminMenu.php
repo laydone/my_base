@@ -30,6 +30,13 @@ class AdminMenu extends Admin {
      */
     protected $logic;
 
+    /**
+     * Describe:
+     *
+     * @var int
+     */
+    protected $limit = 20;
+
 
     /**
      * Describe:初始化

@@ -1,45 +1,20 @@
-<div class="dataTables_wrapper container-fluid dt-bootstrap4">
-    <if condition="$page">
+<if condition="(config('paginate.show') && $total_counts gt 0) || $page">
+    <div class="dataTables_wrapper container-fluid dt-bootstrap4">
         <div class="row">
-            <div class="col-sm-12 col-md-5">
-                <div class="dataTables_info">
-                    {$limited} --
-                    {$current_page} --
-                    {$start_} --
-                    Showing 1 to 10 of {$total_counts} entries
+            <if condition="config('paginate.show') && $total_counts gt 0">
+                <div class="col-sm-12 col-md-5">
+                    <div class="dataTables_info">
+                        展示第 {$show_start} - {$show_end} 条数据 | 共 {$total_counts} 条
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-7">
-                <div class="dataTables_paginate paging_simple_numbers">
-                    {:htmlspecialchars_decode($page)}
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled">
-                            <a href="#" class="page-link">Previous</a>
-                        </li>
-                        <li class="paginate_button page-item active">
-                            <a href="#" class="page-link">1</a>
-                        </li>
-                        <li class="paginate_button page-item ">
-                            <a href="#" class="page-link">2</a>
-                        </li>
-                        <li class="paginate_button page-item ">
-                            <a href="#" class="page-link">3</a>
-                        </li>
-                        <li class="paginate_button page-item ">
-                            <a href="#" class="page-link">4</a>
-                        </li>
-                        <li class="paginate_button page-item ">
-                            <a href="#" class="page-link">5</a>
-                        </li>
-                        <li class="paginate_button page-item ">
-                            <a href="#" class="page-link">6</a>
-                        </li>
-                        <li class="paginate_button page-item next">
-                            <a href="#" class="page-link">Next</a>
-                        </li>
-                    </ul>
+            </if>
+            <if condition="$page">
+                <div class="col-sm-12 col-md-7">
+                    <div class="dataTables_paginate paging_simple_numbers">
+                        {:htmlspecialchars_decode($page)}
+                    </div>
                 </div>
-            </div>
+            </if>
         </div>
-    </if>
-</div>
+    </div>
+</if>

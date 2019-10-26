@@ -9,4 +9,21 @@
  * +----------------------------------------------------------------------
  * | File Describe:
  */
-return [];
+return [
+    'type'            => 'Bootstrap1',                  /* 分页类类名 */
+    'var_page'        => 'page',                        /* 模板输出中分页变量名 */
+    'list_rows'       => 10,                            /* 默认每页显示条数 */
+    'show'            => true,                          /* 是否显示条数信息 */
+    'pre_text'        => '上一页',                      /* 上一页文字 */
+    'next_text'       => '下一页',                      /* 下一页文字 */
+    'first_text'      => '首页',                        /* 首页文字 */
+    'last_text'       => '尾页',                        /* 尾页文字 */
+    'common_style'    => 'paginate_button page-item',   /* 公共样式 */
+    'available_style' => '',                            /* 可点击按钮样式 */
+    'active_style'    => '',                            /* 激活按钮样式 */
+    'disabled_style'  => '',                            /* 禁用按钮样式 */
+    'pre_style'       => 'previous',                    /* 上一页按钮样式 */
+    'next_style'      => 'next',                        /* 下一页按钮样式 */
+    'first_style'     => 'first',                            /* 首页按钮样式 */
+    'last_style'      => 'last',                            /* 尾页按钮样式 */
+];

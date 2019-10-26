@@ -113,7 +113,7 @@ class MybaseLogic {
      * @author lidong<947714443@qq.com>
      * @date   2019/10/25 0025
      */
-    public function html_pages($map, $page = 1, $query = [], $sort = ['id' => 'desc'], $limit = 10, $config = []) {
+    public function html_pages($map, $page = 1, array $query = [], $sort = ['id' => 'desc'], $limit = 10, array $config = []) {
         $D_config = [
             'page'      => $page,
             'query'     => $query,

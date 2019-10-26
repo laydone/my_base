@@ -52,6 +52,12 @@ div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-chi
     border-bottom-right-radius: 0.25rem;
 }
 
+/* 首页按钮样式 */
+.first {}
+
+/*尾页按钮样式*/
+.last {}
+
 div.dataTables_paginate {
     margin: 0;
     white-space: nowrap;
@@ -71,6 +77,9 @@ div.dataTables_paginate ul.pagination {
     list-style: none;
     border-radius: 0.25rem;
 }
+
+
+/* 全局共用样式 */
 
 .f_left {
     float: left;
