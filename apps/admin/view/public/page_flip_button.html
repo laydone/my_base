@@ -1,10 +1,10 @@
-<if condition="(config('paginate.show') && $total_counts gt 0) || $page">
+<if condition="(config('paginate.show') && intval($total_counts ?? '') gt 0) || ($page ?? '')">
     <div class="dataTables_wrapper container-fluid dt-bootstrap4">
         <div class="row">
-            <if condition="config('paginate.show') && $total_counts gt 0">
+            <if condition="config('paginate.show') && intval($total_counts ?? '') gt 0">
                 <div class="col-sm-12 col-md-5">
                     <div class="dataTables_info">
-                        展示第 {$show_start} - {$show_end} 条数据 | 共 {$total_counts} 条
+                        展示第 {$show_start|default='0'} - {$show_end|default='0'} 条数据 | 共 {$total_counts|default='0'} 条
                     </div>
                 </div>
             </if>

@@ -93,6 +93,23 @@ class Mybase extends Controller {
 
 
     /**
+     * Describe:容错方法[空操作]
+     *
+     * @return mixed
+     * @author lidong<947714443@qq.com>
+     * @date   2019/10/28 0028
+     */
+    public function _empty() {
+        try {
+            return $this->fetch();
+        } catch (TemplateNotFoundException $e) {
+            $error = config('http_exception_template');
+            return $this->fetch($error['404']);
+        }
+    }
+
+
+    /**
      * Describe:首页/列表页默认展示
      *
      * @throws \think\exception\DbException

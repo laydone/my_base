@@ -36,7 +36,14 @@
         <include file="public:header" />
         <!--********************************** Header end ti-comment-alt ***********************************-->
         <!--********************************** Sidebar start ***********************************-->
-        <include file="public:sidebar" />
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <include file="public:sidebar" />
+                    <block name="ui_element_menu"></block>
+                </ul>
+            </div>
+        </div>
         <!--********************************** Sidebar end ***********************************-->
         <!--********************************** Content body start ***********************************-->
         <div class="content-body">

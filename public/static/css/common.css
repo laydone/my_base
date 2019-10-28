@@ -98,6 +98,10 @@ div.dataTables_paginate ul.pagination {
     display: inline-block;
 }
 
+.single_line {
+	display: block;
+}
+
 .margin_top_20 {
     margin-top: 20px;
 }
