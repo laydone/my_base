@@ -23,6 +23,59 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label text-right" for="menu_type">
+                                        <span class="text-danger">*</span>
+                                        菜单类型
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <select class="form-control" id="menu_type" name="menu_type">
+                                            <option value="">选择菜单类型</option>
+                                            <option value="1">作为菜单</option>
+                                            <option value="2">操作按钮</option>
+                                        </select>
+                                        <span class="help-block">选择菜单类型</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label text-right" for="display_position">
+                                        <span class="text-danger">*</span>
+                                        按钮展示方式
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <select class="form-control" id="display_position" name="display_position">
+                                            <option value="">选择按钮展示方式</option>
+                                            <option value="html">表头展示</option>
+                                            <option value="html">每行展示</option>
+                                            <option value="html">表头和每行都展示</option>
+                                            <option value="html">不展示展示</option>
+                                        </select>
+                                        <span class="help-block">选择菜单类型</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label text-right" for="request_type">
+                                        <span class="text-danger">*</span>
+                                        请求方式
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <div class="top_10 single_line">
+                                            <label class="radio-inline mr-3">
+                                                <input type="radio" name="request_type" value="1"> 直接跳转
+                                            </label>
+                                            <label class="radio-inline mr-3">
+                                                <input type="radio" name="request_type" value="2"> 无刷新POST
+                                            </label>
+                                            <label class="radio-inline mr-3">
+                                                <input type="radio" name="request_type" value="3"> 无刷新GET
+                                            </label>
+                                            <label class="radio-inline mr-3">
+                                                <input type="radio" name="request_type" value="4"> 打开新标签
+                                            </label>
+                                        </div>
+                                        <span class="help-block">请选择请求方式</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-lg-2 col-form-label text-right" for="name">
                                         <span class="text-danger">*</span>
                                         菜单名称
@@ -30,6 +83,46 @@
                                     <div class="col-lg-6">
                                         <input type="text" class="form-control" id="name" name="name" placeholder="请输入菜单名称">
                                         <span class="help-block">请填写菜单名称</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label text-right" for="app">
+                                        <span class="text-danger">*</span>
+                                        应用名
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="app" name="app" placeholder="请输入链接应用名">
+                                        <span class="help-block">请填写链接应用名</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label text-right" for="controller">
+                                        <span class="text-danger">*</span>
+                                        控制器
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="controller" name="controller" placeholder="请输入链接控制器">
+                                        <span class="help-block">请填写链接控制器</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label text-right" for="action">
+                                        <span class="text-danger">*</span>
+                                        方法名
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="action" name="action" placeholder="请输入链接方法">
+                                        <span class="help-block">请填写链接方法</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label text-right" for="action">
+                                        <span class="text-danger">*</span>
+                                        参数
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="action" name="action" placeholder="请输入链接参数">
+                                        <span class="help-block">请填写链接参数</span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -48,8 +141,18 @@
                                         图标
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" style="width: 40%;" id="icon" name="icon" placeholder="请输入图标">
+                                        <input type="text" class="form-control" style="width: 40%;" id="icon" name="icon" placeholder="请输入图标样式">
                                         <span class="help-block">请 <a class="btn-link" href=""> 选择图标 </a> 样式名称 </span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label text-right" for="style">
+                                        <span class="text-danger">*</span>
+                                        按钮样式
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" style="width: 40%;" id="style" name="style" placeholder="请输入按钮样式">
+                                        <span class="help-block">请填写按钮样式名称 </span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -69,177 +172,26 @@
                                         <span class="help-block">请选择是否展示</span>
                                     </div>
                                 </div>
-                                <!-- demo -->
                                 <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-email">
-                                        Email
-                                        <span class="text-danger">*</span>
+                                    <label class="col-lg-2 col-form-label text-right" for="description">
+                                        描述
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="val-email" name="val-email" placeholder="Your valid email..">
+                                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="请输入菜单描述"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-password">
-                                        Password
-                                        <span class="text-danger">*</span>
+                                    <label class="col-lg-2 col-form-label text-right" for="tips">
+                                        操作提示
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="password" class="form-control" id="val-password" name="val-password" placeholder="Choose a safe one..">
+                                        <textarea class="form-control" rows="5" id="tips" name="tips" placeholder="请输入菜单操作提示"></textarea>
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-confirm-password">
-                                        Confirm Password
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="..and confirm it!">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-suggestions">
-                                        Suggestions
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <textarea class="form-control" id="val-suggestions" name="val-suggestions" rows="5" placeholder="What would you like to see?"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-skill">
-                                        Best Skill
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <select class="form-control" id="val-skill" name="val-skill">
-                                            <option value="">Please select</option>
-                                            <option value="html">HTML</option>
-                                            <option value="css">CSS</option>
-                                            <option value="javascript">JavaScript</option>
-                                            <option value="angular">Angular</option>
-                                            <option value="angular">React</option>
-                                            <option value="vuejs">Vue.js</option>
-                                            <option value="ruby">Ruby</option>
-                                            <option value="php">PHP</option>
-                                            <option value="asp">ASP.NET</option>
-                                            <option value="python">Python</option>
-                                            <option value="mysql">MySQL</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-currency">
-                                        Currency
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="val-currency" name="val-currency" placeholder="$21.60">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-website">
-                                        Website
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="val-website" name="val-website" placeholder="http://example.com">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-phoneus">
-                                        Phone (US)
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="val-phoneus" name="val-phoneus" placeholder="212-999-0000">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-digits">
-                                        Digits
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="val-digits" name="val-digits" placeholder="5">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-number">
-                                        Number
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="val-number" name="val-number" placeholder="5.0">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label" for="val-range">
-                                        Range [1, 5]
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="val-range" name="val-range" placeholder="4">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label">
-                                        <a href="#">Terms &amp; Conditions</a>
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <div class="col-lg-8">
-                                        <label class="css-control css-control-primary css-checkbox" for="val-terms">
-                                            <input type="checkbox" class="css-control-input" id="val-terms" name="val-terms" value="1">
-                                            <span class="css-control-indicator"></span>
-                                            I agree to the terms
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-check mb-3">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">Option 1
-                                        </label>
-                                    </div>
-                                    <div class="form-check mb-3">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">Option 2
-                                        </label>
-                                    </div>
-                                    <div class="form-check disabled">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="" disabled="disabled">Disabled
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">Option 1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">Option 2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline disabled">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="" disabled="disabled">Disabled</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline mr-3">
-                                        <input type="radio" name="optradio"> Option 1
-                                    </label>
-                                    <label class="radio-inline mr-3">
-                                        <input type="radio" name="optradio"> Option 2
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="optradio"> Option 3
-                                    </label>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-8 ml-auto">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary">保存</button>
+                                        <a href="{:url('index',($param ?? []))}" class="btn btn-light">取消返回</a>
                                     </div>
                                 </div>
                             </form>

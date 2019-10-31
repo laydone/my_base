@@ -72,5 +72,9 @@ class Admin extends Base {
         return intval($this->admin_id);
     }
 
+    public function check_lock(){
+
+    }
+
 
 }

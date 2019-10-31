@@ -199,6 +199,41 @@ function get_admin_id() {
 }
 
 /**
+ * Describe:
+ *
+ * @return mixed
+ * @author lidong<947714443@qq.com>
+ * @date   2019/10/31 0031
+ */
+function get_admin() {
+    return session('admin');
+}
+
+/**
+ * Describe:设置管理员ID
+ *
+ * @param $admin_id
+ *
+ * @author lidong<947714443@qq.com>
+ * @date   2019/10/31 0031
+ */
+function set_admin_id($admin_id) {
+    session('admin_id', $admin_id);
+}
+
+/**
+ * Describe:
+ *
+ * @param $admin
+ *
+ * @author lidong<947714443@qq.com>
+ * @date   2019/10/31 0031
+ */
+function set_admin($admin) {
+    session('admin', $admin);
+}
+
+/**
  * Describe:获取用户ID
  *
  * @return mixed
