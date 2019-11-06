@@ -10,6 +10,7 @@
 
 /*------------------------------------------------------------------------*/
 
+use think\facade\Config;
 use think\Image;
 
 /**
@@ -254,4 +255,69 @@ function get_user_id() {
 function get_protocol() {
     $http_type = ((isset($_SERVER['HTTPS']) && ($_SERVER['SERVER_PORT'] == 443 || $_SERVER['HTTPS'] == 1 || $_SERVER['HTTPS'] == 'on')) || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
     return $http_type;
+}
+
+/**
+ * Describe:设置每页显示条数可选值
+ *
+ * @param mixed|int|array $var  可选值
+ * @param bool            $flag 是否保留配置文件设定值[当第一个参数为数组时生效]
+ *
+ * @return bool
+ * @author lidong<947714443@qq.com>
+ * @date   2019/11/6 0006
+ */
+function set_page_length($var, $flag = true) {
+    if (!is_numeric($var) && !is_array($var)) {
+        return false;
+    }
+    $page_length = config::get('paginate.page_length');
+    if ($flag === false) {
+        $page_length = [];
+    }
+    if (is_array($var)) {
+        $page_length = array_merge($page_length, $var);
+    } else {
+        $page_length[] = $var;
+    }
+    sort($page_length);
+    Config::set('paginate.page_length', $page_length);
+    return true;
+}
+
+/**
+ * Describe:获取每页显示条数可选值；
+ *
+ * @return mixed
+ * @author lidong<947714443@qq.com>
+ * @date   2019/11/6 0006
+ */
+function get_page_length() {
+    return Config::get('paginate.page_length');
+}
+
+/**
+ * Describe:设置每页显示条数
+ *
+ * @param int $num
+ *
+ * @author lidong<947714443@qq.com>
+ * @date   2019/11/6 0006
+ */
+function set_page_limit($num = 0) {
+    if (!is_numeric($num) || $num <= 0) {
+        return;
+    }
+    session('page_limit', $num);
+}
+
+/**
+ * Describe:获取每页显示条数
+ *
+ * @return mixed
+ * @author lidong<947714443@qq.com>
+ * @date   2019/11/6 0006
+ */
+function get_page_limit() {
+    return session('page_limit');
 }

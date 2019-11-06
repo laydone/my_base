@@ -103,8 +103,8 @@ class AdminLogic extends MybaseLogic {
         }
         $this->admin = $admin;
         $this->admin_id = $admin_id = $admin[$this->model->getPk()];
-        session('admin', $admin);
-        session('admin_id', $admin_id);
+        set_admin($admin);
+        set_admin_id($admin_id);
         /* TODO:登录操作记录 */
         return true;
     }

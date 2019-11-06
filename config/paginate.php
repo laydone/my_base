@@ -24,6 +24,7 @@ return [
     'disabled_style'  => '',                            /* 禁用按钮样式 */
     'pre_style'       => 'previous',                    /* 上一页按钮样式 */
     'next_style'      => 'next',                        /* 下一页按钮样式 */
-    'first_style'     => 'first',                            /* 首页按钮样式 */
-    'last_style'      => 'last',                            /* 尾页按钮样式 */
+    'first_style'     => 'first',                       /* 首页按钮样式 */
+    'last_style'      => 'last',                        /* 尾页按钮样式 */
+    'page_length'     => [10, 25, 50, 100],             /* 每页显示条数可选值 */
 ];

@@ -44,16 +44,7 @@
                                 <a class="btn btn-dark" href="{:url('')}">重置</a>
                             </form>
                         </div>
-                        <div class="dataTables_length col-sm-12">
-                            <label>每页显示
-                                <select name="DataTables_Table_0_length" class="form-control form-control-sm">
-                                    <option value="10">10</option>
-                                    <option value="25">25</option>
-                                    <option value="50">50</option>
-                                    <option value="100">100</option>
-                                </select> 条数据
-                            </label>
-                        </div>
+                        <include file="public:table_length" />
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
@@ -70,6 +61,52 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                <tbody>
+                                    <php> $i=1;</php>
+                                    <foreach name="list ?? []" item="row" key="k">
+                                        <tr>
+                                            <th><input type="checkbox" class="js_checked_item" name="ids[]" value="{$row.id}"></th>
+                                            <th>{$k+1}</th>
+                                            <td>{$row.name}</td>
+                                            <td>
+                                                <div class="progress" style="height: 10px">
+                                                    <div class="progress-bar gradient-{$i}" style="width: 70%;" role="progressbar">
+                                                        <span class="sr-only">70% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="label gradient-{$i} btn-rounded">70%</span>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-xs badge-info px-2">Sale</span>
+                                            </td>
+                                            <td>January 22</td>
+                                            <td>January 22</td>
+                                            <td class="color-primary">$21.56</td>
+                                            <td>
+                                                <a href="" class="badge badge-xs badge-primary">查看1</a>
+                                                <a href="" class="badge badge-xs badge-dark">查看2</a>
+                                                <a href="" class="badge badge-xs badge-secondary">查看3</a>
+                                                <a href="" class="badge badge-xs badge-warning">查看4</a>
+                                                <a href="" class="badge badge-xs badge-light">查看5</a>
+                                                <a href="" class="badge badge-xs badge-info">编辑</a>
+                                                <a href="" class="badge badge-xs badge-danger">删除</a>
+                                            </td>
+                                            <!-- <td>
+                                                <span>
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                        <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                    </a>
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Close">
+                                                        <i class="fa fa-close color-danger"></i>
+                                                    </a>
+                                                </span>
+                                            </td> -->
+                                        </tr>
+                                        <php>$i++;if($i>=9) $i=1;</php>
+                                    </foreach>
+                                </tbody>
                                 <tbody>
                                     <tr>
                                         <th>1</th>
