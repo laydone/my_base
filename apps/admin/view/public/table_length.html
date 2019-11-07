@@ -1,17 +1,23 @@
-<div class="dataTables_length col-sm-12 ">
-    <form class="js_page_length" action="{:url('')}">
-        <label>
-            每页显示
-            <select name="list_limit" class="form-control form-control-sm ">
-                <foreach name="page_length" item="limit">
-                    <if condition="$limit eq $limited">
-                        <option value="{$limit}" selected="selected">{$limit}</option>
-                        <else />
-                        <option value="{$limit}">{$limit}</option>
-                    </if>
-                </foreach>
-            </select>
-            条数据
-        </label>
-    </form>
-</div>
+<if condition="($page_length ?? 0) gt 0">
+    <div class="dataTables_length col-sm-12 ">
+        <php>
+            $_params = input('param.');
+            if(array_key_exists('page',$_params)){ unset($_params['page']);}
+        </php>
+        <form class="js_page_length" action="{:url('',$_params)}">
+            <label>
+                每页显示
+                <select name="list_limit" class="form-control form-control-sm js_page_select">
+                    <foreach name="page_length" item="limit">
+                        <if condition="$limit eq $limited">
+                            <option value="{$limit}" selected="selected">{$limit}</option>
+                            <else />
+                            <option value="{$limit}">{$limit}</option>
+                        </if>
+                    </foreach>
+                </select>
+                条数据
+            </label>
+        </form>
+    </div>
+</if>
