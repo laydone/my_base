@@ -46,6 +46,13 @@ class MybaseLogic {
      */
     protected $error;
 
+    /**
+     * Describe: 查询的数据类型
+     *
+     * @var string 可选值['all','no_del','no_disable' ]
+     */
+    protected $data_type;
+
 
     /**
      * 构造方法 初始化基础逻辑类
@@ -121,6 +128,7 @@ class MybaseLogic {
         ];
         $final_config = array_merge($D_config, $config);
         /*TODO:加配置判断默认查询的数据类型*/
+        $this->get_date_type();
         $lists = $this->model->where($map)->order($sort)->paginate($final_config);
         return $lists;
     }
@@ -186,6 +194,49 @@ class MybaseLogic {
             }
         }
         return true;
+    }
+
+
+    /**
+     * Describe:
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/8 0008
+     */
+    public function get_date_type() {
+        $module = request()->module();
+        $admin_modules = config('module_set.admin_modules');
+        switch ($this->data_type) {
+            case 'all':
+                $this->model->setDataType(MyModel::ALL_DATA);
+                break;
+            case 'no_del':
+                $this->model->setDataType(MyModel::NO_DEL_DATA);
+                break;
+            case 'no_disable':
+                $this->model->setDataType(MyModel::NO_DISABLED_DATA);
+                break;
+            default:
+                if (in_array($module, $admin_modules)) {
+                    $this->model->setDataType(MyModel::NO_DEL_DATA);
+                }
+        }
+    }
+
+
+    /**
+     * Describe:设置查询数据类型
+     *
+     * @param null $val
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/8 0008
+     */
+    public function set_data_type($val = null) {
+        $data_type_range = config('logic_range.date_type');
+        if (in_array($val, $data_type_range)) {
+            $this->data_type = $val;
+        }
     }
 
 

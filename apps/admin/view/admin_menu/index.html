@@ -25,20 +25,33 @@
                             </form>
                         </div>
                         <include file="public:table_length" />
+                        <div class="general-button text-right">
+                            <!-- 
+                            <button type="button" class="btn mb-1 btn-xs btn-primary">Primary</button>
+                            <button type="button" class="btn mb-1 btn-xs btn-secondary">Secondary</button>
+                            <button type="button" class="btn mb-1 btn-xs btn-success">Success</button>
+                            <button type="button" class="btn mb-1 btn-xs btn-danger">Danger</button>
+                            <button type="button" class="btn mb-1 btn-xs btn-warning">Warning</button>
+                            <button type="button" class="btn mb-1 btn-xs btn-info">Info</button>
+                            <button type="button" class="btn mb-1 btn-xs btn-light">Light</button>
+                            <button type="button" class="btn mb-1 btn-xs btn-dark">Dark</button> 
+                        	-->
+                        </div>
+                        <div class="clearfix"></div>
                         <div class="table-responsive">
                             <table class="table table-striped js_checked_table">
                                 <thead>
                                     <tr>
                                         <th width="40"><input type="checkbox" class="js_checked_all" name=""></th>
                                         <th width="40">#</th>
-                                        <th width="220">菜单名称</th>
-                                        <th width="280">链接</th>
-                                        <th width="">所属</th>
+                                        <th width="180">菜单名称</th>
+                                        <th width="220">链接</th>
+                                        <th width="180">所属</th>
+                                        <th width="180">更新时间</th>
                                         <th width="80">显示</th>
                                         <th width="80">状态</th>
-                                        <th width="120">添加时间</th>
-                                        <th width="120">更新时间</th>
-                                        <th>操作</th>
+                                        <th width="180">添加时间</th>
+                                        <th width="">操作</th>
                                         <!-- <th>操作</th> -->
                                     </tr>
                                 </thead>
@@ -55,13 +68,14 @@
                                             <td>
                                                 <span class="label gradient-{$i} btn-rounded">70%</span>
                                             </td>
+                                            <td>{$row.update_time_text}</td>
                                             <td>
                                                 <switch $row.is_display>
                                                     <case 1>
                                                         <span class="badge badge-xs badge-success px-2">{:$row.is_display_text}</span>
                                                     </case>
                                                     <case 0>
-                                                        <span class="badge badge-xs badge-danger px-2">{:$row.is_display_text}</span>
+                                                        <span class="badge badge-xs badge-warning px-2">{:$row.is_display_text}</span>
                                                     </case>
                                                 </switch>
                                             </td>
@@ -71,13 +85,14 @@
                                                         <span class="badge badge-xs badge-info px-2">{:$row.is_disable_text}</span>
                                                     </case>
                                                     <case 1>
-                                                        <span class="badge badge-xs badge-warning px-2">{:$row.is_disable_text}</span>
+                                                        <span class="badge badge-xs badge-dark px-2">{:$row.is_disable_text}</span>
                                                     </case>
                                                 </switch>
                                             </td>
                                             <td>{$row.create_time_text}</td>
-                                            <td>{$row.update_time_text}</td>
                                             <td>
+                                                <a href="{:url('edit',['id'=>$row.id])}" class="badge badge-xs badge-primary">编辑</a>
+                                                <!--
                                                 <a href="" class="badge badge-xs badge-primary js_ajax_get">查看1</a>
                                                 <a href="" class="badge badge-xs badge-dark">查看2</a>
                                                 <a href="" class="badge badge-xs badge-secondary">查看3</a>
@@ -85,6 +100,7 @@
                                                 <a href="" class="badge badge-xs badge-light">查看5</a>
                                                 <a href="" class="badge badge-xs badge-info">编辑</a>
                                                 <a href="" class="badge badge-xs badge-danger">删除</a>
+                                            -->
                                             </td>
                                             <!-- <td>
                                                 <span>

@@ -16275,6 +16275,7 @@ table.dataTable thead .sorting::after {
 
 .badge-success {
     background-color: #6fd96f;
+    color: #fff;
 }
 
 .badge-info {
@@ -16288,8 +16289,12 @@ table.dataTable thead .sorting::after {
 
 .badge-warning {
     background-color: #f29d56;
+    color: #fff;
 }
-
+.badge-secondary {
+    background-color: #6f78b2;
+    color: #fff;
+}
 .badge-danger {
     background-color: #ff5e5e;
 }

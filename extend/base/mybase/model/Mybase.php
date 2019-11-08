@@ -63,8 +63,8 @@ class Mybase extends Model {
      * @var array
      */
     protected $is_disable_type = [
-        '0' => '已启用',
-        '1' => '未启用',
+        '0' => '启用',
+        '1' => '禁用',
     ];
 
     /**

@@ -27,8 +27,8 @@ class AdminMenu extends Mybase {
      * @var array
      */
     protected $is_display_type = [
-        '0' => '隐藏',
-        '1' => '显示',
+        '0' => '否', /* 隐藏 */
+        '1' => '是', /* 显示 */
     ];
 
 
