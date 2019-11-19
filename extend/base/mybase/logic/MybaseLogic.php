@@ -198,7 +198,111 @@ class MybaseLogic {
 
 
     /**
-     * Describe:
+     * Describe:数据启用
+     *
+     * @param mixed|array|string $ids 需要操作数据的ID数组或者ID串
+     *
+     * @throws \Exception
+     * @return bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/19 0019
+     */
+    public function enable($ids) {
+        $res = $this->change_field($ids, $this->model->field_disable, 0);
+        return $res;
+    }
+
+
+    /**
+     * Describe:数据禁用
+     *
+     * @param mixed|array|string $ids 需要操作数据的ID数组或者ID串
+     *
+     * @throws \Exception
+     * @return bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/19 0019
+     */
+    public function disable($ids) {
+        $res = $this->change_field($ids, $this->model->field_disable, 1);
+        return $res;
+    }
+
+
+    /**
+     * Describe:数据删除
+     *
+     * @param mixed|array|string $ids 需要操作数据的ID数组或者ID串
+     *
+     * @throws \Exception
+     * @return bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/19 0019
+     */
+    public function del($ids) {
+        $res = $this->change_field($ids, $this->model->field_del, 1);
+        return $res;
+    }
+
+
+    /**
+     * Describe:数据还原
+     *
+     * @param mixed|array|string $ids 需要操作数据的ID数组或者ID串
+     *
+     * @throws \Exception
+     * @return bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/19 0019
+     */
+    public function restore($ids) {
+        $res = $this->change_field($ids, $this->model->field_del, 0);
+        return $res;
+    }
+
+
+    /**
+     * Describe:批量修改数据单个字段的值
+     *
+     * @param mixed|array|string $ids   需要修改字段值的数据ID数组或ID串
+     * @param string             $field 需要修改的字段
+     * @param int                $val   修改的值
+     *
+     * @throws \Exception
+     * @return bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/19 0019
+     */
+    public function change_field($ids, $field, $val) {
+        if (empty ($field) || (is_string($val) && strlen($val) == 0) || (!is_string($val) && empty ($val))) { /* 判断参数合法性 */
+            $this->error = '请选定需要设置的字段以及值';
+        }
+        if (!is_array($ids)) {
+            $ids = explode(',', $ids);
+        }
+        $ids = array_values(array_filter($ids)); /* 去掉空值 */
+        if (empty ($ids)) {
+            $this->error = '请选定需要设置的数据';
+        }
+        $map = [];
+        $pk = $this->model->getPk(); /* 获取当前模型主键 */
+        $map [$pk] = [ /* 构建更新数据范围 */
+                       'in',
+                       $ids,
+        ];
+        try {
+            $this->model->where($map)->setField($field, $val); /* */
+        } catch (\Exception $e) {
+            throw $e; /* TODO:上线删除或者注释掉本行 */
+            // $this->error = $e->getMessage();
+            return false;
+        }
+        return true;
+    }
+
+
+    /**
+     * Describe:获取查询数据类型
      *
      * @author lidong<947714443@qq.com>
      * @date   2019/11/8 0008

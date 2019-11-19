@@ -184,9 +184,54 @@ class Mybase extends Controller {
      * @date   2019/10/16 0016
      */
     public function disable() {
-        if (!$this->request->isPost()) { /*TODO:错误提示*/
+        if (!$this->request->isPost()) { /*TODO:错误提示整合*/
+            $this->error('请求方式错误');
         }
-        /*TODO:数据更新操作*/
+        $ids = $this->request->param('id');
+        $res = $this->logic->disable($ids);
+        if ($res === false) {
+            $this->error($this->logic->get_error());
+        }
+        $this->success('禁用成功');
+    }
+
+
+    /**
+     * Describe:启用
+     *
+     * @throws \Exception
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/19 0019
+     */
+    public function enable() {
+        if (!$this->request->isPost()) { /*TODO:错误提示整合*/
+            $this->error('请求方式错误');
+        }
+        $ids = $this->request->param('id');
+        $res = $this->logic->enable($ids);
+        if ($res === false) {
+            $this->error($this->logic->get_error());
+        }
+        $this->success('禁用成功');
+    }
+
+
+    /**
+     * Describe:数据更新操作
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/19 0019
+     */
+    public function update() {
+        if (!$this->request->isPost()) {
+            $this->error('请求方式错误');
+        }
+        $data = $this->request->param();
+        $res = $this->logic->update($data);
+        if ($res === false) {
+            $this->error($this->logic->get_error());
+        }
+        $this->success('保存成功');
     }
 
 
