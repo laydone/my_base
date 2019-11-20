@@ -12,7 +12,7 @@
 namespace base\mybase\model;
 
 /**
- * Describe:
+ * Describe:后台菜单模型
  * Class AdminMenu
  *
  * @package base\mybase\model
@@ -20,6 +20,18 @@ namespace base\mybase\model;
  * @date    2019/10/25 0025
  */
 class AdminMenu extends Mybase {
+
+    /**
+     * Describe:模型初始化
+     *
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/20 0020
+     */
+    static protected function init() {
+        parent::init(); /*继承父级初始化*/
+        self::observe(\base\mybase\event\AdminMenu::class); /*指定自定义观察者类*/
+    }
+
 
     /**
      * 启用状态文字

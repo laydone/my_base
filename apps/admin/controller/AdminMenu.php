@@ -35,7 +35,7 @@ class AdminMenu extends Admin {
      *
      * @var int
      */
-    protected $limit = 20;
+    protected $limit = 10;
 
 
     /**

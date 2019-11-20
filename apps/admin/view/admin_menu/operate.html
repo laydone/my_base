@@ -30,7 +30,16 @@
                                     <div class="col-lg-6">
                                         <select class="form-control" id="menu_type" name="menu_type">
                                             <option value="">选择菜单类型</option>
-                                            <option value="1">作为菜单</option>
+                                            <if condition="$info.menu_type eq 1">
+                                                <option value="1" selected="selected">作为菜单</option>
+                                                <else />
+                                                <option value="1">作为菜单</option>
+                                            </if>
+                                            <if condition="$info.menu_type eq 1">
+                                                <option value="2" selected="selected">操作按钮</option>
+                                                <else />
+                                                <option value="2">操作按钮</option>
+                                            </if>
                                             <option value="2">操作按钮</option>
                                         </select>
                                         <span class="help-block">选择菜单类型</span>

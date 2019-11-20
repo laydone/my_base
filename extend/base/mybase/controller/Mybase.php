@@ -171,6 +171,9 @@ class Mybase extends Controller {
      */
     public function edit() {
         $id = $this->request->param('id', 0, 'intval');
+        if ($id <= 0) {/*TODO:错误提示整合*/
+            $this->error('参数错误', url('index'));
+        }
         $info = $this->logic->get_details($id);
         $this->assign('info', $info);
         return $this->fetch('operate');
@@ -231,7 +234,7 @@ class Mybase extends Controller {
         if ($res === false) {
             $this->error($this->logic->get_error());
         }
-        $this->success('保存成功');
+        $this->success('保存成功', url('index'));
     }
 
 
