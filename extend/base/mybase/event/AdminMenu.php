@@ -30,7 +30,9 @@ class AdminMenu {
      * @date   2019/11/20 0020
      */
     public function afterUpdate($info) {
-        cache('admin_menu', null); /* 删除指定缓存 */
+        /*TODO:不同权限组的菜单缓存*/
+        $cache_name = config('logic_conf.admin_menu.admin_list');
+        cache($cache_name, null); /* 删除指定缓存 */
     }
 
 

@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-validation">
-                            <form class="form-valide" action="{:url('update')}" autocomplete="off" method="post">
+                            <form class="form-valide js_form" action="{:url('update')}" autocomplete="off" method="post">
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label text-right" for="pid">
                                         <span class="text-danger">*</span>
@@ -28,60 +28,20 @@
                                         菜单类型
                                     </label>
                                     <div class="col-lg-6">
-                                        <select class="form-control" id="menu_type" name="menu_type">
+                                        <select class="form-control js_menu_type" id="menu_type" name="menu_type">
                                             <option value="">选择菜单类型</option>
-                                            <if condition="$info.menu_type eq 1">
+                                            <if condition="($info.menu_type ?? '') eq 1">
                                                 <option value="1" selected="selected">作为菜单</option>
                                                 <else />
                                                 <option value="1">作为菜单</option>
                                             </if>
-                                            <if condition="$info.menu_type eq 1">
+                                            <if condition="($info.menu_type ?? '') eq 2">
                                                 <option value="2" selected="selected">操作按钮</option>
                                                 <else />
                                                 <option value="2">操作按钮</option>
                                             </if>
-                                            <option value="2">操作按钮</option>
                                         </select>
                                         <span class="help-block">选择菜单类型</span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label text-right" for="display_position">
-                                        <span class="text-danger">*</span>
-                                        按钮展示方式
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <select class="form-control" id="display_position" name="display_position">
-                                            <option value="">选择按钮展示方式</option>
-                                            <option value="html">表头展示</option>
-                                            <option value="html">每行展示</option>
-                                            <option value="html">表头和每行都展示</option>
-                                            <option value="html">不展示展示</option>
-                                        </select>
-                                        <span class="help-block">选择菜单类型</span>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label text-right" for="request_type">
-                                        <span class="text-danger">*</span>
-                                        请求方式
-                                    </label>
-                                    <div class="col-lg-6">
-                                        <div class="top_10 single_line">
-                                            <label class="radio-inline mr-3">
-                                                <input type="radio" name="request_type" value="1"> 直接跳转
-                                            </label>
-                                            <label class="radio-inline mr-3">
-                                                <input type="radio" name="request_type" value="2"> 无刷新POST
-                                            </label>
-                                            <label class="radio-inline mr-3">
-                                                <input type="radio" name="request_type" value="3"> 无刷新GET
-                                            </label>
-                                            <label class="radio-inline mr-3">
-                                                <input type="radio" name="request_type" value="4"> 打开新标签
-                                            </label>
-                                        </div>
-                                        <span class="help-block">请选择请求方式</span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -90,7 +50,7 @@
                                         菜单名称
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="请输入菜单名称">
+                                        <input type="text" class="form-control" id="name" name="name" value="{$info.name|default=''}" placeholder="请输入菜单名称">
                                         <span class="help-block">请填写菜单名称</span>
                                     </div>
                                 </div>
@@ -100,8 +60,8 @@
                                         应用名
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="app" name="app" placeholder="请输入链接应用名">
-                                        <span class="help-block">请填写链接应用名</span>
+                                        <input type="text" class="form-control" id="app" name="app" value="{$info.app|default=''}" placeholder="请输入菜单指向目标应用名">
+                                        <span class="help-block">请填写菜单指向目标应用名</span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -110,8 +70,8 @@
                                         控制器
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="controller" name="controller" placeholder="请输入链接控制器">
-                                        <span class="help-block">请填写链接控制器</span>
+                                        <input type="text" class="form-control" id="controller" name="controller" value="{$info.controller|default=''}" placeholder="请输入菜单指向目标控制器">
+                                        <span class="help-block">请填写菜单指向目标控制器</span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -120,47 +80,118 @@
                                         方法名
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="action" name="action" placeholder="请输入链接方法">
-                                        <span class="help-block">请填写链接方法</span>
+                                        <input type="text" class="form-control" id="action" name="action" value="{$info.action|default=''}" placeholder="请输入菜单指向目标方法">
+                                        <span class="help-block">请填写菜单指向目标方法</span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label text-right" for="action">
+                                    <label class="col-lg-2 col-form-label text-right" for="params">
                                         <span class="text-danger">*</span>
                                         参数
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="action" name="action" placeholder="请输入链接参数">
-                                        <span class="help-block">请填写链接参数</span>
+                                        <input type="text" class="form-control" id="params" name="params" value="{$info.params|default=''}" placeholder="请输入链接参数">
+                                        <span class="help-block">请填写链接参数(格式: a=b 或 a=b&c=d )</span>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row js_menu_link">
                                     <label class="col-lg-2 col-form-label text-right" for="sort">
                                         <span class="text-danger">*</span>
                                         排序
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" style="width: 40%;" id="sort" name="sort" placeholder="请输入排序">
-                                        <span class="help-block">请填写顺序，范围1-9999</span>
+                                        <input type="text" class="form-control" style="width: 40%;" id="sort" name="sort" value="{$info.sort|default=''}" placeholder="请输入排序">
+                                        <span class="help-block">请填写顺序，范围1-9999(数字越小越靠前)</span>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row js_menu_link">
                                     <label class="col-lg-2 col-form-label text-right" for="icon">
                                         <span class="text-danger">*</span>
                                         图标
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" style="width: 40%;" id="icon" name="icon" placeholder="请输入图标样式">
-                                        <span class="help-block">请 <a class="btn-link" href=""> 选择图标 </a> 样式名称 </span>
+                                        <input type="text" class="form-control" style="width: 40%;" id="icon" name="icon" value="{$info.icon|default=''}" placeholder="请输入图标样式">
+                                        <span class="help-block">请 <a class="btn-link" target="_blank" href=""> 选择图标 </a> 样式名称 </span>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row js_menu_button">
+                                    <label class="col-lg-2 col-form-label text-right" for="display_position">
+                                        <span class="text-danger">*</span>
+                                        按钮展示方式
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <select class="form-control" id="display_position" name="display_position">
+                                            <option value="">选择按钮展示方式</option>
+                                            <if condition="($info.display_position ?? '') eq 1">
+                                                <option value="1" selected="selected">表头展示</option>
+                                                <else />
+                                                <option value="1">表头展示</option>
+                                            </if>
+                                            <if condition="($info.display_position ?? '') eq 2">
+                                                <option value="2" selected="selected">每行展示</option>
+                                                <else />
+                                                <option value="2">每行展示</option>
+                                            </if>
+                                            <if condition="($info.display_position ?? '') eq 3">
+                                                <option value="3" selected="selected">表头和每行都展示</option>
+                                                <else />
+                                                <option value="3">表头和每行都展示</option>
+                                            </if>
+                                            <if condition="($info.display_position ?? '') eq 4">
+                                                <option value="4" selected="selected">不展示展示</option>
+                                                <else />
+                                                <option value="4">不展示展示</option>
+                                            </if>
+                                        </select>
+                                        <span class="help-block">选择按钮展示方式</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row js_menu_button">
+                                    <label class="col-lg-2 col-form-label text-right" for="request_type">
+                                        <span class="text-danger">*</span>
+                                        请求方式
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <div class="top_10 single_line">
+                                            <label class="radio-inline mr-3">
+                                                <if condition="($info.request_type ?? '') eq 1">
+                                                    <input type="radio" name="request_type" value="1" checked="checked"> 直接跳转
+                                                    <else />
+                                                    <input type="radio" name="request_type" value="1"> 直接跳转
+                                                </if>
+                                            </label>
+                                            <label class="radio-inline mr-3">
+                                                <if condition="($info.request_type ?? '') eq 2">
+                                                    <input type="radio" name="request_type" value="2" checked="checked"> 无刷新POST
+                                                    <else />
+                                                    <input type="radio" name="request_type" value="2"> 无刷新POST
+                                                </if>
+                                            </label>
+                                            <label class="radio-inline mr-3">
+                                                <if condition="($info.request_type ?? '') eq 3">
+                                                    <input type="radio" name="request_type" value="3" checked="checked"> 无刷新GET
+                                                    <else />
+                                                    <input type="radio" name="request_type" value="3"> 无刷新GET
+                                                </if>
+                                            </label>
+                                            <label class="radio-inline mr-3">
+                                                <if condition="($info.request_type ?? '') eq 4">
+                                                    <input type="radio" name="request_type" value="4" checked="checked"> 打开新标签
+                                                    <else />
+                                                    <input type="radio" name="request_type" value="4"> 打开新标签
+                                                </if>
+                                            </label>
+                                        </div>
+                                        <span class="help-block">请选择请求方式</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row js_menu_button">
                                     <label class="col-lg-2 col-form-label text-right" for="style">
                                         <span class="text-danger">*</span>
                                         按钮样式
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" style="width: 40%;" id="style" name="style" placeholder="请输入按钮样式">
+                                        <input type="text" class="form-control" style="width: 40%;" id="style" name="style" value="{$info.style|default=''}" placeholder="请输入按钮样式">
                                         <span class="help-block">请填写按钮样式名称 </span>
                                     </div>
                                 </div>
@@ -172,10 +203,18 @@
                                     <div class="col-lg-6">
                                         <div class="top_10 single_line">
                                             <label class="radio-inline mr-3">
-                                                <input type="radio" name="is_display" value="1"> 是
+                                                <if condition="($info.is_display ?? '') eq 1">
+                                                    <input type="radio" name="is_display" value="1" checked="checked"> 是
+                                                    <else />
+                                                    <input type="radio" name="is_display" value="1"> 是
+                                                </if>
                                             </label>
                                             <label class="radio-inline mr-3">
-                                                <input type="radio" name="is_display" value="0"> 否
+                                                <if condition="($info.is_display ?? 0) eq 0">
+                                                    <input type="radio" name="is_display" value="0" checked="checked"> 否
+                                                    <else />
+                                                    <input type="radio" name="is_display" value="0"> 否
+                                                </if>
                                             </label>
                                         </div>
                                         <span class="help-block">请选择是否展示</span>
@@ -186,7 +225,7 @@
                                         描述
                                     </label>
                                     <div class="col-lg-6">
-                                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="请输入菜单描述"></textarea>
+                                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="请输入菜单描述"> {$info.description|default=''}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -194,13 +233,18 @@
                                         操作提示
                                     </label>
                                     <div class="col-lg-6">
-                                        <textarea class="form-control" rows="5" id="tips" name="tips" placeholder="请输入菜单操作提示"></textarea>
+                                        <textarea class="form-control" rows="5" id="tips" name="tips" placeholder="请输入菜单操作提示">{$info.tips|default=''}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-8 ml-auto">
-                                        <button type="submit" class="btn btn-primary">保存</button>
-                                        <a href="{:url('index',($param ?? []))}" class="btn btn-light">取消返回</a>
+                                        <span class="help-block top_10 js_tips"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-8 ml-auto">
+                                        <button type="submit" class="btn btn-primary js_submit">保存</button>
+                                        <a href="{:url('index',($param ?? []))}" class="btn btn-light">返回</a>
                                     </div>
                                 </div>
                             </form>
@@ -214,4 +258,20 @@
 <block name="script">
     <script src="__PLUGIN__/validation/jquery.validate.min.js"></script>
     <script src="__PLUGIN__/validation/jquery.validate-init.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(document).on('change', '.js_menu_type', function() {
+            var _menu_type = $(this).val();
+            console.log(_menu_type);
+            if (_menu_type == 2) {
+                $('.js_menu_link').hide();
+                $('.js_menu_button').show();
+            } else {
+                $('.js_menu_link').show();
+                $('.js_menu_button').hide();
+            }
+        });
+        $('.js_menu_type').change();
+    });
+    </script>
 </block>
