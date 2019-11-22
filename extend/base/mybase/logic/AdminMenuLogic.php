@@ -13,6 +13,7 @@ namespace base\mybase\logic;
 
 use base\mybase\model\AdminMenu as AdminMenuModel;
 use base\mybase\validate\AdminMenu as AdminMenuValidate;
+use plugins\tools\ArrTree;
 
 /**
  * Describe:
@@ -61,14 +62,67 @@ class AdminMenuLogic extends MybaseLogic {
      * @date   2019/11/21 0021
      */
     public function menu_list() {
-        $cache_name = config('logic_conf.admin_menu.cache_list');
-        if (!cache($cache_name)) {
-            $lists = $this->model->setDataType(AdminMenuModel::NO_DISABLED_DATA)->select();
-            cache($cache_name, $lists);
+        $cache_list_name = config('logic_conf.admin_menu.cache_list');
+        if (!cache($cache_list_name)) {
+            $lists = $this->model->setDataType(AdminMenuModel::NO_DISABLED_DATA)->column(null, $this->model->getPk());
+            cache($cache_list_name, $lists);
         } else {
-            $lists = cache($cache_name);
+            $lists = cache($cache_list_name);
         }
         return $lists;
+    }
+
+
+    /**
+     * Describe: 获取权限菜单树
+     *
+     * @param int $admin_id 管理员ID
+     *
+     * @return array
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/22 0022
+     */
+    public function menu_tree($admin_id = 0) {
+        $menus_ids = $this->get_admin_menus($admin_id);
+        $cache_tree_name = config('logic_conf.admin_menu.cache_tree_pre') . $admin_id;
+        $tree = cache($cache_tree_name);
+        if ($tree) {
+            return $tree;
+        }
+        $all_menus = $this->menu_list();
+        if ($menus_ids === true) { /* 超级管理员拥有所有权限*/
+            $menus = array_values($all_menus);
+        } else {
+            $menus = [];
+            foreach ($all_menus as $key => $row) {
+                if (in_array($key, $menus_ids)) {
+                    $temp[] = $row;
+                }
+            }
+        }
+        $tree = ArrTree::list_to_tree($menus);
+        cache($cache_tree_name, $tree);
+        return $tree;
+    }
+
+
+    /**
+     * Describe:
+     *
+     * @param int $admin_id 获取权限菜单
+     *
+     * @return array|bool
+     * @author lidong<947714443@qq.com>
+     * @date   2019/11/22 0022
+     */
+    public function get_admin_menus($admin_id = 0) {
+        $super_admin = config('admin_permission.super_admin') ?? [];
+        if (in_array($admin_id, $super_admin)) {
+            return true;
+        }
+        /* $menu_ids = */
+        /*TODO:获取对应管理员的权限*/
+        return [];
     }
 
 
